@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="en" class="js csstransforms3d"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.40.1">
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="./favicon.png" type="image/png">
+
+
+    
+      <title>Pwnagotchi - Deep Reinforcement Learning instrumenting bettercap for WiFi pwning.</title>
+    
+
+
+    
+    <link href="./css/nucleus_1619273531.css" rel="stylesheet">
+    <link href="./css/fontawesome-all.min_1619273531.css" rel="stylesheet">
+    <link href="./css/hybrid_1619273531.css" rel="stylesheet">
+    <link href="./css/featherlight.min_1619273531.css" rel="stylesheet">
+    <link href="./css/perfect-scrollbar.min_1619273531.css" rel="stylesheet">
+    <link href="./css/auto-complete_1619273531.css" rel="stylesheet">
+    <link href="./css/theme_1619273531.css" rel="stylesheet">
+    <link href="./css/hugo-theme_1619273531.css" rel="stylesheet">
+    
+      <link href="./css/theme-yellow_1619273531.css" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min_1619273531.js"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <link rel="stylesheet" href="./css/jqcloud.min_v%3D1.1.css">
+
+<style type="text/css">
+code {
+  color: #444;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+.copy-to-clipboard {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-left: none;
+  height: 19px !important;
+}
+
+#support {
+  font-size:5em; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 470px;
+  margin: auto;
+}
+
+#support > .col {
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+#logo > h1 > img {
+    border: 10px solid #6e0000;
+    border-radius: 10px;
+}
+
+h1 code, 
+h2 code, 
+h3 code, 
+h4 code, 
+h5 code {
+  width: 50%;
+  font-size: 15px;
+  color: #c5c8c6;
+  background: #1d1f21;
+  padding: 5px 20px 5px 5px;
+}
+
+h1 span.copy-to-clipboard, 
+h2 span.copy-to-clipboard, 
+h3 span.copy-to-clipboard, 
+h4 span.copy-to-clipboard, 
+h5 span.copy-to-clipboard {
+  display: none;
+}
+
+a.highlight code {
+  background: initial; 
+  border: none;
+}
+
+a.highlight span.copy-to-clipboard {
+  display: none;
+}
+
+.dd-item > a > i.fas {
+    width: 25px;
+    color: #8b0000;
+}
+
+ul#unitslist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.face, span.face {
+    font-family: monospace;
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+div.toc > nav#TableOfContents {
+  margin: 0;
+  padding: 0 !important;
+  font-size: initial !important;
+}
+
+div.toc > nav#TableOfContents > ul {
+  margin: 0;
+  padding: 0 !important;
+}
+
+#moodcloud {
+    width: 100%;
+    height: 300px;
+}
+</style>
+
+<script src="../../code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+
+<link href="./map.min.css" rel="stylesheet">
+<script src="./map.min.js"></script>
+<script src="./jquery.timeago.js"></script>
+<script src="./jqcloud.min.js"></script>
+
+<script src="./pwnmap_v%3D2.4.js"></script>
+<script src="./pwnfile_v%3D5.3.js"></script>
+<script src="./moodcloud_v%3D1.0.js"></script>
+
+  </head>
+  <body class="" data-url="/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+  <h1 style="margin:0; padding:0">
+    <img src="./pwnagotchi_v%3D2.gif" alt="pwnagotchi">
+  </h1>
+
+</a>
+
+
+  <a>
+      <p><h1><font color="#8b0000">Pwnagotchi dev site</font></h1>
+  </a>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input="" id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="./js/lunr.min_1619273531.js"></script>
+<script type="text/javascript" src="./js/auto-complete_1619273531.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/pwnagotchi.ai\/";
+    
+</script>
+<script type="text/javascript" src="./js/search_1619273531.js"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+                      <!-- Introduction -->
+                  <li data-nav-id="Introduction" title="Introduction" class="dd-item">
+                      <a href="Introduction.html">
+                          <i class="fas fa-star-of-life"></i> Introduction
+                      </a>
+                  </li>
+
+                  <!-- Installation -->
+                  <li data-nav-id="3rd-party-Images" title="3rd-party Images" class="dd-item">
+                      <a href="3rd-party-Images.html">
+                          <i class="fas fa-flask"></i> 3rd-party Images
+                      </a>
+                  </li>
+
+                  <!-- Plugins -->
+                  <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item">
+                      <a href="3rd-party-Plugins.html">
+                          <i class="fas fa-puzzle-piece"></i> 3rd-party Plugins
+                      </a>
+                  </li>
+
+                  <!-- Configuration -->
+                  <li data-nav-id="Configuration" title="Configuration" class="dd-item">
+                      <a href="Configuration.html">
+                          <i class="fas fa-cog"></i> Configuration
+                      </a>
+                  </li>
+
+                  <!-- Guides -->
+                  <li data-nav-id="Guides" title="Guides" class="dd-item">
+                      <a href="Guides.html">
+                          <i class="fas fa-brain"></i> Guides
+                      </a>
+                  </li>
+
+                  <!-- Contributing -->
+                  <li data-nav-id="Contributing" title="Contributing" class="dd-item">
+                      <a href="Contributing.html">
+                          <i class="fas fa-dna"></i> Contributing
+                      </a>
+                  </li>
+
+                  <!-- Hall of Fame -->
+                  <li data-nav-id="Hall-of-Fame" title="Hall of Fame" class="dd-item">
+                      <a href="Hall-of-Fame.html">
+                          <i class="fas fa-trophy"></i> Hall of Fame
+                      </a>
+                  </li>
+
+ 
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://twitter.com/intent/follow?screen_name=pwnagotchi"><br><img src="https://img.shields.io/twitter/follow/pwnagotchi?style=social&amp;logo=twitter" alt="follow on Twitter"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://community.pwnagotchi.ai/"><img alt="Discourse posts" src="../../img.shields.io/discourse/posts/server%3Dhttps%253A%252F%252Fcommunity.pwnagotchi.ai%252F%26style%3Dflat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://invite.pwnagotchi.ai/"><img alt="Slack" src="../../invite.pwnagotchi.ai/badge.svg/index.html"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/evilsocket/pwnagotchi/blob/master/LICENSE.md"><img alt="Software License" src="../../img.shields.io/badge/license-GPL3-brightgreen_style%3Dflat-square.svg"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://travis-ci.org/evilsocket/pwnagotchi"><img alt="Travis" src="../../img.shields.io/travis/evilsocket/pwnagotchi/master_style%3Dflat-square.svg"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/evilsocket/pwnagotchi"><i class="fab fa-github"></i> pwnagotchi</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.reddit.com/r/pwnagotchi/"><i class="fab fa-reddit"></i> r/pwnagotchi</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+
+        
+        <div id="body-inner">
+          
+
+
+        
+
+<span id="sidebar-toggle-span">
+<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
+</span>
+
+<style> 
+p {text-align: center;}
+</style>
+
+
+<h1 id="pwnagotchi-deep-reinforcement-learning-for-wifi-pwning">Pwnagotchi: Deep Reinforcement Learning for WiFi pwning!</h1>
+
+<p><a href="https://twitter.com/pwnagotchi">Pwnagotchi</a> is an <a href="https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752">A2C</a>-based “AI” powered by <a href="https://www.bettercap.org/">bettercap</a> and running on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a> that learns from its surrounding WiFi environment in order to maximize the <a href="/intro/#wifi-handshakes-101">crackable WPA key material it captures</a> (either through passive sniffing or by performing deauthentication and association attacks). This material is collected on disk as PCAP files containing any form of handshake supported by <a href="https://hashcat.net/hashcat/">hashcat</a>, including full and half WPA handshakes as well as <a href="https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/">PMKIDs</a>.</p>
+
+<p>Learn more about <a href="https://www.evilsocket.net/2019/10/19/Weaponizing-and-Gamifying-AI-for-WiFi-Hacking-Presenting-Pwnagotchi-1-0-0/">the project and how it started on the author’s blog</a>.</p>
+
+<p>Instead of merely playing <a href="https://becominghuman.ai/getting-mario-back-into-the-gym-setting-up-super-mario-bros-in-openais-gym-8e39a96c1e41?gi=c4b66c3d5ced">Super Mario or Atari games</a> like most reinforcement learning based “AI” <em>(yawn)</em>, Pwnagotchi tunes <a href="https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml#L137">its own parameters</a> over time to <strong>get better at pwning WiFi things</strong> in the real world environments you expose it to.</p>
+
+<div class="notices tip"><p><strong>Learn more about <a href="/intro/#how-does-pwnagotchi-work">how Pwnagotchi works</a> and why it <a href="/intro/#wifi-handshakes-101">eats WPA handshakes</a> in the <i class="fas fa-star-of-life" style="color:#b33636;"></i> <a href="/intro/">Introduction</a> doc. You can also read about <a href="https://www.evilsocket.net/2019/10/19/Weaponizing-and-Gamifying-AI-for-WiFi-Hacking-Presenting-Pwnagotchi-1-0-0/" target="_blank">the story of the project</a>.</strong></p>
+</div>
+
+
+<h2 id="but-why">But…why?</h2>
+
+<p>To give hackers an excuse to learn about reinforcement learning and WiFi networking—and have a reason to get out for more walks.</p>
+
+<p>Also? <strong>It’s cute as f—</strong>.</p>
+
+<div class="notices info"><p><strong>In case you're curious about the name:</strong> <em>Pwnagotchi</em> (ポーナゴッチ) is a portmanteau of <em>pwn</em> and <em>-gotchi</em>. It is a nostalgic reference made in homage to a very popular children's toy from the 1990s called the <a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a>. The Tamagotchi (たまごっち, derived from <em>tamago</em> (たまご) "egg" + <em>uotchi</em> (ウオッチ) "watch") is a cultural touchstone for many Millennial hackers as a formative electronic toy from our collective childhoods. <br><br>Were <em>you</em> lucky enough to possess a Tamagotchi as a kid? Well, with your Pwnagotchi, you too can enjoy the nostalgic delight of being strangely emotionally attached to a handheld automata <em>yet again!</em> Except, this time around...you get to #HackThePlanet. &gt;:D</p>
+</div>
+
+    <div id="navigation">
+        
+
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="./js/clipboard.min_1619273531.js"></script>
+    <script src="./js/perfect-scrollbar.min_1619273531.js"></script>
+    <script src="./js/perfect-scrollbar.jquery.min_1619273531.js"></script>
+    <script src="./js/jquery.sticky_1619273531.js"></script>
+    <script src="./js/featherlight.min_1619273531.js"></script>
+    <script src="./js/html5shiv-printshiv.min_1619273531.js"></script>
+    <script src="./js/highlight.pack_1619273531.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="./js/modernizr.custom.71422_1619273531.js"></script>
+    <script src="./js/learn_1619273531.js"></script>
+    <script src="./js/hugo-learn_1619273531.js"></script>
+
+    <link href="./mermaid/mermaid_1619273531.css" type="text/css" rel="stylesheet">
+    <script src="./mermaid/mermaid_1619273531.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script async="" defer="" src="../../buttons.github.io/buttons.js"></script>
+
+<script async="" src="../../platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="../../ssl.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-149427491-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  
+
+
+</body></html>
