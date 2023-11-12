@@ -3,8 +3,8 @@
     
     --MAIN-TEXT-color:#323232; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
-    --MAIN-LINK-color:#c78d08; /* Color of links */
-    --MAIN-LINK-HOVER-color:#f8b506; /* Color of hovered links */
+    --MAIN-LINK-color:#ac0000; /* Color of links */
+    --MAIN-LINK-HOVER-color:#ff0000; /* Color of hovered links */
     --MAIN-ANCHOR-color: #f8b506; /* color of anchors on titles */
 
     --MENU-HEADER-BG-color:#1c0000; /* Background color of menu header */
@@ -18,8 +18,8 @@
     --MENU-SECTIONS-BG-color:#300000; /* Background color of other sections */
     --MENU-SECTIONS-LINK-color: #9b9b9b; /* Color of links in menu */
     --MENU-SECTIONS-LINK-HOVER-color: #ffffff;  /* Color of links in menu, when hovered */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #ffffff; /* Color of background for the active category (only) */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #ffffff; /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #1c0000; /* Color of background for the active category (only) */
     
     --MENU-VISITED-color: #ff3333; /* Color of 'page visited' icons in menu */
     --MENU-SECTION-HR-color: #2b2020; /* Color of <hr> separator in menu */
