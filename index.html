@@ -66,7 +66,13 @@ code {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* This sets the default font size */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.9rem; /* Adjust the font size for smaller screens */
+  }
 }
 
 #logo > h1 > img {
@@ -165,7 +171,7 @@ div.toc > nav#TableOfContents > ul {
 
 
     <a>
-      <p><h1><font color="#8b0000">Pwnagotchi dev site</font></h1>
+      <p><h1><font color="#ffffffff">Pwnagotchi dev site</font></h1>
   </a>
 
 
@@ -201,54 +207,65 @@ div.toc > nav#TableOfContents > ul {
  
   
     
+   
                       <!-- Introduction -->
-                  <li data-nav-id="Introduction" title="Introduction" class="dd-item">
-                      <a href="Introduction.html">
-                          <i class="fas fa-star-of-life"></i> Introduction
+                      <li data-nav-id="Introduction" title="Introduction" class="dd-item parent active visited">
+                        <a href="Introduction.html">
+                            <i class="fas fa-star-of-life"></i> introduction
+                        </a>
+                    </li>
+  
+                    <!-- Installation -->
+                    <li data-nav-id="How-to" title="How-to" class="dd-item">
+                      <a href="How-to.html">
+                          <i class="fas fa-brain"></i> how-to
                       </a>
-                  </li>
+                   </li>
+  
+                    <!-- Installation -->
+                    <li data-nav-id="3rd-party-Images" title="3rd-party Images" class="dd-item">
+                        <a href="3rd-party-Images.html">
+                            <i class="fas fa-flask"></i> 3rd-party images
+                        </a>
+                    </li>
+  
+                    <!-- Plugins -->
+                    <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item">
+                        <a href="3rd-party-Plugins.html">
+                            <i class="fas fa-puzzle-piece"></i> 3rd-party plugins
+                        </a>
+                    </li>
 
-                  <!-- Installation -->
-                  <li data-nav-id="3rd-party-Images" title="3rd-party Images" class="dd-item">
-                      <a href="3rd-party-Images.html">
-                          <i class="fas fa-flask"></i> 3rd-party Images
-                      </a>
-                  </li>
+                    <!-- 3d -->
+                    <li data-nav-id="3d-Printables" title="3d Printables" class="dd-item">
+                        <a href="3d-printable-Cases.html">
+                            <i class="fas fa-box-open"></i> 3d printable cases
+                        </a>
+                    </li>
+  
+                    <!-- customization -->
+                    <li data-nav-id="Customization" title="Customization" class="dd-item">
+                        <a href="Customization.html">
+                            <i class="fas fa-cog"></i> customization
+                        </a>
+                    </li>
+  
+                    <!-- Contributing -->
+                    <li data-nav-id="Contributing" title="Contributing" class="dd-item">
+                        <a href="Contributing.html">
+                            <i class="fas fa-dna"></i> contributing
+                        </a>
+                    </li>
+  
+                    <!-- Hall of  -->
+                    <li data-nav-id="Hall-of-" title="Hall of Fame" class="dd-item">
+                        <a href="Hall-of-Fame.html">
+                            <i class="fas fa-trophy"></i> hall of fame
+                        </a>
+                    </li>
+  
+  
 
-                  <!-- Plugins -->
-                  <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item">
-                      <a href="3rd-party-Plugins.html">
-                          <i class="fas fa-puzzle-piece"></i> 3rd-party Plugins
-                      </a>
-                  </li>
-
-                  <!-- Configuration -->
-                  <li data-nav-id="Configuration" title="Configuration" class="dd-item">
-                      <a href="Configuration.html">
-                          <i class="fas fa-cog"></i> Configuration
-                      </a>
-                  </li>
-
-                  <!-- Guides -->
-                  <li data-nav-id="Guides" title="Guides" class="dd-item">
-                      <a href="Guides.html">
-                          <i class="fas fa-brain"></i> Guides
-                      </a>
-                  </li>
-
-                  <!-- Contributing -->
-                  <li data-nav-id="Contributing" title="Contributing" class="dd-item">
-                      <a href="Contributing.html">
-                          <i class="fas fa-dna"></i> Contributing
-                      </a>
-                  </li>
-
-                  <!-- Hall of Fame -->
-                  <li data-nav-id="Hall-of-Fame" title="Hall of Fame" class="dd-item">
-                      <a href="Hall-of-Fame.html">
-                          <i class="fas fa-trophy"></i> Hall of Fame
-                      </a>
-                  </li>
 
  
          
@@ -256,40 +273,38 @@ div.toc > nav#TableOfContents > ul {
 
     
     
-      <section id="shortcuts">
-        <h3></h3>
-        <ul>
-          
-              <li> 
-                  <a class="padding" href="https://twitter.com/intent/follow?screen_name=pwnagotchi"><br><img src="https://img.shields.io/twitter/follow/pwnagotchi?style=social&amp;logo=twitter" alt="follow on Twitter"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://community.pwnagotchi.ai/"><img alt="Discourse posts" src="../../img.shields.io/discourse/posts/server%3Dhttps%253A%252F%252Fcommunity.pwnagotchi.ai%252F%26style%3Dflat-square"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://invite.pwnagotchi.ai/"><img alt="Slack" src="../../invite.pwnagotchi.ai/badge.svg/index.html"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://github.com/evilsocket/pwnagotchi/blob/master/LICENSE.md"><img alt="Software License" src="../../img.shields.io/badge/license-GPL3-brightgreen_style%3Dflat-square.svg"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://travis-ci.org/evilsocket/pwnagotchi"><img alt="Travis" src="../../img.shields.io/travis/evilsocket/pwnagotchi/master_style%3Dflat-square.svg"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://github.com/evilsocket/pwnagotchi"><i class="fab fa-github"></i> pwnagotchi</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.reddit.com/r/pwnagotchi/"><i class="fab fa-reddit"></i> r/pwnagotchi</a>
-              </li>
-          
-        </ul>
-      </section>
+                <style>
+                  #shortcuts {
+                  position: fixed;
+                  bottom: 0;
+
+              }
+
+              .brsmall { 
+                          display: block; 
+                          margin-bottom: 0.75em; 
+              } 
+            </style>
+
+            <section id="shortcuts">
+            <h3></h3>
+            <ul>
+              
+                  <li> 
+                      <a class="padding" href="https://twitter.com/intent/follow?screen_name=pwnagotchi"><i class="fab fa-twitter"></i> Twitter</a>
+                  </li>
+              
+                  <li> 
+                      <a class="padding" href="https://discord.gg/PgaU3Vp"><i class="fab fa-discord"></i> unofficial Discord</a>
+                  </li>
+
+                  <li> 
+                      <a class="padding" href="https://www.reddit.com/r/pwnagotchi/"><i class="fab fa-reddit"></i> r/pwnagotchi</a>
+                  </li>
+                  <span class="brsmall"></span>
+              
+            </ul>
+            </section>
     
 
     
@@ -319,29 +334,57 @@ div.toc > nav#TableOfContents > ul {
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
+<script>
+  // Get references to the button, body element, and overlay div
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+  const body = document.body;
+  const overlay = document.getElementById("overlay");
 
+  // Add a click event listener to the button
+  sidebarToggle.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
 
-<h1 id="pwnagotchi-deep-reinforcement-learning-for-wifi-pwning">Pwnagotchi: Deep Reinforcement Learning for WiFi pwning!</h1>
+    // Add the "sidebar-hidden" class to the body element
+    body.classList.add("sidebar-hidden");
+  });
 
-<p><a href="https://twitter.com/pwnagotchi">Pwnagotchi</a> is an <a href="https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752">A2C</a>-based “AI” powered by <a href="https://www.bettercap.org/">bettercap</a> and running on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a> that learns from its surrounding WiFi environment in order to maximize the <a href="/intro/#wifi-handshakes-101">crackable WPA key material it captures</a> (either through passive sniffing or by performing deauthentication and association attacks). This material is collected on disk as PCAP files containing any form of handshake supported by <a href="https://hashcat.net/hashcat/">hashcat</a>, including full and half WPA handshakes as well as <a href="https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/">PMKIDs</a>.</p>
+  // Add a click event listener to the overlay div
+  overlay.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
 
-<p>Learn more about <a href="https://www.evilsocket.net/2019/10/19/Weaponizing-and-Gamifying-AI-for-WiFi-Hacking-Presenting-Pwnagotchi-1-0-0/">the project and how it started on the author’s blog</a>.</p>
+    // Remove the "sidebar-hidden" class from the body element
+    body.classList.remove("sidebar-hidden");
+  });
+</script>
 
-<p><img src="../../media.giphy.com/media/f9GsXyfgEQbY65fnhu/source.gif"></p>
+<style>
+  p {
+  text-align: center;
+}
 
-<p>Instead of merely playing <a href="https://becominghuman.ai/getting-mario-back-into-the-gym-setting-up-super-mario-bros-in-openais-gym-8e39a96c1e41?gi=c4b66c3d5ced">Super Mario or Atari games</a> like most reinforcement learning based “AI” <em>(yawn)</em>, Pwnagotchi tunes <a href="https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml#L137">its own parameters</a> over time to <strong>get better at pwning WiFi things</strong> in the real world environments you expose it to.</p>
+.image-container {
+      display: flex;
+}
 
-<div class="notices tip"><p><strong>Learn more about <a href="/intro/#how-does-pwnagotchi-work">how Pwnagotchi works</a> and why it <a href="/intro/#wifi-handshakes-101">eats WPA handshakes</a> in the <i class="fas fa-star-of-life" style="color:#b33636;"></i> <a href="/intro/">Introduction</a> doc. You can also read about <a href="https://www.evilsocket.net/2019/10/19/Weaponizing-and-Gamifying-AI-for-WiFi-Hacking-Presenting-Pwnagotchi-1-0-0/" target="_blank">the story of the project</a>.</strong></p>
+.image-container img {
+      width: 200%;
+      height: 200%;
+      width: flex;
+      height: flex;
+}
+</style>
+
+<h1 id="pwnagotchi-deep-reinforcement-learning-for-wifi-pwning">Welcome to the pwnagotchi dev wiki</h1>
+
+<p>This is the community based wiki site for all your Pwnagotchi needs. No matter what you want to do, we got you covered. Why would you spend hours searching Github, when you can just use this wiki site to get to your desired information with ease?</p>
+
+<p>If you want to add information to the wiki page, either reach out to one of the developers or simply open a pull request on Github.</p>
+
+<div class="notices tip"><p><strong>What are you waiting for? Explore this page and enhance your Pwnagotchi experience!</strong></p>
 </div>
 
-
-<h2 id="but-why">But…why?</h2>
-
-<p>To give hackers an excuse to learn about reinforcement learning and WiFi networking—and have a reason to get out for more walks.</p>
-
-<p>Also? <strong>It’s cute as f—</strong>.</p>
-
-<div class="notices info"><p><strong>In case you're curious about the name:</strong> <em>Pwnagotchi</em> (ポーナゴッチ) is a portmanteau of <em>pwn</em> and <em>-gotchi</em>. It is a nostalgic reference made in homage to a very popular children's toy from the 1990s called the <a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a>. The Tamagotchi (たまごっち, derived from <em>tamago</em> (たまご) "egg" + <em>uotchi</em> (ウオッチ) "watch") is a cultural touchstone for many Millennial hackers as a formative electronic toy from our collective childhoods. <br><br>Were <em>you</em> lucky enough to possess a Tamagotchi as a kid? Well, with your Pwnagotchi, you too can enjoy the nostalgic delight of being strangely emotionally attached to a handheld automata <em>yet again!</em> Except, this time around...you get to #HackThePlanet. &gt;:D</p>
+<div class="image-container">
+  <img src="oldgif.gif" alt="standart Pwnagotchi">
 </div>
 
     <div id="navigation">

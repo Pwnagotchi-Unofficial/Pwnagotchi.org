@@ -142,19 +142,12 @@ div.toc > nav#TableOfContents > ul {
     height: 300px;
 }
 
-object {
-  position: relative;
-  top: -20px;
-}
-
-@media only all and (max-width: 47.938em) {
-    #body .padding {
-        padding: 5px 0 !important;
-        padding-top: 5px !important;
-        padding-right: 0 !important;
-        padding-bottom: 5px !important;
-        padding-left: 0 !important;
-    }
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
 }
 </style>
 
@@ -221,6 +214,7 @@ object {
 
  
   
+    
                       <!-- Introduction -->
                       <li data-nav-id="Introduction" title="Introduction" class="dd-item">
                         <a href="Introduction.html">
@@ -229,7 +223,7 @@ object {
                     </li>
   
                     <!-- Installation -->
-                    <li data-nav-id="How-to" title="How-to" class="dd-item">
+                    <li data-nav-id="How-to" title="How-to" class="dd-item parent active visited">
                       <a href="How-to.html">
                           <i class="fas fa-brain"></i> how-to
                       </a>
@@ -243,7 +237,7 @@ object {
                     </li>
   
                     <!-- Plugins -->
-                    <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item parent active visited">
+                    <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item">
                         <a href="3rd-party-Plugins.html">
                             <i class="fas fa-puzzle-piece"></i> 3rd-party plugins
                         </a>
@@ -277,7 +271,7 @@ object {
                         </a>
                     </li>
   
-  
+
  
          
     </ul>
@@ -331,10 +325,12 @@ object {
 
         <section id="body">
         <div id="overlay"></div>
-
+        <div class="padding highlightable">
+              
 
         
-
+        <div id="body-inner">
+          
 
 
         
@@ -372,40 +368,11 @@ p {text-align: center;}
 
 
 </div>
-      <br></br>
-      <style>
-        /* Default styles with padding */
-        .object-container {
-          padding: 20px;
-        }
-      
-        /* Media query to decrease padding when screen width is between 780px and 768px  */
-        @media (max-width: 780px) and (min-width: 768px) {
-          .object-container {
-            padding: 10px;
-          }
-        }
-      
-        /* Media query to remove padding on screens 767px or smaller  */
-        @media (max-width: 767px) {
-          .object-container {
-            padding: 0;
-          }
-        }
-         */
-      </style>
-      
+          <div>
+            <iframe src="howto.html" id="embeddedFrame" style="width: 1500px; height: 1100px; max-width: 100%;" frameborder="0"></iframe>
+          </div>
 
-
-
-      <div class="object-container">
-        <object data="plugins.html" width="100%" height="1250">
-          <!-- This content is displayed if the browser doesn't support <object> -->
-          <p>Your browser does not support embedded content.</p>
-        </object>
-      </div>
-
-
+          
 
     <div id="navigation">
         

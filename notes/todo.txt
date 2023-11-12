@@ -1,0 +1,7 @@
+finish 3d print stuff
+add hardware mods to customization
+finish customization
+better introduction
+survey page for community stuff
+maybe redo some stuff with react so its easier to add stuff for people who dont know html
+clean the code (move the css out of the html files and into folders etc)

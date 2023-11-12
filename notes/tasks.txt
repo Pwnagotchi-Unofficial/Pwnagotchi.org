@@ -1,0 +1,22 @@
+crackhouse					 https://github.com/V0r-T3x/pwnagotchi_LCD_colorized_darkmode/blob/b5792224f1c17b6f14e2acac1e28470cdd424983/files/crack_house.py        v 1.0.0
+banthex						 https://github.com/adi170-alt/pwnagotchi-banthex-upload/blob/main/banthex.py								v 1.5.0
+onlinehashcrack					 https://github.com/evilsocket/pwnagotchi/blob/2122af4e264495d32ee415c074da8efd905901f0/pwnagotchi/plugins/default/onlinehashcrack.py	v 2.1.0
+wpasec					       	 https://github.com/evilsocket/pwnagotchi/blob/2122af4e264495d32ee415c074da8efd905901f0/pwnagotchi/plugins/default/wpa-sec.py		v 2.1.0
+dashboard2				 	 https://github.com/itsdarklikehell/pwnagotchi-plugins/blob/ab088a12f25ca3acca33d68d5d5d2625172a4787/dashboard2.py			v 1.0.0	 
+discohash					 https://github.com/flamebarke/DiscoHash/blob/main/discohash.py										v 1.1.0
+display password				 https://github.com/c-nagy/pwnagotchi-display-password-plugin/blob/master/display-password.py					        v 2.1.0
+display version					 https://github.com/Teraskull/pwnagotchi-community-plugins/blob/1ee41500935c2bf11d9f506b294d9ebdf4034437/display_version.py	  	v 1.0.0
+educational					 https://github.com/c-nagy/pwnagotchi-educational-purposes-only-plugin/blob/main/educational-purposes-only.py				v 1.0.0
+experience					 https://github.com/GaelicThunder/Experience-Plugin-Pwnagotchi/blob/master/exp.py							v 1.0.5
+age						 https://github.com/hannadiamond/pwnagotchi-plugins/blob/93ac6dac6a8e12c967d8330720318ab852f1f473/plugins/age.py			v 1.0.1
+external wifi					 https://github.com/unagisan69/pwnagotchi-external-wifi-plugin/blob/main/ext_wifi.py							v 1.0.0
+f0xtr0t						 https://github.com/sixt0o/f0xtr0t/blob/main/f0xtr0t.py	 										v 1.4.2
+fix_region					 https://github.com/V0r-T3x/pwnagotchi_plugins/blob/main/plugins/fix_region.py								v 1.0
+hashespwnagotchi				 https://github.com/jjensn/hashespwnagotchi/blob/master/hashespwnagotchi.py 								v 0.0.1
+hulk 						 https://github.com/dadav/pwnagotchi-custom-plugins/blob/867eb90b816c04e41d07be52cd3cf92268cc5a00/hulk.py#				v 1.0.0
+internet connection				 https://github.com/jayofelony/pwnagotchi-torch-plugins/blob/main/internet-connection.py						v 1.2
+my cracked pw					 https://github.com/SilenTree12th/pwnagotchi_plugins/blob/main/mycracked_pw.py								v 5.1.1
+net-pos						 https://github.com/evilsocket/pwnagotchi/blob/2122af4e264495d32ee415c074da8efd905901f0/pwnagotchi/plugins/default/net-pos.py		v 2.0.3
+pisugar2					 https://github.com/tisboyo/pwnagotchi-pisugar2-plugin/blob/master/pisugar2.py								v 0.0.1
+pisugar 3 improved				 https://github.com/nullm0ose/pwnagotchi-plugin-pisugar3/blob/main/pisugar3.py								v 1.0.0
+pwnmenu						 https://gitlab.com/sn0wflake/pwnagotchi-pwnmenu-plugin/-/blob/main/pwnmenu.py								v 1.0.0	

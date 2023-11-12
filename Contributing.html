@@ -66,7 +66,13 @@ code {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* This sets the default font size */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.9rem; /* Adjust the font size for smaller screens */
+  }
 }
 
 #logo > h1 > img {
@@ -135,6 +141,10 @@ div.toc > nav#TableOfContents > ul {
     width: 100%;
     height: 300px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 </style>
 
 <script src="../../code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
@@ -165,7 +175,7 @@ div.toc > nav#TableOfContents > ul {
 
 
   <a>
-      <p><h1><font color="#8b0000">Pwnagotchi dev site</font></h1>
+      <p><h1><font color="#ffffffff">Pwnagotchi dev site</font></h1>
   </a>
 
 
@@ -201,53 +211,62 @@ div.toc > nav#TableOfContents > ul {
   
     
                       <!-- Introduction -->
-                  <li data-nav-id="Introduction" title="Introduction" class="dd-item">
-                      <a href="Introduction.html">
-                          <i class="fas fa-star-of-life"></i> Introduction
+                      <li data-nav-id="Introduction" title="Introduction" class="dd-item">
+                        <a href="Introduction.html">
+                            <i class="fas fa-star-of-life"></i> introduction
+                        </a>
+                    </li>
+  
+                    <!-- Installation -->
+                    <li data-nav-id="How-to" title="How-to" class="dd-item">
+                      <a href="How-to.html">
+                          <i class="fas fa-brain"></i> how-to
                       </a>
-                  </li>
+                   </li>
+  
+                    <!-- Installation -->
+                    <li data-nav-id="3rd-party-Images" title="3rd-party Images" class="dd-item">
+                        <a href="3rd-party-Images.html">
+                            <i class="fas fa-flask"></i> 3rd-party images
+                        </a>
+                    </li>
+  
+                    <!-- Plugins -->
+                    <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item">
+                        <a href="3rd-party-Plugins.html">
+                            <i class="fas fa-puzzle-piece"></i> 3rd-party plugins
+                        </a>
+                    </li>
+  
+                    <!-- 3d -->
+                    <li data-nav-id="3d-Printables" title="3d Printables" class="dd-item">
+                      <a href="3d-printable-Cases.html">
+                          <i class="fas fa-box-open"></i> 3d printable cases
+                      </a>
+                    </li>
 
-                  <!-- Installation -->
-                  <li data-nav-id="3rd-party-Images" title="3rd-party Images" class="dd-item">
-                      <a href="3rd-party-Images.html">
-                          <i class="fas fa-flask"></i> 3rd-party Images
-                      </a>
-                  </li>
+                    <!-- customization -->
+                    <li data-nav-id="Customization" title="Customization" class="dd-item">
+                        <a href="Customization.html">
+                            <i class="fas fa-cog"></i> customization
+                        </a>
+                    </li>
+  
+                    <!-- Contributing -->
+                    <li data-nav-id="Contributing" title="Contributing" class="dd-item parent active visited">
+                        <a href="Contributing.html">
+                            <i class="fas fa-dna"></i> contributing
+                        </a>
+                    </li>
+  
+                    <!-- Hall of  -->
+                    <li data-nav-id="Hall-of-" title="Hall of Fame" class="dd-item">
+                        <a href="Hall-of-Fame.html">
+                            <i class="fas fa-trophy"></i> hall of fame
+                        </a>
+                    </li>
+  
 
-                  <!-- Plugins -->
-                  <li data-nav-id="3rd-party-Plugins" title="3rd-party Plugins" class="dd-item">
-                      <a href="3rd-party-Plugins.html">
-                          <i class="fas fa-puzzle-piece"></i> 3rd-party Plugins
-                      </a>
-                  </li>
-
-                  <!-- Configuration -->
-                  <li data-nav-id="Configuration" title="Configuration" class="dd-item">
-                      <a href="Configuration.html">
-                          <i class="fas fa-cog"></i> Configuration
-                      </a>
-                  </li>
-
-                  <!-- Guides -->
-                  <li data-nav-id="Guides" title="Guides" class="dd-item">
-                      <a href="Guides.html">
-                          <i class="fas fa-brain"></i> Guides
-                      </a>
-                  </li>
-
-                  <!-- Contributing -->
-                  <li data-nav-id="Contributing" title="Contributing" class="dd-item">
-                      <a href="Contributing.html">
-                          <i class="fas fa-dna"></i> Contributing
-                      </a>
-                  </li>
-
-                  <!-- Hall of Fame -->
-                  <li data-nav-id="Hall-of-Fame" title="Hall of Fame" class="dd-item">
-                      <a href="Hall-of-Fame.html">
-                          <i class="fas fa-trophy"></i> Hall of Fame
-                      </a>
-                  </li>
 
  
          
@@ -255,40 +274,38 @@ div.toc > nav#TableOfContents > ul {
 
     
     
-      <section id="shortcuts">
-        <h3></h3>
-        <ul>
-          
-              <li> 
-                  <a class="padding" href="https://twitter.com/intent/follow?screen_name=pwnagotchi"><br><img src="https://img.shields.io/twitter/follow/pwnagotchi?style=social&amp;logo=twitter" alt="follow on Twitter"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://community.pwnagotchi.ai/"><img alt="Discourse posts" src="../../img.shields.io/discourse/posts/server%3Dhttps%253A%252F%252Fcommunity.pwnagotchi.ai%252F%26style%3Dflat-square"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://invite.pwnagotchi.ai/"><img alt="Slack" src="../../invite.pwnagotchi.ai/badge.svg/index.html"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://github.com/evilsocket/pwnagotchi/blob/master/LICENSE.md"><img alt="Software License" src="../../img.shields.io/badge/license-GPL3-brightgreen_style%3Dflat-square.svg"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://travis-ci.org/evilsocket/pwnagotchi"><img alt="Travis" src="../../img.shields.io/travis/evilsocket/pwnagotchi/master_style%3Dflat-square.svg"></a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://github.com/evilsocket/pwnagotchi"><i class="fab fa-github"></i> pwnagotchi</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.reddit.com/r/pwnagotchi/"><i class="fab fa-reddit"></i> r/pwnagotchi</a>
-              </li>
-          
-        </ul>
-      </section>
+                <style>
+                  #shortcuts {
+                  position: fixed;
+                  bottom: 0;
+
+              }
+
+              .brsmall { 
+                          display: block; 
+                          margin-bottom: 0.75em; 
+              } 
+            </style>
+
+            <section id="shortcuts">
+            <h3></h3>
+            <ul>
+              
+                  <li> 
+                      <a class="padding" href="https://twitter.com/intent/follow?screen_name=pwnagotchi"><i class="fab fa-twitter"></i> Twitter</a>
+                  </li>
+              
+                  <li> 
+                      <a class="padding" href="https://discord.gg/PgaU3Vp"><i class="fab fa-discord"></i> unofficial Discord</a>
+                  </li>
+
+                  <li> 
+                      <a class="padding" href="https://www.reddit.com/r/pwnagotchi/"><i class="fab fa-reddit"></i> r/pwnagotchi</a>
+                  </li>
+                  <span class="brsmall"></span>
+              
+            </ul>
+            </section>
     
 
     
@@ -318,21 +335,473 @@ div.toc > nav#TableOfContents > ul {
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
+<script>
+  // Get references to the button, body element, and overlay div
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+  const body = document.body;
+  const overlay = document.getElementById("overlay");
+
+  // Add a click event listener to the button
+  sidebarToggle.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Add the "sidebar-hidden" class to the body element
+    body.classList.add("sidebar-hidden");
+  });
+
+  // Add a click event listener to the overlay div
+  overlay.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Remove the "sidebar-hidden" class from the body element
+    body.classList.remove("sidebar-hidden");
+  });
+</script>
+
  
-<style> 
-p {text-align: center;}
-</style>
+
     
 
 <h1 id="pwnagotchi-deep-reinforcement-learning-for-wifi-pwning">CONTRIBUTING</h1>
 
-<p>If you want to contribute to this site, feel free to open a Github pull request, or if you find bugs and exploits, either DM one of the developers or open a new issue on Github. </p>
+<p>In this site, we'll explain how to contribute to the <strong>Pwnagotchi community!</strong> Do you want to add a feature? <strong>Code a plugin!</strong> While beginners might fear tinkering with their Pwnagotchi, this is where the ultimate freedom begins.</p>
 
-<div class="notices info"><p><strong>In case you're curious about the name:</strong> <em>Pwnagotchi</em> (ポーナゴッチ) is a portmanteau of <em>pwn</em> and <em>-gotchi</em>. It is a nostalgic reference made in homage to a very popular children's toy from the 1990s called the <a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a>. The Tamagotchi (たまごっち, derived from <em>tamago</em> (たまご) "egg" + <em>uotchi</em> (ウオッチ) "watch") is a cultural touchstone for many Millennial hackers as a formative electronic toy from our collective childhoods. <br><br>Were <em>you</em> lucky enough to possess a Tamagotchi as a kid? Well, with your Pwnagotchi, you too can enjoy the nostalgic delight of being strangely emotionally attached to a handheld automata <em>yet again!</em> Except, this time around...you get to #HackThePlanet. &gt;:D</p>
+<div class="notices note"><p>This contributing page is <strong> not </strong> for this wiki, its for the Pwnagotchi framework in general. However if you made a new plugin or image, which you want to be displayed on this site, feel free to <strong>open a pull request or reach out to one of the developers.</strong></p>
 </div>
 
 <div class="notices info"><p><strong>The site is still WIP:</strong> this site is currently beeing developed. Due to this, the site can change at any moment. Please be patient, while we do our best to enhance your experience.</a>. 
 </div>
+
+<div class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#writing-a-plugin" class="highlight">Writing a Plugin</a></li>
+<li><a href="#adding-a-new-display" class="highlight">Adding a new Display</a></li>
+<li><a href="#creating-an-image" class="highlight">Creating an Image</a></li>
+<li><a href="#adding-a-language" class="highlight">Adding a Language</a>
+<ul>
+<li><a href="#contributing-a-new-translation" class="highlight">Contributing a new translation</a></li>
+<li><a href="#updating-an-existing-translation" class="highlight">Updating an existing translation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+  <hr>
+
+
+<h2 id="writing-a-plugin">Developing your own plugin</h2>
+
+<p>If you want to develop your own plugin, you have the following callbacks availaible:</p>
+
+<table>
+<thead>
+<tr>
+<th>Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>on_ai_best_reward</code></td>
+<td>Called when the AI got the best reward so far.</td>
+</tr>
+
+<tr>
+<td><code>on_ai_policy</code></td>
+<td>Called when the AI finds a new set of parameters.</td>
+</tr>
+
+<tr>
+<td><code>on_ai_ready</code></td>
+<td>Called when the AI finished loading.</td>
+</tr>
+
+<tr>
+<td><code>on_ai_training_end</code></td>
+<td>Called when the AI has done training.</td>
+</tr>
+
+<tr>
+<td><code>on_ai_training_start</code></td>
+<td>Called when the AI starts training for a given number of epochs.</td>
+</tr>
+
+<tr>
+<td><code>on_ai_training_step</code></td>
+<td>Called after the AI completed a training epoch.</td>
+</tr>
+
+<tr>
+<td><code>on_ai_worst_reward</code></td>
+<td>Called when the AI got the worst reward so far.</td>
+</tr>
+
+<tr>
+<td><code>on_association</code></td>
+<td>Called when the agent is sending an association frame.</td>
+</tr>
+
+<tr>
+<td><code>on_bored</code></td>
+<td>Called when the status is set to bored.</td>
+</tr>
+
+<tr>
+<td><code>on_channel_hop</code></td>
+<td>callend when the agent is tuning on a specific channel.</td>
+</tr>
+
+<tr>
+<td><code>on_config_changed</code></td>
+<td>This will be triggered if the config has changed (also right after <strong>on_loaded</strong>).</td>
+</tr>
+
+<tr>
+<td><code>on_deauthentication</code></td>
+<td>Called when the agent is deauthenticating a client station from an AP.</td>
+</tr>
+
+<tr>
+<td><code>on_display_setup</code></td>
+<td>Called when the hardware display setup is done, display is an hardware specific object.</td>
+</tr>
+
+<tr>
+<td><code>on_epoch</code></td>
+<td>Called when an epoch is over (where an epoch is a single loop of the main algorithm).</td>
+</tr>
+
+<tr>
+<td><code>on_excited</code></td>
+<td>Called when the status is set to excited.</td>
+</tr>
+
+<tr>
+<td><code>on_free_channel</code></td>
+<td>Called when a non overlapping wifi channel is found to be free.</td>
+</tr>
+
+<tr>
+<td><code>on_handshake</code></td>
+<td>Called when a new handshake is captured, access_point and 
+client_station are json objects if the agent could match the BSSIDs to 
+the current list, otherwise they are just the strings of the BSSIDs.</td>
+</tr>
+
+<tr>
+<td><code>on_internet_available</code></td>
+<td>This will be triggered every few seconds during the time pwnagotchi has internet.</td>
+</tr>
+
+<tr>
+<td><code>on_loaded</code></td>
+<td>The plugin got loaded and is enabled.</td>
+</tr>
+
+<tr>
+<td><code>on_lonely</code></td>
+<td>Called when the status is set to lonely.</td>
+</tr>
+
+<tr>
+<td><code>on_peer_detected</code></td>
+<td>Called when a new peer is detected.</td>
+</tr>
+
+<tr>
+<td><code>on_peer_lost</code></td>
+<td>Called when a known peer is lost.</td>
+</tr>
+
+<tr>
+<td><code>on_ready</code></td>
+<td>Called when everything is ready and the main loop is about to start.</td>
+</tr>
+
+<tr>
+<td><code>on_rebooting</code></td>
+<td>Called when the agent is rebooting the board.</td>
+</tr>
+
+<tr>
+<td><code>on_sad</code></td>
+<td>Called when the status is set to sad.</td>
+</tr>
+
+<tr>
+<td><code>on_sleep</code></td>
+<td>Called when the agent is sleeping for t seconds.</td>
+</tr>
+
+<tr>
+<td><code>on_ui_setup</code></td>
+<td>Called to setup the ui elements.</td>
+</tr>
+
+<tr>
+<td><code>on_ui_update</code></td>
+<td>Called when the ui is updated.</td>
+</tr>
+
+<tr>
+<td><code>on_unfiltered_ap_list</code></td>
+<td>Called when the agent refreshed an unfiltered access point list this
+ list contains all access points that were detected BEFORE filtering.</td>
+</tr>
+
+<tr>
+<td><code>on_unload</code></td>
+<td>This will be triggered if the plugin gets unloaded (e.g. the user 
+toggled the enable/disable switch). You should remove unneeded <strong>ui-elements</strong> here.</td>
+</tr>
+
+<tr>
+<td><code>on_wait</code></td>
+<td>Called when the agent is waiting for t seconds.</td>
+</tr>
+
+<tr>
+<td><code>on_webhook</code></td>
+<td>You can provide some web-functionality here. Will be triggered if the user opens <code>/plugins/&lt;pluginname&gt;</code>.</td>
+</tr>
+
+<tr>
+<td><code>on_wifi_update</code></td>
+<td>Called when the agent refreshed its access points list.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<p>To illustrate how easy it is to add additional functionality via the plugin system, here is the code for the GPS plugin (<code>gps.py</code>):</p>
+
+<pre><code class="language-python hljs"><span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> pwnagotchi.plugins <span class="hljs-keyword">as</span> plugins
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GPS</span><span class="hljs-params">(plugins.Plugin)</span>:</span>
+    __author__ = <span class="hljs-string">'evilsocket@gmail.com'</span>
+    __version__ = <span class="hljs-string">'1.0.0'</span>
+    __license__ = <span class="hljs-string">'GPL3'</span>
+    __description__ = <span class="hljs-string">'Save GPS coordinates whenever an handshake is captured.'</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.running = <span class="hljs-keyword">False</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_loaded</span><span class="hljs-params">(self)</span>:</span>
+        logging.info(<span class="hljs-string">"gps plugin loaded for %s"</span> % self.options[<span class="hljs-string">'device'</span>])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_ready</span><span class="hljs-params">(self, agent)</span>:</span>
+        <span class="hljs-keyword">if</span> os.path.exists(self.options[<span class="hljs-string">'device'</span>]):
+            logging.info(<span class="hljs-string">"enabling gps bettercap's module for %s"</span> % self.options[<span class="hljs-string">'device'</span>])
+            <span class="hljs-keyword">try</span>:
+                agent.run(<span class="hljs-string">'gps off'</span>)
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">pass</span>
+
+            agent.run(<span class="hljs-string">'set gps.device %s'</span> % self.options[<span class="hljs-string">'device'</span>])
+            agent.run(<span class="hljs-string">'set gps.speed %d'</span> % self.options[<span class="hljs-string">'speed'</span>])
+            agent.run(<span class="hljs-string">'gps on'</span>)
+            self.running = <span class="hljs-keyword">True</span>
+        <span class="hljs-keyword">else</span>:
+            logging.warning(<span class="hljs-string">"no GPS detected"</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_handshake</span><span class="hljs-params">(self, agent, filename, access_point, client_station)</span>:</span>
+        <span class="hljs-keyword">if</span> self.running:
+            info = agent.session()
+            gps = info[<span class="hljs-string">'gps'</span>]
+            gps_filename = filename.replace(<span class="hljs-string">'.pcap'</span>, <span class="hljs-string">'.gps.json'</span>)
+
+            logging.info(<span class="hljs-string">"saving GPS to %s (%s)"</span> % (gps_filename, gps))
+            <span class="hljs-keyword">with</span> open(gps_filename, <span class="hljs-string">'w+t'</span>) <span class="hljs-keyword">as</span> fp:
+                json.dump(gps, fp)
+
+</code></pre>
+
+
+
+
+
+
+
+
+<p>Pwnagotchi’s developement environment is <a href="https://www.raspberrypi.org/downloads/raspbian/" class="highlight">Raspbian</a> + <a href="https://re4son-kernel.com/re4son-pi-kernel/" class="highlight">nexmon patches</a> for monitor mode, or any Linux with a monitor mode enabled interface (if you tune <code>config.toml</code>).</p>
+
+<div class="notices warning"><p>
+<strong>Do not try with Kali on the Raspberry Pi 0 W</strong>, it is compiled without hardware floating point support and TensorFlow is simply not available for it, use Raspbian.
+</p>
+</div>
+
+<h2 id="adding-a-new-display">Adding a new Display</h2>
+
+<p>Currently Pwnagotchi supports several displays and adding support for new ones is very easy!
+All you have to do is copying the specific Python libraries of the hardware <a href="https://github.com/evilsocket/pwnagotchi/tree/master/pwnagotchi/ui/hw/libs" class="highlight">into this folder</a>
+and then create a new class in its parent folder that implements the methods of the following abstract class:</p>
+
+<pre><code class="language-python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DisplayImpl</span><span class="hljs-params">(object)</span>:</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, config, name)</span>:</span>
+self.name = name
+self.config = config[<span class="hljs-string">'ui'</span>][<span class="hljs-string">'display'</span>]
+self._layout = {
+<span class="hljs-string">'width'</span>: <span class="hljs-number">0</span>,
+<span class="hljs-string">'height'</span>: <span class="hljs-number">0</span>,
+<span class="hljs-string">'face'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'name'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'channel'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'aps'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'uptime'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'line1'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'line2'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'friend_face'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'friend_name'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'shakes'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-string">'mode'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+<span class="hljs-comment"># status is special :D</span>
+<span class="hljs-string">'status'</span>: {
+    <span class="hljs-string">'pos'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+    <span class="hljs-string">'font'</span>: fonts.Medium,
+    <span class="hljs-string">'max'</span>: <span class="hljs-number">20</span>
+}
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">layout</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-keyword">raise</span> NotImplementedError
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-keyword">raise</span> NotImplementedError
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">render</span><span class="hljs-params">(self, canvas)</span>:</span>
+<span class="hljs-keyword">raise</span> NotImplementedError
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clear</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-keyword">raise</span> NotImplementedError
+</code></pre>
+
+<p>For instance, the <a href="https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/ui/hw/oledhat.py" class="highlight">pwnagotchi/ui/hw/oledhat.py</a> file which supports <a href="https://www.waveshare.com/wiki/1.3inch_OLED_HAT" class="highlight">this hat</a>
+looks like this:</p>
+
+<pre><code class="language-python hljs"><span class="hljs-keyword">import</span> logging
+
+<span class="hljs-keyword">import</span> pwnagotchi.ui.fonts <span class="hljs-keyword">as</span> fonts
+<span class="hljs-keyword">from</span> pwnagotchi.ui.hw.base <span class="hljs-keyword">import</span> DisplayImpl
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OledHat</span><span class="hljs-params">(DisplayImpl)</span>:</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, config)</span>:</span>
+super(OledHat, self).__init__(config, <span class="hljs-string">'oledhat'</span>)
+self._display = <span class="hljs-keyword">None</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">layout</span><span class="hljs-params">(self)</span>:</span>
+fonts.setup(<span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>)
+self._layout[<span class="hljs-string">'width'</span>] = <span class="hljs-number">128</span>
+self._layout[<span class="hljs-string">'height'</span>] = <span class="hljs-number">64</span>
+self._layout[<span class="hljs-string">'face'</span>] = (<span class="hljs-number">0</span>, <span class="hljs-number">32</span>)
+self._layout[<span class="hljs-string">'name'</span>] = (<span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
+self._layout[<span class="hljs-string">'channel'</span>] = (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+self._layout[<span class="hljs-string">'aps'</span>] = (<span class="hljs-number">25</span>, <span class="hljs-number">0</span>)
+self._layout[<span class="hljs-string">'uptime'</span>] = (<span class="hljs-number">65</span>, <span class="hljs-number">0</span>)
+self._layout[<span class="hljs-string">'line1'</span>] = [<span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">128</span>, <span class="hljs-number">9</span>]
+self._layout[<span class="hljs-string">'line2'</span>] = [<span class="hljs-number">0</span>, <span class="hljs-number">53</span>, <span class="hljs-number">128</span>, <span class="hljs-number">53</span>]
+self._layout[<span class="hljs-string">'friend_face'</span>] = (<span class="hljs-number">0</span>, <span class="hljs-number">41</span>)
+self._layout[<span class="hljs-string">'friend_name'</span>] = (<span class="hljs-number">40</span>, <span class="hljs-number">43</span>)
+self._layout[<span class="hljs-string">'shakes'</span>] = (<span class="hljs-number">0</span>, <span class="hljs-number">53</span>)
+self._layout[<span class="hljs-string">'mode'</span>] = (<span class="hljs-number">103</span>, <span class="hljs-number">10</span>)
+self._layout[<span class="hljs-string">'status'</span>] = {
+<span class="hljs-string">'pos'</span>: (<span class="hljs-number">30</span>, <span class="hljs-number">18</span>),
+<span class="hljs-string">'font'</span>: fonts.Small,
+<span class="hljs-string">'max'</span>: <span class="hljs-number">18</span>
+}
+<span class="hljs-keyword">return</span> self._layout
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(self)</span>:</span>
+logging.info(<span class="hljs-string">"initializing oledhat display"</span>)
+<span class="hljs-keyword">from</span> pwnagotchi.ui.hw.libs.waveshare.oledhat.epd <span class="hljs-keyword">import</span> EPD
+self._display = EPD()
+self._display.init()
+self._display.Clear()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">render</span><span class="hljs-params">(self, canvas)</span>:</span>
+self._display.display(canvas)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clear</span><span class="hljs-params">(self)</span>:</span>
+self._display.clear()
+</code></pre>
+
+<h2 id="creating-an-image">Creating an Image</h2>
+
+<p>If you want to create a custom image for testing, developing or just 
+hacking, you will need a GNU/Linux computer and the binaries for
+<code>curl</code>, <code>git</code>, <code>make</code>, <code>unzip</code>, <code>go</code>, <code>qemu-user-static</code> and <code>kpartx</code>. The Makefile will also temporarily install <a href="https://www.packer.io/" class="highlight">packer</a> and use <code>sudo</code> as needed.</p>
+
+<p>To create a zip file with the image and one with its sha256 checksum, just run:</p>
+
+<pre><code class="language-sh hljs bash">make image
+</code></pre>
+
+<p>To remove the generated files:</p>
+
+<pre><code class="language-sh hljs bash">sudo make clean
+</code></pre>
+
+<h2 id="adding-a-language">Adding a Language</h2>
+
+<h3 id="contributing-a-new-translation">Contributing a new translation</h3>
+
+<p>If you want to contribute a new translation of Pwnagotchi’s status messages for the UI, do the following:</p>
+
+
+<li><p>Copy the language template (<code>voice.pot</code>); the template should NOT be changed manually.</p>
+
+<pre><code class="language-bash hljs">./scripts/language.sh add &lt;lang&gt; (e.g. <span class="hljs-string">"de"</span>)
+</code></pre></li>
+
+<li><p>Now the user changes the file <code>pwnagotchi/locale/&lt;lang&gt;/LC_MESSAGES/voice.po</code></p>
+
+<ul>
+<li>The important part: be sure to change the <code>msgstr</code> part, NOT the <code>msgid</code> part!</li>
+</ul></li>
+
+<li><p>Now you’ll need to compile it; this will create the <code>.mo</code> files:</p></li>
+
+
+<pre><code class="language-bash hljs">./scripts/language.sh compile &lt;lang&gt;
+</code></pre>
+
+<h3 id="updating-an-existing-translation">Updating an existing translation</h3>
+
+<p>Sometimes we change old or add new status messages in Pwnagotchi’s UI. If that’s happened and something in the <code>voice.py</code> the code has changed, users can submit updated translations using the following procedure:</p>
+
+<ol>
+<li>Update the template and merges it with the already translated po-file:</li>
+</ol>
+
+<pre><code class="language-bash hljs">./scripts/language.sh update &lt;lang&gt;
+</code></pre>
+
+<ol>
+<li>Now you need to
+
+<ul>
+<li>Look for <code>fuzzy</code> marked strings in the file pwnagotchi/locale/<lang>/LC_MESSAGES/voice.po</lang></li>
+<li>Add your new/changed translation</li>
+<li>Remove the <code>fuzzy</code> string afterwards</li>
+</ul></li>
+<li>Recompile the <code>.mo</code> file</li>
+</ol>
+
+<pre><code class="language-bash hljs">./scripts/language.sh compile &lt;lang&gt;
+</code></pre>
+
+<p>Afterwards you can either compile it to a custom image, or submit it, in a pull request, to one ot multiple github image repos of your choice. After some time the developer/developers responsible for the repo should see your commit and hopefully add your translation.</p>
+
+
 
     <div id="navigation">
         
