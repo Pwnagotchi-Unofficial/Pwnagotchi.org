@@ -1,0 +1,56 @@
+[module]
+  [module.hugoVersion]
+    min = "0.112.4"
+
+[mediaTypes]
+  [mediaTypes."text/javascript"]
+    suffixes = ["js"]
+
+[outputFormats]
+  [outputFormats.PRINT]
+    name= "PRINT"
+    baseName = "index.print"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+    noUgly = true
+
+  [outputFormats.SEARCH]
+    name= "SEARCH"
+    baseName = "index.search"
+    isPlainText = true
+    mediaType = 'text/javascript'
+    permalinkable = false
+    noUgly = true
+
+  [outputFormats.SEARCHPAGE]
+    name= "SEARCHPAGE"
+    baseName = "search"
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+    noUgly = true
+
+[params]
+  themeVariant = "relearn-custom"
+  disableBreadcrumb = true
+  
+
+
+[params.relearn.dependencies]
+  [params.relearn.dependencies.mathjax]
+    name = "MathJax"
+    location = "footer"
+  [params.relearn.dependencies.mermaid]
+    name = "Mermaid"
+    location = "footer"
+  [params.relearn.dependencies.openapi]
+    name = "OpenApi"
+    location = "footer"
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
+
+
+[outputs]
+  home = ["HTML", "RSS", "SEARCH"]
