@@ -65,7 +65,7 @@ If you have followed the guide, your SD card should still be mounted (or connect
 Mount the boot partition, and open in. In there, you will create a file named `config.toml`. Open this file in your favourite text editor, and pay close attention to next steps.
 
 ### Changing the default config.toml
-[Default configuration](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml) server as a guide to help you understand different settings. It doesn't have to contain everything, what you see in the blob in the link are default settings. We will go over stuff you need to change in order to get your pwny working.
+You can use the [default configuration](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml) as a guide to help you understand different settings. It doesn't have to contain everything, what you see in the blob in the link are default settings. We will go over stuff you need to change in order to get your pwny working.
 
 ```toml
 main.name = ""
