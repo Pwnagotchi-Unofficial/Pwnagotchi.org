@@ -1,0 +1,8 @@
+{{- $id := "" }}
+{{- partial "shortcodes/image.html" (dict
+  "page" .Page
+  "url" .Destination
+  "title" .Title
+  "alt" .Text
+  "id" $id
+) }}

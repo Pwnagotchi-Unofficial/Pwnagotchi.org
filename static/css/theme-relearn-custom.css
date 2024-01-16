@@ -1,0 +1,107 @@
+:root {
+    --PRIMARY-color: #1c0000; /* brand primary color */
+    --SECONDARY-color: #ffffff;  /* brand secondary color */
+    --ACCENT-color: rgba( 255, 136, 255, 1 ); /* brand accent color, used for search highlights */
+
+    --MAIN-TEXT-color: #C1D7F0; ; /* text color of content and h1 titles */
+    --MAIN-LINK-HOVER-color: #c21717; ; /* hovered link color of content */
+    --MAIN-BG-color: rgb(85, 2, 2); /* background color of content */
+    --MAIN-TITLES-TEXT-color: rgba( 16, 16, 16, 1 ); /* text color of h2-h6 titles and transparent box titles */
+
+    --CODE-theme: relearn-light; /* name of the chroma stylesheet file */
+    --CODE-BLOCK-color: rgba( 39, 40, 34, 1 ); /* fallback text color of block code; should be adjusted to your selected chroma style */
+    --CODE-BLOCK-BG-color: #300000; /* fallback background color of block code; should be adjusted to your selected chroma style */
+    --CODE-BLOCK-BORDER-color: rgba( 216, 216, 216, 1 ); /* border color of block code */
+    --CODE-INLINE-color: rgba( 94, 94, 94, 1 ); /* text color of inline code */
+    --CODE-INLINE-BG-color: #300000; /* background color of inline code */
+    --CODE-INLINE-BORDER-color: #300000; /* border color of inline code */
+
+    --BROWSER-theme: light; /* name of the theme for browser scrollbars of the main section */
+    --MERMAID-theme: default; /* name of the default Mermaid theme for this variant, can be overridden in hugo.toml */
+    --OPENAPI-theme: light; /* name of the default OpenAPI theme for this variant, can be overridden in hugo.toml */
+    --OPENAPI-CODE-theme: idea; /* name of the default OpenAPI code theme for this variant, can be overridden in hugo.toml */
+
+    --MENU-HOME-LINK-color: #919191; /* home button color if configured */
+    --MENU-HOME-LINK-HOVER-color: rgb(255, 255, 255); /* hovered home button color if configured */
+
+    --MENU-SEARCH-color: #ffffff; /* text and icon color of search box */
+    --MENU-SEARCH-BG-color: rgb(85, 2, 2); /* background color of search box */
+    --MENU-SEARCH-BORDER-color: #080000;; /* border color of search box */
+
+    --MENU-SECTIONS-BG-color: #300000; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+    --MENU-SECTIONS-ACTIVE-BG-color: rgba(0, 0, 0, 0.795); /* background color of the active menu section */
+    --MENU-SECTIONS-LINK-color: #9ba1a7; /* link color of menu topics */
+    --MENU-SECTIONS-LINK-HOVER-color: rgb(255, 255, 255); /* hovered link color of menu topics */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #ffffff; /* text color of the displayed menu topic */
+    --MENU-SECTION-SEPARATOR-color: rgba( 96, 96, 96, 1 ); /* separator color between menu sections and menu footer */
+
+    --BOX-CAPTION-color: rgba( 255, 255, 255, 1 ); /* text color of colored box titles */
+    --BOX-BG-color: rgba(0, 0, 0, 0.833); /* background color of colored boxes */
+    --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* text color of colored box content */
+}
+
+
+#logo > h1 > img {
+    border: 10px solid rgb(85, 2, 2) !important;
+    border-radius: 10px;
+}
+
+.article-subheading {
+    color: #ffffff !important;
+}
+
+code {
+    color: #C1D7F0 !important;
+    background: #300000 !important;
+    border: 1px transparent #ffffff00 !important;
+    border-color: #000000 !important;
+}
+
+li.active.visited a {
+    background-color: #1c0000 !important; /* Background color */
+}
+
+#R-topbar > .topbar-wrapper {
+    background-color: #1c0000;
+}
+
+h2 {
+    color: #C1D7F0 !important;
+}
+
+object {
+    overflow: hidden !important;
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* Internet Explorer 11 */
+    position: relative !important;
+}
+
+
+pre:not(.mermaid) {
+    background-color: #300000 !important;
+    border-color: #000000 !important;
+    color: #C1D7F0 !important;
+}
+
+
+div.highlight:not(.wrap-code) pre:not(.mermaid) code {
+    color: #C1D7F0 !important;
+    background-color: #300000 !important;
+}
+
+.copy-to-clipboard {
+    background-color: #300000 !important;
+    border: none !important;
+}
+
+.copy-to-clipboard-button {
+    color: #C1D7F0 !important;
+}
+
+a.highlight {
+    color: #ff6600 !important;
+}
+
+h3, .article-subheading {
+    color: #C1D7F0 !important;
+}

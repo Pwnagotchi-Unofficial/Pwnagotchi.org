@@ -1,0 +1,26 @@
+{{- $page := .page }}
+{{- if and (not $page) .context }}
+  {{- $page = .context }}
+  {{- warnf "%q: DEPRECATED parameter 'context' for shortcode 'mermaid' found, use 'page' instead; see https://mcshelby.github.io/hugo-theme-relearn/basics/migration#5180" $page.File.Filename }}
+{{- end }}
+{{- $content := .content }}
+{{- $align := .align | default "center" }}
+{{- $zoom := $page.Site.Params.mermaidZoom | default false }}
+{{- with $page.Params.mermaidZoom }}
+  {{- $zoom = . }}
+  {{- if eq (printf "%T" .) "string" }}
+    {{- $zoom = (eq . "true") }}
+  {{- end }}
+{{- end }}
+{{- with .zoom }}
+  {{- $zoom = . }}
+  {{- if eq (printf "%T" .) "string" }}
+    {{- $zoom = (eq . "true") }}
+  {{- end }}
+{{- end }}
+{{- with $page }}
+<pre class="mermaid align-{{ $align }}{{ if $zoom }} zoomable{{ end }}">
+  {{- replaceRE "&#39;" "'" ( replaceRE "&#34;" "\"" ( $content | safeHTML ) ) -}}
+</pre>
+{{- .Store.Set "hasMermaid" true }}
+{{- end }}

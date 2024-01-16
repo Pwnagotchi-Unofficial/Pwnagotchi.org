@@ -1,0 +1,38 @@
+{{- $onwidths := cond (isset . "onwidths") .onwidths "show" }}
+{{- $onwidthm := cond (isset . "onwidthm") .onwidthm "show" }}
+{{- $onwidthl := cond (isset . "onwidthl") .onwidthl "show" }}
+{{- with .page }}
+	{{- $format := partial "get-format.hugo" . }}
+	{{- $outputFormat := partial "output-format.hugo" (dict "page" . "format" $format) }}
+	{{- $showPrevNext := (and (not .Params.disableNextPrev) (not .Site.Params.disableNextPrev)) }}
+	{{- if and (or (eq $outputFormat "html") (eq $outputFormat "searchpage")) $showPrevNext }}
+		{{- $endarrow := "🡒" }}
+		{{- if eq (.Language.LanguageDirection | default (T "Reading-direction") | default "ltr") "rtl" }}
+			{{- $endarrow = "🡐" }}
+		{{- end }}
+		{{- $next := "" }}
+		{{- if eq .Page.Kind "taxonomy" }}
+			{{- /* go to first term page */}}
+			{{- $pages := partialCached "partials/pageHelper/taxonomyPages.html" . . }}
+			{{- $next = (index $pages 0).Page }}
+		{{- else if eq .Page.Kind "term" }}
+			{{- /* go to next term page */}}
+			{{- $taxonomy_page := .Site.GetPage .Data.Plural }}
+			{{- $pages := partialCached "partials/pageHelper/taxonomyPages.html" $taxonomy_page $taxonomy_page }}
+			{{- $next = partial "partials/pageHelper/next.html" (dict "collection" $pages "item" .) }}
+		{{- else if or (ne $outputFormat "html") (not (.Scratch.Get "relearnNextPage")) }}
+		{{- else }}
+			{{- $next = .Scratch.Get "relearnNextPage" }}
+		{{- end }}
+		{{- partial "topbar/func/button.html" (dict
+			"page" .
+			"class" "topbar-button-next"
+			"href" (partial "relLangPrettyUglyURL.hugo" (dict "to" $next))
+			"icon" "chevron-right"
+			"onwidths" $onwidths
+			"onwidthm" $onwidthm
+			"onwidthl" $onwidthl
+			"hint" (printf "%s (%s)" ($next | default .).Title ($endarrow | safeHTML))
+		)}}
+	{{- end }}
+{{- end }}

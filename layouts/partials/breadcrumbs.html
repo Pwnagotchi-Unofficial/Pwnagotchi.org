@@ -1,0 +1,51 @@
+{{- $page := .page }}
+{{- $to := $page }}
+{{- $pageurl := partial "relLangPrettyUglyURL.hugo" (dict "to" $page) }}
+{{- $lasturl := partial "relLangPrettyUglyURL.hugo" (dict "to" $page) }}
+{{- if .dirOnly }}
+  {{- $page = $page.Parent }}
+  {{- $to = $page }}
+  {{- $lasturl = partial "relLangPrettyUglyURL.hugo" (dict "to" $page) }}
+{{- end }}
+{{- $depth := add 1 (int (partial "get-page-depth.hugo" (dict "page" $page))) }}
+{{- if .page.Site.Params.disableRootBreadcrumb }}
+  {{- $depth = add $depth -1 }}
+{{- end }}
+{{- $breadcrumb := slice }}
+{{- range seq $depth }}
+  {{- if $to }}
+    {{- if or $to.Title (eq $to.Kind "taxonomy") (eq $to.Kind "term") }}
+      {{- $breadcrumb = $breadcrumb | append $to }}
+    {{- end }}
+  {{- else }}
+    {{- break }}
+  {{- end }}
+  {{- $to = $to.Parent }}
+{{- end }}
+{{- $len := len $breadcrumb -}}
+{{- $breadcrumbReversed := slice }}
+{{- range seq $len }}
+  {{- $breadcrumbReversed = $breadcrumbReversed | append (index $breadcrumb (sub $len .)) }}
+{{- end }}
+{{- $depth := 0 }}
+{{- range $i, $e := $breadcrumbReversed }}
+  {{- $to := $e }}
+  {{- $depth = add $depth 1 }}
+  {{- $title := $to.Title }}
+  {{- if eq $to.Kind "taxonomy" }}
+    {{- $title = default (default $to.Data.Plural (i18n $to.Data.Plural)) .Title }}
+  {{- else if eq $to.Kind "term" }}
+    {{- $taxonomy_page := $to.Site.GetPage $to.Data.Plural }}
+    {{- $title = default (default $to.Data.Singular (i18n $to.Data.Singular)) $taxonomy_page.Params.SingularTitle }}
+    {{- $title = printf "%s %s %s" $title (default "::" $to.Site.Params.titleSeparator) (default (humanize $to.Data.Term | strings.Title) $to.Title) }}
+  {{- end }}
+  {{- if not $title }}
+    {{- $title = $to.Site.Title }}
+  {{- end }}
+  {{- $url := partial "relLangPrettyUglyURL.hugo" (dict "to" $to) }}
+  {{- $isPage := eq $url $pageurl }}
+  {{- $isLast := eq $url $lasturl }}
+  {{- $link := and $url (not $isPage) }}
+  {{- printf "<li" | safeHTML }}
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">{{ if $link }}<a itemprop="item" href="{{ $url }}">{{end}}<span itemprop="name">{{ $title }}</span>{{ if $link }}</a>{{ end }}<meta itemprop="position" content="{{ $depth }}">{{ if not $isLast }}{{ (printf "&nbsp;%s&nbsp;" (default ">" .Site.Params.breadcrumbSeparator)) | safeHTML }}{{ end }}</li>
+{{- end }}

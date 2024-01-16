@@ -1,0 +1,13 @@
+{{- $page := .page }}
+{{- if and (not $page) .context }}
+  {{- $page = .context }}
+  {{- warnf "%q: DEPRECATED parameter 'context' for shortcode 'math' found, use 'page' instead; see https://mcshelby.github.io/hugo-theme-relearn/basics/migration#5180" $page.File.Filename }}
+{{- end }}
+{{- $content := .content }}
+{{- $align := .align | default "center" }}
+{{- with $page }}
+<span class="math align-{{ $align }}">
+  {{- $content | safeHTML -}}
+</span>
+{{- .Store.Set "hasMathJax" true }}
+{{- end }}
