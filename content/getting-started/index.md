@@ -5,7 +5,7 @@ title = "getting started"
 weight = 2
 +++
 
-This section is focused on newcomers. Here you can look trough guides that will help you with getting your first device up and running (most of them are in the [community wiki](https://github.com/Pwnagotchi-Unofficial/community-wiki)). 
+This section is focused on newcomers. Here you can look through guides that will help you with getting your first device up and running (most of them are in the [community wiki](https://github.com/Pwnagotchi-Unofficial/community-wiki)). 
 
 This is a guide for beginners by [N3ttX](https://github.com/ApplePie420) - How to get up and running quickly (headless/without screen)
 
@@ -13,11 +13,11 @@ This is a guide for beginners by [N3ttX](https://github.com/ApplePie420) - How t
 
 First of all, you will need a **Raspberry Pi 0 W**. You can get those for around 10-15$ at your local electronics store or pi dealer. You can use [this website](https://rpilocator.com/) to find availability near you. 
 
-Next, a microSD card, you'd be best with 16GB or more. Those go for around 8-10$ on Amazon, I highly recommend you pay extra for premium quality brands like Samsung, Kingston or SanDisk. Also, note that microSD cards have different speed ratings, look for UHS-I class and higher. You can read more about those [in this blogpost by Kingston](https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes). You will also need a microSD card reader, what form depends on you, I recommend those small USB readers.
+Next, a microSD card, you'd be best with 16GB or more. Those go for around 8-10$ on Amazon; I highly recommend you pay extra for premium quality brands like Samsung, Kingston or SanDisk. Also, note that microSD cards have different speed ratings, look for UHS-I class and higher. You can read more about those [in this blogpost by Kingston](https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes). You will also need a microSD card reader, what form depends on you, I recommend those small USB readers.
 
-A good quality micro USB cable that can do data transfer. Be aware that some cables (especially cheap ones) are wired for _power only_, meaning you won't be able to connect to your pi during the initial setup. I highly recommend you get a higher quality cable, both from the durability and reliability standpoint, and from the "being able to transfer data" standpoint. You can get them from Amazon for around 5-10$ depending on the brand, I can recommend Amazon Basics, Vention and Ugreen.
+A good quality micro USB cable that can do data transfer. Be aware that some cables (especially cheap ones) are wired for _power only_, meaning you won't be able to connect to your pi during the initial setup. I highly recommend you get a higher quality cable, both from a durability and reliability standpoint, and from the "being able to transfer data" standpoint. You can get them from Amazon for around 5-10$ depending on the brand, I can recommend Amazon Basics, Vention and Ugreen.
 
-Lastly, you'd want to get yourself a power bank, or a battery bank. It doesn't really matter which one, you only need standard USB output that can deliver about 1-1.5A, which most power banks can do. Obviously, the higher the capacity, the longer you can pwn. Neat features like being able to charge the power bank while using it are cool for car deployments. But that depends on you. I can recommend brands like Ugreen, Baseus, Xiaomi, Anker and Viking.
+Lastly, you'd want to get yourself a power bank, or a battery bank. It doesn't really matter which one, you only need standard USB output that can deliver about 1-1.5A, which most power banks can do. Obviously, the higher the capacity (measured in mAh), the longer you can pwn. Neat features may come with the power bank such as being able to charge the power bank while using it which is good for car deployments. But that depends on you. I can recommend brands like Ugreen, Baseus, Xiaomi, Anker and Viking.
 
 Optionally, if you dont have a case, get yourself a rubber band or two, so you can put together the pi on your powerbank.
 
@@ -30,11 +30,11 @@ Next, we will need an image. The official one is no longer maintained, is outdat
 
 # Flashing the OS
 ## Selecting OS image and media
-There isn't much to this, once you have extracted your `.img` file from the archive, plug in your SD card reader with microSD card in it, and run Imager. You will see windows similar to this:
+There isn't much to this, once you have extracted your `.img` file from the archive, plug in your SD card reader with microSD card in it, and run [Raspberry] Imager. You will see windows similar to this:
 
 ![Raspberry Imager](https://github.com/pwndevelopers/community-wiki/assets/21370314/0a27501d-9bd5-464f-903b-811d8f15ba4a)
 
-In there, choose the OS. Click the button, scroll to bottom and select "Use custom". Use popup navigator to locate your `.img` file on your computer. After that, select your storage. If you have only one USB flash drive plugged in, it should be the only option, like this (the text might say something different but you get the gist):
+In there, choose the OS by clicking the button, scrolling to bottom and selecting "Use custom". Use the popup navigator to locate your `.img` file on your computer. After that, select your storage. If you have only one USB flash drive plugged in, it should be the only option, like this (the text might say something different but you get the gist):
 
 ![Device selection menu in Imager](https://github.com/pwndevelopers/community-wiki/assets/21370314/55c25357-be3a-4f10-8fe6-d583e52c052e)
 
@@ -49,7 +49,7 @@ Set username and password, you can leave those to default (username: `pi`, passw
 
 Configure Wireless LAN, you'd want to leave that empty, since your device won't be connecting to the itnernet by itself.
 
-Set Locale Settings, enter the timezone you are in, and the keyboart layout you'd wish to use when you remote in.
+Set Locale Settings, enter the timezone you are in, and the keyboard layout you'd wish to use when you remote in.
 
 ![Example of the settings](https://github.com/pwndevelopers/community-wiki/assets/21370314/04d52ceb-ea89-444e-8eff-76cb6e359762)
 
@@ -58,11 +58,11 @@ Set Locale Settings, enter the timezone you are in, and the keyboart layout you'
 That is everything, you can hit "Save" on the bottom, and hit "Write" on the main screen. This process can take up to few minutes, depending on your SD card, reader and drive from which you are reading the image from. Be patient. When the flashing is done, you will get a message that it is done.
 
 ## Setting up pwnagotchi config
-If you have followed the guide, your SD card should still be mounted (or connected) to your PC. There should be two partitions, one called "boot" and one called "rootfs". On Windows, you will probably see just the boot partition, which is okay for now. 
+If you have followed the guide, your SD card should still be mounted (or connected) to your PC. There should be two partitions, one called "boot" and one called "rootfs". On Windows, you will see just the boot partition, which is okay for now. 
 
 ![Two different partitions in Thunar file manager](https://github.com/pwndevelopers/community-wiki/assets/21370314/cfa1dcba-45ed-4a87-8a02-50fda15a0e9e)
 
-Mount the boot partition, and open in. In there, you will create a file named `config.toml`. Open this file in your favourite text editor, and pay close attention to next steps.
+Mount the boot partition, and open it. In there, you will create a file named `config.toml`. Open this file in your favourite text editor, and pay close attention to next steps.
 
 ### Changing the default config.toml
 You can use the [default configuration](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml) as a guide to help you understand different settings. It doesn't have to contain everything, what you see in the blob in the link are default settings. We will go over stuff you need to change in order to get your pwny working.
@@ -204,7 +204,7 @@ After that, you can save and your connection should work. Open terminal, and typ
 ### ... on MacOS
 Steps should be similar to Linux, so you can try bouncing off of that. I have never used Mac, so I have no idea how to do this. 
 
-_Community notice: If you happen to own Mac and do this, you can write this portion of the guide and provide screenshots :)_
+_Community notice: If you happen to own Mac and do this, you can write this portion of the guide and provide screenshots :) <Dylan> Will do this soon!_
 
 ## Checking Bluetooth
 If you have connected to your pwny via SSH, you can use the shell to debug stuff. Because we have set everything necessary in advance, there is not really a need to have the shell, but it is helpful to have it in case something is not working.
@@ -221,9 +221,11 @@ If your bluetooth is not working, you can try these steps:
 6) In a few moments, you should be prompted (on your phone) to allow communication with pwnagotchi.
 7) If the problem still persists, try untrusting and unpairing pwnagotchi from your phone, rebooting both devices and repeating process. Sometimes, you need to repeat this process multiple times for it to work (I need 3 attempts before it started working). If you still have problem, head to ⁠supwnport channel on our Discord.
 
+### Device not connecting (after first pair.)
+A way to fix this is to try and convince your mobile device (Whether Android, IOS or Linux) to connect via the Bluetooth tab in your devices settings application. Usually your device will be listed under its hostname E.g. my device is called `DylanJava` so thats what it would be called in the bluetooth tab.
 # That is it
 Really. You can now shutdown your pwny from the webUI, wait for the green LED to stop blinking, disconnect the USB cable from your PC and from the Pi. Connect it back to the "PWR IN" port, and to your power bank. Give it few minutes to boot, and you can go for a walk. It should automatically connect with your phone, so you can keep track of him on the walk. You should see his face change, and different status messages based on what is currently happening around.
 
-Happy pwning!
+**Happy pwning!**
 
 
