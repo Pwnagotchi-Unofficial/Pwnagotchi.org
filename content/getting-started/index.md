@@ -204,7 +204,7 @@ After that, you can save and your connection should work. Open terminal, and typ
 ### ... on MacOS
 Steps should be similar to Linux, so you can try bouncing off of that. I have never used Mac, so I have no idea how to do this. 
 
-_Community notice: If you happen to own Mac and do this, you can write this portion of the guide and provide screenshots :) <Dylan> Will do this soon!_
+_Community notice: If you happen to own Mac and do this, you can write this portion of the guide and provide screenshots :)_
 
 ## Checking Bluetooth
 If you have connected to your pwny via SSH, you can use the shell to debug stuff. Because we have set everything necessary in advance, there is not really a need to have the shell, but it is helpful to have it in case something is not working.
