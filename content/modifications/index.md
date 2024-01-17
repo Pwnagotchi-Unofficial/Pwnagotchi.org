@@ -64,8 +64,8 @@ Another advanced Pwnagotchi mod is called "Slimagotchi". As the name suggests it
 
 ### Tools needed:
 1. a soldering iron
-2. fluxs
-3. copper braid wick
+2. flux
+3. copper braided wick
 4. side cutter
 
 
@@ -75,22 +75,22 @@ Another advanced Pwnagotchi mod is called "Slimagotchi". As the name suggests it
 3. some kapton tape
 
 ### Instructions:
-1. Place some flux on the wick.ui
+1. Place some flux on the wick.
 
-2. Place some flux on the connector pins.ui
+2. Place some flux on the connector pins.
 
-3. Set your soldering iron to around 300˚ C; you want it hot enough to flow solder into the wick.
+3. Set your soldering iron to around 300˚C; you want it hot enough to flow solder into the wick.
 
-4. Place the wick above the pins and heat with the soldering iron.ui
+4. Place the wick above the pins and heat with the soldering iron.
 
-5. When you get to the side pads, you can use a side cutter like this one if you need to cut the pins. (Sometimes these are difficult to remove because of the size and solder amount.)ui
+5. When you get to the side pads, you can use a side cutter like this one if you need to cut the pins. (Sometimes these are difficult to remove because of the size and solder amount.)
 
-6. When finished, your pads should look like this:ui
+6. When finished, your pads should look like this: _Image needed_
 
-7. Apply some Kapton tape to the back to prevent any shorting and isolate the board:ui
+7. Apply some Kapton tape to the back to prevent any shorting and isolate the board.
 
-8. Now it’s time to make some pins to use in your thruhole RPi0W. You can cut these headers and use the pins like this:uiuiui
+8. Now it’s time to make some pins to use in your thruhole RPi0W. You can cut these headers and use the pins like this: _Image needed_
 
-9. Finally, place the pins in the screen and set your RPi0W on top; then solder the pins onto the RPi0W.ui
+9. Finally, place the pins in the screen and set your RPi0W on top; then solder the pins onto the RPi0W.
 
 10. And you’re finished!
