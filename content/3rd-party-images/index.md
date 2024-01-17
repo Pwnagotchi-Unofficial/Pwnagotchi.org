@@ -2,11 +2,11 @@
 pre = "<i class='fas fa-flask'></i> "
 archetype = "default"
 title = "3rd-party images"
-weight = 3
+weight = 4
 +++
 
-<div style="position: relative; padding-bottom: 75%; height: 2000px; max-width: 100%px; overflow: hidden;">
-    <object type="text/html" data="images.html" id="embeddedObject" style="position: absolute; width: 100%; height: 2000px; border: 0; left: -15px;"></object>
+<div style="position: relative; padding-bottom: 75%; height: 2000px; max-width: 100%px; overflow: hidden; z-index: 999 !important;">
+    <object type="text/html" data="images.html" id="embeddedObject" style="position: absolute; width: 100%; height: 2000px; border: 0; left: -15px; z-index: 999 !important;"></object>
 </div>
 
 <script>
@@ -25,3 +25,18 @@ weight = 3
     });
   });
 </script>
+
+<style>
+
+@media (max-width: 420px) {
+  main {
+    padding: 0 !important; /* Remove padding for screens below 420px */
+}
+
+@media (max-width: 450px) {
+  #embeddedObject {
+    left: 0; /* Set left to 0 for screens below 450px */
+  }
+}
+
+</style>
