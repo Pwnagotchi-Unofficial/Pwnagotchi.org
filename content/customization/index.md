@@ -17,7 +17,7 @@ Please ensure you **perform a backup** before installing any visual modification
 ## Custom Faces Mod
 
 
-This is a nice way to start modifying your pwnagotchi. This modifications **allows you to use images** instead of the standart string faces. The [mod](https://github.com/roodriiigooo/PWNAGOTCHI-CUSTOM-FACES-MOD) has been made by [Rodrigo](https://github.com/roodriiigooo). **Make sure to check out his amazing work.**  
+This is a nice way to start modifying your pwnagotchi. This modification **allows you to use images** instead of the standard text faces. The [mod](https://github.com/roodriiigooo/PWNAGOTCHI-CUSTOM-FACES-MOD) has been made by [Rodrigo](https://github.com/roodriiigooo). **Make sure to check out his amazing work.**  
     
 
 ### 📑 Get Started
@@ -95,7 +95,7 @@ Now let's move on to the next file. Backup first, then edit:
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# nano components.py
     
 
-Locate this code snippet:
+Locate this code snippet (You can manually delete lines by using BACKSPACE or by using CTRL-K to delete an entire line):
 
     class Text(Widget):
         def __init__(self, value="", position=(0, 0), font=None, color=0, wrap=False, max_length=0):
@@ -115,7 +115,7 @@ Locate this code snippet:
                 drawer.text(self.xy, text, font=self.font, fill=self.color)
     
 
-Now replace with:
+Now replace with (Using CTRL + SHIFT + V to paste in a terminal / ssh connection):
 
     class Text(Widget):
         def __init__(self, value="", position=(0, 0), font=None, color=0, wrap=False, max_length=0, png=False):
@@ -159,14 +159,14 @@ Now let's move on to the next file. Once again, backup first and then edit:
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# nano view.py
     
 
-Replace this one:
+Replace this one (You can use CTRL + K again or just BACKSPACE):
 
     ...
     'face': Text(value=faces.SLEEP, position=self._layout['face'], color=BLACK, font=fonts.Huge),
     ...
     
 
-With that:
+With that (CTRL + SHIFT + V again):
 
     ...
     'face': Text(value=faces.SLEEP, position=(config['ui']['faces']['position_x'], config['ui']['faces']['position_y']), color=BLACK, font=fonts.Huge, png=config['ui']['faces']['png']),
@@ -529,7 +529,7 @@ Images name in /themes/mytheme/img/:
 
 ### On-The-Go Refresh:
 
-If something in the configuration changed, there is no need to restart the pwnagotchi. You open the Fancygotchi plugin page to refresh it. All the UI will be uptated and refreshed.
+If something in the configuration changed, there is no need to restart the pwnagotchi. You open the Fancygotchi plugin page on the WEBUI to refresh it. All the UI will be uptated and refreshed.
 
 ### Sharing Custom Theme:
 
@@ -642,7 +642,7 @@ I prefer to do this by using FileZilla, and FTPing in. [Tutorial on FTP by WiFiT
 
 Click Reboot at the bottom of your WebUI or:
 
-SSH into your pwnagotchi and run the command `sudo reboot now`
+SSH into your pwnagotchi and run the command `sudo reboot now` or `sudo shutdown now -f -r` <Force reboots the system with the -f and -r flags using the shutdown command>
 
 ### 4\. Enjoy!
 
