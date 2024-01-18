@@ -1,6 +1,3 @@
-add sniffleplagus/nurse img
-add pwngrid + opwngrid
-finish plugin page
-services for cracking + printing 
+services for cracking + printing
 footer 
 toml creator
