@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-flask'></i> "
 archetype = "default"
-title = "3rd-party images"
+title = "3rd Party Images"
 weight = 4
 +++
 

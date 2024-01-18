@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-brain'></i> "
 archetype = "default"
-title = "getting started"
+title = "Getting Started"
 weight = 2
 +++
 
@@ -199,7 +199,7 @@ After that, head over to "IPv4 Settings", change method to "Manual" and enter de
 
 ![Network Manager IPv4 settings](https://github.com/pwndevelopers/community-wiki/assets/21370314/64ba6e9f-e11e-4e18-a420-5b280ca713c0)
 
-After that, you can save and your connection should work. Open terminal, and type in `ssh <username>@10.0.0.2`, where `<username> is whatever username you have specified in the Imager. If you haven't, the default is `pi`. Enter the password you have specified in the Imager, if you haven't, then the default is `raspberry`.
+After that, you can save and your connection should work. Open terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is whatever username you have specified in the Imager. If you haven't, the default is `pi`. Enter the password you have specified in the Imager, if you haven't, then the default is `raspberry`.
 
 ### ... on MacOS
 Steps should be similar to Linux, so you can try bouncing off of that. I have never used Mac, so I have no idea how to do this. 
@@ -227,5 +227,3 @@ A way to fix this is to try and convince your mobile device (Whether Android, IO
 Really. You can now shutdown your pwny from the webUI, wait for the green LED to stop blinking, disconnect the USB cable from your PC and from the Pi. Connect it back to the "PWR IN" port, and to your power bank. Give it few minutes to boot, and you can go for a walk. It should automatically connect with your phone, so you can keep track of him on the walk. You should see his face change, and different status messages based on what is currently happening around.
 
 **Happy pwning!**
-
-

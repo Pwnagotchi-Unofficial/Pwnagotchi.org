@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-laptop'></i> "
 archetype = "default"
-title = "alternative hardware"
+title = "Alternative Hardware"
 weight = 3
 +++
 
@@ -21,8 +21,8 @@ background-color: #300000 !important;
 
 |                 Pi                    |                   advantages                  				 |		       disadvantages    |
 |---------------------------------------|--------------------------------------------------------------------------------|--------------------------------------|
-|  Raspberry Pi 02w 			| +small +more power than a pi 0w +many accesories    				 | no full size USB 			|
-|  Raspberry Pi 3			| +more power  									 | -larger -no active development	|
+|  Raspberry Pi 0 W v2 			| small <br> more powerful than a pi 0 w v1 <br> many accesories    				 | no full size USB 			|
+|  Raspberry Pi 3			| more powerful  									 | larger <br> no active development	|
 |  Raspberry Pi 4			| +even more power than a pi02w  +full size Ethernet and USB   			 |-larger -power hungry 		|
 |  Raspberry Pi 5			| +fastest Raspberry Pi there is +full size Ethernet and USB                     | -larger -power hungry		|
 

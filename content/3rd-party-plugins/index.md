@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-puzzle-piece'></i> "
 archetype = "default"
-title = "3rd-party plugins"
+title = "3rd Party Plugins"
 weight = 4
 +++
 

@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-book-medical'></i> "
 archetype = "default"
-title = "common issues"
+title = "Common Issues"
 weight = 6
 +++
 
