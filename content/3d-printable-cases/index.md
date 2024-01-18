@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-box-open'></i> "
 archetype = "default"
-title = "3d printable cases"
+title = "3D Printable Cases"
 weight = 6
 +++
 

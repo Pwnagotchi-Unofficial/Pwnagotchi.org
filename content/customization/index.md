@@ -1,11 +1,9 @@
 +++
 pre = "<i class='fas fa-cog'></i> "
 archetype = "default"
-title = "customization"
+title = "Customization"
 weight = 6
 +++
-
-
 
 A lot of people want to add a personal touch top their pwnagotchi. Thats why we decided on adding this page to the wiki.
 
@@ -13,18 +11,11 @@ If you want to **change the layout** of different things, or **change the faces*
 
 Please ensure you **perform a backup** before installing any visual modifications. Additionally, please note that if changes and updates do not appear (even after a reboot), you may need to **unload and reload the plugin** to ensure proper display.
 
-
 ## Custom Faces Mod
-
 
 This is a nice way to start modifying your pwnagotchi. This modification **allows you to use images** instead of the standard text faces. The [mod](https://github.com/roodriiigooo/PWNAGOTCHI-CUSTOM-FACES-MOD) has been made by [Rodrigo](https://github.com/roodriiigooo). **Make sure to check out his amazing work.**  
     
-
 ### 📑 Get Started
-
-
-  
-  
 
 First, with the pwnagotchi connected to a computer in MANU mode, establish an SSH connection.
 
@@ -35,45 +26,37 @@ Login as root:
     root@pwnagotchi:/home/pi# whoami
     root
     
-
 Navigate to the root directory:
 
     root@pwnagotchi:/home/pi# cd /
     
-
 Let's create two folders, one for backing up the files and another one to receive the custom faces:
 
     root@pwnagotchi:/# mkdir files-backup
     root@pwnagotchi:/# mkdir custom-faces
-    
 
 Now let's navigate to the folder that contains the files we're going to modify:
 
     root@pwnagotchi:/# cd /usr/local/lib/python3.7/dist-packages/pwnagotchi/ui
     
-
 Stop the pwnagotchi service:
 
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# systemctl stop pwnagotchi
     
-
 Here are the following files:
 
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# ls
     components.py  faces.py  hw           __pycache__  view.py
     display.py     fonts.py  __init__.py  state.py     web
-    
 
 Now run the following command to make a backup of the first file:
 
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# cp faces.py /files-backup/
     
-
 Open the file using nano:
 
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# nano faces.py
     
-
 Add these attributes to the code, resulting in the following:
 
     UPLOAD1 = '(1__1)'
@@ -86,7 +69,6 @@ Add these attributes to the code, resulting in the following:
         for face_name, face_value in config.items():
             globals()[face_name.upper()] = face_value
     
-
 CTRL + O to save, CTRL + X to close file.
 
 Now let's move on to the next file. Backup first, then edit:
@@ -94,7 +76,6 @@ Now let's move on to the next file. Backup first, then edit:
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# cp components.py /files-backup/
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# nano components.py
     
-
 Locate this code snippet (You can manually delete lines by using BACKSPACE or by using CTRL-K to delete an entire line):
 
     class Text(Widget):
@@ -114,7 +95,6 @@ Locate this code snippet (You can manually delete lines by using BACKSPACE or by
                     text = self.value
                 drawer.text(self.xy, text, font=self.font, fill=self.color)
     
-
 Now replace with (Using CTRL + SHIFT + V to paste in a terminal / ssh connection):
 
     class Text(Widget):
@@ -150,7 +130,6 @@ Now replace with (Using CTRL + SHIFT + V to paste in a terminal / ssh connection
                     self.image = self._image.convert('1')
                     canvas.paste(self.image, self.xy)
     
-
 CTRL + O to save, CTRL + X to close file.
 
 Now let's move on to the next file. Once again, backup first and then edit:
@@ -158,35 +137,23 @@ Now let's move on to the next file. Once again, backup first and then edit:
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# cp view.py /files-backup/
     root@pwnagotchi:/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui# nano view.py
     
-
 Replace this one (You can use CTRL + K again or just BACKSPACE):
 
     ...
     'face': Text(value=faces.SLEEP, position=self._layout['face'], color=BLACK, font=fonts.Huge),
     ...
     
-
 With that (CTRL + SHIFT + V again):
 
     ...
     'face': Text(value=faces.SLEEP, position=(config['ui']['faces']['position_x'], config['ui']['faces']['position_y']), color=BLACK, font=fonts.Huge, png=config['ui']['faces']['png']),
     ...
     
-
 CTRL + O to save, CTRL + X to close file.
 
 From this point on, the pwnagotchi is ready to display images instead of the default string.
 
-  
-  
-  
-  
-
 ### 📃 Configuration
-
-
-  
-  
 
 From here, we will be able to configure the images for our custom Faces. So let's do that!
 
@@ -196,29 +163,17 @@ Default .png file names:
 
     LOOK_R, LOOK_L, LOOK_R_HAPPY, LOOK_L_HAPPY, SLEEP, SLEEP2, AWAKE, BORED, INTENSE, COOL, HAPPY, GRATEFUL, EXCITED, MOTIVATED, DEMOTIVATED, LONELY, SAD, ANGRY, FRIEND, BROKEN, DEBUG, UPLOAD, UPLOAD1, UPLOAD2, ICON, POSITION_X, POSITION_Y
     
-
 Stop the pwnagotchi service, if it's not:
 
     root@pwnagotchi:/# systemctl stop pwnagotchi
     
-
-  
-  
-  
-  
-
 ### 🎴 Upload Images
-
-
-  
-  
 
 Use FileZilla or any other method you know to upload your images to the /custom-faces/ folder that was created earlier. If you don't have it, use one of my packages from here.
 
 Open the pwnagotchi's configuration file:
 
     root@pwnagotchi:/# nano /etc/pwnagotchi/config.toml
-    
 
 Locate this code snippet:
 
@@ -249,7 +204,6 @@ Locate this code snippet:
     ui.faces.upload2 = "(0__1)"
     ...
     
-
 This snippet will be responsible for enabling our customization. If it doesn't exist, you can add it.
 
 Add the new entries pointing to the folder where the images were placed, set the position where the custom Face will be displayed and set the activation flag to True.
@@ -285,31 +239,20 @@ Add the new entries pointing to the folder where the images were placed, set the
     ui.faces.position_y = 34
     ...
     
-
 **Note 1:** Check if your installed plugins modify the 'faces'. If there are any, replace them with the equivalent custom image address. If you don't do this, the pwnagotchi may crash. The code looks like this: ui.set('face', "(◕‿‿◕)") or view.set('face', "(◕‿‿◕)")  
   
 **Note 2:** I recommend that you always use the same path (/custom-faces/ folder) for your customization. That way, it becomes easier as you only need to replace the files!  
-  
-  
   
 CTRL + O to save, CTRL + X to close file. Restart your device.
 
     
       root@pwnagotchi:/# systemctl restart pwnagotchi
     
-
 **Enjoy!**
-
-  
-  
 
 ## Fancygotchi
 
-
 [Fancygotchi](https://github.com/V0r-T3x/fancygotchi) is beeing developed by [V0rt3x](https://github.com/V0r-T3x). He setup a [Patreon](https://www.patreon.com/V0rt3x_workshop) for this Project and i hope you check it out.
-
-  
-  
 
 ### Quick installation:
 
@@ -319,7 +262,6 @@ Download the files (fancygotchi.py and the fancygotchi folder) inside the custom
 
 Keep Fancygotchi disabled when you restart!
 
-    
     ui.display.enabled = true
     ui.display.type = "displayhatmini" # set to your display
     ui.display.color = "black"
@@ -329,7 +271,6 @@ Keep Fancygotchi disabled when you restart!
     main.plugins.fancygotchi.theme = '' # Keep empty to load the default theme.
     main.plugins.fancygotchi.rotation = 0 #<--- use it
     
-
 Restart the pwnagotchi and open the web ui plugin page then wait for the automatic restart.
 
 Afterwards the pwnagotchi should restart with its new face.
@@ -368,10 +309,8 @@ You can create your own theme easily with fancygotchi. You just have to copy the
 
 The file structure is always the same for each theme. ![Fancygotchi Themes Tree](https://raw.githubusercontent.com/V0r-T3x/fancygotchi/main/img/themes_tree_note.png) You can use the following command to display your file structure.
 
-    
     theme tree
     
-
 You got the img folder for all images used inside the theme. A css file to modify the webui. And a folder with the display name. The cyber theme for example uses the displayhatmini.
 
 Inside the display folder, you will have two files: config-h.toml and config-v.toml.
@@ -393,13 +332,10 @@ The configuration file header is composed with all the global options for the th
 
 This starts with \[theme.options\].
 
-    
     stealth_mode = false:
     
-
 It's not implemented yet, but will give a way to hide the pwnagotchi UI with a foreground image and potentially custom naive components.
 
-    
     fg_image: Foreground image name.
     bg_color: Background color.
     bg_image: Background image name.
@@ -418,14 +354,12 @@ It's not implemented yet, but will give a way to hide the pwnagotchi UI with a f
     main_text_color: If the full color or animated full color is enabled, the main color will have priority on all text colors. This option helps to avoid too much lag on a Raspberry Pi Zero w.
     color_text: Sets the text color for low color option displays. Possible options: 'black' 'white' 'auto' = pale color will be 'white' and dark color will be 'black'
     
-
 ### Main Theme Options:
 
 This part is for all the options and native options of the pwnagotchi. This starts with \[theme.main\_elements\].
 
 Each Text components options can have those options:
 
-    
     position: Position [x, y].
     font: Font type.
     color: The component color.
@@ -434,10 +368,8 @@ Each Text components options can have those options:
     f_awesome: If enabled (true) and the icon feature is enabled, the component value is used to select the right font awesome character to use instead of a text.
     f_awesome_size: The font size for Font Awesome.
     
-
 Each label component option can have the following options:
 
-    
     position: Position [x, y].
     label: The label value.
     label_font: The label font.
@@ -451,7 +383,6 @@ Each label component option can have the following options:
     f_awesome_size: The font size for Font Awesome.
     zoom: A multiplier to adjust the image size. Number < 0 = smaller image (0.5 = half size) Number > 0 = bigger image (2 = double size)
     
-
 ### Plugins Options:
 
 The third section is for all other custom plugins configuration. This starts with \[theme.plugin\_elements\].
@@ -460,15 +391,12 @@ To customize other plugin appearance:
 
 For the bluetooth components for exapmple, you can simply check inside the plugin file for the "add\_element" variable:
 
-    
     ui.add_element('bluetooth', LabeledValue(color=BLACK, label='BT', value='-', position=(ui.width() / 2 - 15, 0), label_font=fonts.Bold, text_font=fonts.Medium))
     
-
 If you check the config-h.toml you can see how the bluetooth part is constituted.
 
 All other custom plugins are stocked under \[theme.plugin\_elements\].
 
-    
     [theme.plugin_elements]
     [theme.plugin_elements.bluetooth]
     position = [276, 170]
@@ -484,12 +412,10 @@ All other custom plugins are stocked under \[theme.plugin\_elements\].
     f_awesome = false
     f_awesome_size = 40
     
-
 ### Changing the Pwnagotchi Face with Image:
 
 If you want you can change the pwny face too. Enable the icon feature, and place all the images (faces) with the right names in /themes/mytheme/img/. You can change the image type to use (only tested with png). The pure white on images will become transparent. Note that each image needs to have the same size.
 
-    
     [theme.main_elements.face]
     position = [14, 28]
     font = "Huge"
@@ -498,8 +424,7 @@ If you want you can change the pwny face too. Enable the icon feature, and place
     icon = true # Enable here
     image_type = "png"
     
-
-Images name in /themes/mytheme/img/:
+Images name in `/themes/mytheme/img/`:
 
 *   look\_r.png
 *   look\_l.png
@@ -535,27 +460,17 @@ If something in the configuration changed, there is no need to restart the pwnag
 
 If you want to share a custom theme, just share the theme folder with another device, which has Fancygotchi installed already.
 
-  
-  
-
 ## Tweak View
-
-  
-  
 
 Another great way to customize your Pwnagotchi quickly is TweakView by NurseJackass, it's really easy to set up. Here is how:
 
 ### Quick Intstall Steps
-
-  
-  
 
 \- Set up your pi and Pwnagotchi with webUI. The Tweak View interface is accessed through webUI, so make sure that works first.
 
 \- [Download the file](https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/tweak_view.py) into the custom plugins folder on Pwnagotchi. Enable the plugin through the webUI, then reload the plugins page. "Tweak View" is now a link to the editor interface. The interface is not pretty, but it works. It was a development tool to learn Python and how to integrate with Pwnagotchi. Mostly it provides a quicker and easier update cycle for fine-tuning UI layout (as opposed to editing all of the plugin and view files and restarting Pwnagotchi).
 
 \- The editor interface presents a list of all of the UI elements on the screen, with all of the editable parameters for each. To change an element, type something into the settings boxes or change the dropdowns. There is very little error checking, and some wrong changes can make the display stop updating. Be cautious when editing. UI Elements have the following editable parameters:
-
     
         Color: color is there, but does not really work (without further mods to the main Pwnagotchi code) because Pwnagotchi uses 1-bit UI.           If your Pwnagotchi does support color, enter values as 6 hex digits preceded by "#" (first two digits are red, next 2 are green, last 2 are blue, 00-ff == 0-255), or other "Color Names" allowed by Pillow.
         label: for "LabeledValue" elements, you can change the label. The plugin that "owns" the element might overwrite your change, but most do not. You can even make it empty.
@@ -565,7 +480,6 @@ Another great way to customize your Pwnagotchi quickly is TweakView by NurseJack
         value: displayed to help find the element in the page, but not editable
         xy: coordinates of the upper left corner of the UI element. 0,0 is the upper left corner of the screen.        Negative values are interpreted as inset from the right or bottom edge, but still the upper-left of the element.        For example, to place "mode" in the bottom right of the screen, set mode.xy = "-40,-12". To move an item offscreen, use a positive value larger than the width of the screen in the first position.
     
-
 \- After making the changes you want, press return or click the "Update View" button at the bottom. The "Tweak View POST" results page shows you the updated actions. The Pwnagotchi image on the page will most likely still show the old placement due to the way Pwnagotchi updates. The first section, labeled "Path," is also a leftover debugging element that really should be deleted in the future. Just ignore it.
 
 \- The "Form" section of the results page shows all of the "mods" that were submitted. It is debugging output, sometimes showing the new value and the old value, or sometimes just the new value. It's pretty verbose. Again, probably skip it.
@@ -578,52 +492,40 @@ Note: If the UI stops updating or displaying some things, edit or delete the cha
 
 ### The Font Bug
 
-
 If you go to the tweak view interface and see that all of the fonts are "Small", that is "the font bug". Go back, disable the plugin, count to 10 (or wait for the display UI to go back to "original"), then reload the plugin. This bug should be fixed in the latest version, so if you are experiencing the bug, update the plugin (download a new copy and put it in the custom plugins directory).
 
 If you didn't catch the bug and submit a mod, then all of the display elements will be switched to "Small" font. Don't worry, you can delete the offending changes from the editor results page.
 
 ### Tweak Files
 
-
 Tweak\_view stores your "mods" in /etc/pwnagotchi/tweak\_view.json. It should be JSON "pretty printed," with one mod per line. You can edit this file with any text editor (but be careful; typos can make it not load properly). Disable tweak\_view from the web UI before editing, or it might overwrite your changes. Enable tweakview after editing to activate the changes.
 
 ### Multiple Layouts
 
-
 Tweak\_view does not have a way to switch between multiple layouts, but you can do it by changing the tweak\_view.json file from the command line.
 
 Set up tweak view the way you like, for example, shrink the face and make memtempcpu bigger.
-
     
     ssh into the device, and copy the current settings to a file
     cd /etc/pwnagotchi
     sudo cp tweak_view.json readable_stats.json
     
-
 Then go back into tweak\_view and change it to something else. Maybe relocate the face off the screen (x, y = 500, 150) to make room for more extended status messages and increase the max width of the status to go full screen. Then go back into the shell and save the settings to another file:
-
     
     sudo cp tweak_view.json faceless.json
     
-
 When you want to switch to "readable\_stats":
 
 Disable tweak\_view in the web UI,
-
     
     ssh in and
     sudo cp /etc/pwnagotchi/readable_stats.json /etc/pwnagotchi/tweak_view.json
     
-
 Re-enable tweak\_view in the web UI.
 
 A future version might have a drop-down to select among saved mods (but [Fancygotchi](link-to-fancy) is a much better choice for that).
 
-
-
 ## Custom voices
-
 
 ### 1\. Download a personality
 
@@ -636,7 +538,6 @@ Copy your chosen `voice.py` to `/usr/local/lib/python3.7/dist-packages/pwnagotch
 I prefer to do this by using FileZilla, and FTPing in. [Tutorial on FTP by WiFiTube](https://www.youtube.com/watch?v=6f7PB3bgaxQ)
 
 [![](https://i3.wp.com/github.com/TheJustinCrow/PwnPersonalities/raw/main/media/CopyFiles.gif)](https://github.com/TheJustinCrow/PwnPersonalities/raw/main/media/CopyFiles.gif)
-
 
 ### 3\. Reboot Pwnagotchi
 
@@ -659,7 +560,6 @@ List of Personalities
 | [AAAAAAAAA](https://github.com/antifreeze31/pwnagotchi-personalities/tree/master/AAAAAA) | Screams all the time.... AAAAAAAAAAAA! |
 | [Gamer](https://github.com/antifreeze31/pwnagotchi-personalities/tree/master/gamer) | Get your Pwny to talk like you when your playing your favourite game! |
 | [UwU](https://github.com/antifreeze31/pwnagotchi-personalities/tree/master/uwu) | Everything is beeing said in a UwU-way! |
-
 
 Contributions
 -------------

@@ -1,14 +1,13 @@
 +++
 pre = "<i class='fas fa-trophy'></i> "
 archetype = "default"
-title = "hall of fame"
+title = "Hall of Fame"
 weight = 9
 +++
 
 People who helped, developed or contributed in other ways get honored here. I want to personally thank you!
 Some people made software, which you can use right now. To see their work check out the 3rd-party Images/Plugins pages!
 <br></br>
-
 
 NeonLightning
 
@@ -36,7 +35,7 @@ Rai
 
 Dj1ch
 
-and many others...
+_and many others..._
 
 <style>
 p {

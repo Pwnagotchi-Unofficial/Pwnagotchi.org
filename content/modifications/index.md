@@ -1,10 +1,9 @@
 +++
 pre = "<i class='fas fa-toolbox'></i> "
 archetype = "default"
-title = "modifications"
+title = "Modifications"
 weight = 6
 +++
-
 
 ## External Antenna
 
@@ -54,8 +53,6 @@ You will need some sort of magnification device (whether a jewelers loupe or a s
 
 If you soldered everything correctely and plugged your external antenna into the new connector you just put on your Pi, your good to go. Enjoy your Pwnagotchi with a DIY IPEX-antenna.
 
-
-
 ## Slimagotchi
 
 Another advanced Pwnagotchi mod is called "Slimagotchi". As the name suggests it´s really slim, which is benefitial for carrying it around to save some space or just for aesthetics.
@@ -67,7 +64,6 @@ Another advanced Pwnagotchi mod is called "Slimagotchi". As the name suggests it
 2. flux
 3. copper braided wick
 4. side cutter
-
 
 ### Parts needed:
 1. a RPi0W

@@ -1,10 +1,11 @@
 +++
 pre = "<i class='fas fa-globe'></i> "
 archetype = "default"
-title = "opwngrid"
+title = "Opwngrid"
 weight = 7
 +++
 
+_content dynamically fetched from [opwngrid.xyz](https://opwngrid.xyz)_
 
 <div style="position: relative; padding-bottom: 75%; height: 2000px; max-width: 100%; overflow: hidden;">
     <iframe src="https://opwngrid.xyz/" id="embeddedIframe" style="position: absolute; width: 100%; height: 2000px; border: 0;"></iframe>

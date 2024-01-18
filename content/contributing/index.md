@@ -1,7 +1,7 @@
 +++
 pre = "<i class='fas fa-dna'></i> "
 archetype = "default"
-title = "contributing"
+title = "Contributing"
 weight = 8
 +++
 
@@ -9,9 +9,7 @@ In this site, we'll explain how to contribute to the **Pwnagotchi community!** D
 
 This contributing page is **not** for this wiki, its for the Pwnagotchi framework in general. However if you made a new plugin or image, which you want to be displayed on this site, feel free to **open a pull request or reach out to one of the developers.**
 
-
 ## Developing your own plugin
-
 
 If you want to develop your own plugin, you have the following callbacks availaible:
 
@@ -198,14 +196,11 @@ To illustrate how easy it is to add additional functionality via the plugin syst
                 with open(gps_filename, 'w+t') as fp:
                     json.dump(gps, fp)
     
-    
-
 Pwnagotchi’s developement environment is [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) + [nexmon patches](https://re4son-kernel.com/re4son-pi-kernel/) for monitor mode, or any Linux with a monitor mode enabled interface (if you tune `config.toml`).
 
 **Do not try with Kali on the Raspberry Pi 0 W**, it is compiled without hardware floating point support and TensorFlow is simply not available for it, use Raspbian.
 
 ## Adding a new Display
-
 
 Currently Pwnagotchi supports several displays and adding support for new ones is very easy! All you have to do is copying the specific Python libraries of the hardware [into this folder](https://github.com/evilsocket/pwnagotchi/tree/master/pwnagotchi/ui/hw/libs) and then create a new class in its parent folder that implements the methods of the following abstract class:
 
@@ -247,7 +242,6 @@ Currently Pwnagotchi supports several displays and adding support for new ones i
     def clear(self):
     raise NotImplementedError
     
-
 For instance, the [pwnagotchi/ui/hw/oledhat.py](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/ui/hw/oledhat.py) file which supports [this hat](https://www.waveshare.com/wiki/1.3inch_OLED_HAT) looks like this:
 
     import logging
@@ -296,7 +290,6 @@ For instance, the [pwnagotchi/ui/hw/oledhat.py](https://github.com/evilsocket/pw
     def clear(self):
     self._display.clear()
     
-
 ## Creating an Image
 
 ### Linux
@@ -305,12 +298,10 @@ If you want to create a custom image for testing, developing or just hacking, yo
 To create a zip file with the image and one with its sha256 checksum, just run:
 
     make image
-    
 
 To remove the generated files:
 
     sudo make clean
-    
 
 ### Windows
 
@@ -318,7 +309,6 @@ Download [Win32Diskimager](https://win32diskimager.org/)
  
 Launch the program and select an .img file which you dont need anymore (or download one from Github). The select the BOOT drive of your sd-card and hit read. Once that is done the image you chose prior is now an exact copy of your current setup. Flash it on another sd-card or share it!
 Adding a Language
-
 
 ## Contributing a new translation
 
@@ -335,16 +325,15 @@ If you want to contribute a new translation of Pwnagotchi’s status messages fo
 *   Now you’ll need to compile it; this will create the `.mo` files:
     
 
-    ./scripts/language.sh compile <lang>
+        ./scripts/language.sh compile <lang>
     
-
 ### Updating an existing translation
 
 Sometimes we change old or add new status messages in Pwnagotchi’s UI. If that’s happened and something in the `voice.py` the code has changed, users can submit updated translations using the following procedure:
 
 1.  Update the template and merges it with the already translated po-file:
 
-    ./scripts/language.sh update <lang>
+        ./scripts/language.sh update <lang>
     
 
 1.  Now you need to
@@ -353,7 +342,6 @@ Sometimes we change old or add new status messages in Pwnagotchi’s UI. If that
     *   Remove the `fuzzy` string afterwards
 2.  Recompile the `.mo` file
 
-    ./scripts/language.sh compile <lang>
+        ./scripts/language.sh compile <lang>
     
-
 Afterwards you can either compile it to a custom image, or submit it, in a pull request, to one ot multiple github image repos of your choice. After some time the developer/developers responsible for the repo should see your commit and hopefully add your translation.
