@@ -134,7 +134,7 @@ ui.display.enabled = false
 
 `main.lang` specifies the language of your pwny. For language reference, see [here](https://pwnagotchi.ai/configuration/#choose-your-unit-s-language)
 
-`main.whitelist` is a list of access points that **WON'T** be pwned, so for example your home WiFi. You can enter it's SSID or MAC address there.
+`main.whitelist` is a list of access points that **WON'T** be pwned, so for example your home WiFi. You can enter it's SSID (Name of the Wi-Fi router) or it's MAC address there.
 
 `main.plugins.grid` controls the bevaiour of the Grid, which is sort of a backend for the pwny, that has statistics, you can message others using it, etc. Read more about Grid [here](https://pwnagotchi.ai/configuration/#set-your-pwngrid-preferences). 
 
@@ -169,7 +169,7 @@ Congratulations, your SD card should be now ready for boot! Safely remove your S
 
 ![RPi 0 USB ports](https://github.com/pwndevelopers/community-wiki/assets/21370314/8de186f5-e095-47af-8e2c-e39705aac432)
 
-Insert your USB cable into the "DATA" port, and connect it to your PC. The green LED on your Pi should start blinking quickly for a while, that means it is starting up. In the meantime, you can enable Bluetooth and Hotspot on your phone, so you can get up and running. The process of booting up for the first time can take few minutes, up to tens of minutes depending on your SD card, so give it a little while. In the meantime, you can make yourself a coffee, have a snack, or join our community [Discord](https://discord.gg/PgaU3Vp) and get to known the most amazing people!
+Insert your USB cable into the "DATA" port, and connect it to your PC. The green LED on your Pi should start blinking quickly for a while, that means it is starting up. In the meantime, you can enable Bluetooth and Hotspot on your phone, so you can get up and running. The process of booting up for the first time can take few minutes, up to tens of minutes depending on your SD card, so give it a little while. In the meantime, you can make yourself a coffee, have a snack, or join our community [Discord](https://discord.gg/PgaU3Vp) and get to know the most amazing people!
 
 ## SSH into your pi...
 ### ... on Windows
@@ -199,7 +199,7 @@ After that, head over to "IPv4 Settings", change method to "Manual" and enter de
 
 ![Network Manager IPv4 settings](https://github.com/pwndevelopers/community-wiki/assets/21370314/64ba6e9f-e11e-4e18-a420-5b280ca713c0)
 
-After that, you can save and your connection should work. Open terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is whatever username you have specified in the Imager. If you haven't, the default is `pi`. Enter the password you have specified in the Imager, if you haven't, then the default is `raspberry`.
+After that, you can save and your connection should work. Open the terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is whatever username you have specified in the Imager. If you haven't, the default is `pi`. Enter the password you have specified in the Imager, if you haven't, then the default is `raspberry`.
 
 ### ... on MacOS
 Steps should be similar to Linux, so you can try bouncing off of that. I have never used Mac, so I have no idea how to do this. 
