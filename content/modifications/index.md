@@ -47,7 +47,7 @@ Please be aware that if you modify your Pi, you will invalidate its FCC certific
 
 I used the following guide for the great images that they were able to take: briandorey.com/post/raspberry-pi-zero-w-external-antenna-mod
 
-WARNING: If you do not have soldering skills OR don’t have the correct tools for this mod, you will damage your Pi.
+**WARNING**: If you do not have soldering skills OR don’t have the correct tools for this mod, you will damage your Pi.
 This can be done very quickly with a hot air rework station, but not many folks will have a hot air rework station—so I did it with my soldering iron.
 You will need some sort of magnification device (whether a jewelers loupe or a stereo microscope) when it comes to the moving of the 0ohm resistor. It is VERY small.
 

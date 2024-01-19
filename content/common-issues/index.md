@@ -53,3 +53,4 @@ If you noticed that your Pwnagotchi isnt beeing recognized by Windows follow the
 3. Try different USB port on your PC/Laptop
 4. If your RPi is shown on some COM port (COM5 for example), you need to install RNDIS drivers (because Windows doesn't install those automatically for some reason). Follow this [guide](https://www.factoryforward.com/pi-zero-w-headless-setup-windows10-rndis-driver-issue-resolved/).
 5. [RNDIS windows 10 driver download link](https://modclouddownloadprod.blob.core.windows.net/shared/mod-rndis-driver-windows.zip)
+
