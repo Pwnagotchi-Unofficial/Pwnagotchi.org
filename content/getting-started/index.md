@@ -17,7 +17,7 @@ Next, a microSD card, you'd be best with 16GB or more. Those go for around 8-10$
 
 A good quality micro USB cable that can do data transfer. Be aware that some cables (especially cheap ones) are wired for _power only_, meaning you won't be able to connect to your pi during the initial setup. I highly recommend you get a higher quality cable, both from a durability and reliability standpoint, and from the "being able to transfer data" standpoint. You can get them from Amazon for around 5-10$ depending on the brand, I can recommend Amazon Basics, Vention and Ugreen.
 
-Lastly, you'd want to get yourself a power bank, or a battery bank. It doesn't really matter which one, you only need standard USB output that can deliver about 1-1.5A, which most power banks can do. Obviously, the higher the capacity (measured in mAh), the longer you can pwn. Neat features may come with the power bank such as being able to charge the power bank while using it which is good for car deployments. But that depends on you. I can recommend brands like Ugreen, Baseus, Xiaomi, Anker and Viking.
+Lastly, you'd want to get yourself a power bank, or a battery bank. It doesn't really matter which one, you only need standard USB output that can deliver about 1-1.5A, which most power banks can do. Obviously, the higher the capacity (measured in mAh), the longer you can pwn. Neat features may come with the power bank such as being able to charge the power bank while using it, which is good for car deployments, but that depends on you. I can recommend brands like Ugreen, Baseus, Xiaomi, Anker and Viking for power banks.
 
 Optionally, if you dont have a case, get yourself a rubber band or two, so you can put together the pi on your powerbank.
 
@@ -43,11 +43,11 @@ Select that media, but don't hit write yet. In the bottom right corner, there is
 ## OS options
 You can set hostname to whatever you like, for example, my pwny is called `pwn3ttx` so I also set hostname of my device to it. This is so you can easily recognize it on your network, and you can use it as URL to view your pwny via Bluetooth.
 
-Check "Enable SSH" with "Use password authentication", so you can remote into the pi. If you want to use your SSH keys, check the other option, you should know what you are doing at this point.
+Check "Enable SSH" with "Use password authentication", so you can remote into the pi. If you want to use your SSH keys, check the other option, and upload the public keys.
 
 Set username and password, you can leave those to default (username: `pi`, password: `raspberry`), but from security standpoint, **it is highly discouraged to do so**. Change them to something you like, that is secure and you can remember.
 
-Configure Wireless LAN, you'd want to leave that empty, since your device won't be connecting to the itnernet by itself.
+Configure Wireless LAN, you'd want to leave that empty, since your device won't be connecting to the internet by itself.
 
 Set Locale Settings, enter the timezone you are in, and the keyboard layout you'd wish to use when you remote in.
 
@@ -169,7 +169,7 @@ Congratulations, your SD card should be now ready for boot! Safely remove your S
 
 ![RPi 0 USB ports](https://github.com/pwndevelopers/community-wiki/assets/21370314/8de186f5-e095-47af-8e2c-e39705aac432)
 
-Insert your USB cable into the "DATA" port, and connect it to your PC. The green LED on your Pi should start blinking quickly for a while, that means it is starting up. In the meantime, you can enable Bluetooth and Hotspot on your phone, so you can get up and running. The process of booting up for the first time can take few minutes, up to tens of minutes depending on your SD card, so give it a little while. In the meantime, you can make yourself a coffee, have a snack, or join our community [Discord](https://discord.gg/PgaU3Vp) and get to know the most amazing people!
+Insert your USB cable into the "DATA" port, and connect it to your PC. The green LED on your Pi should start blinking quickly for a while, that means it is starting up. In the meantime, you can enable Bluetooth and Hotspot on your phone, so you can get up and running. The process of booting up for the first time can take few minutes or up to tens of minutes depending on your SD card, so give it a little while. In the meantime, you can make yourself a coffee, have a snack, or join our community [Discord](https://discord.gg/PgaU3Vp) and get to know the most amazing people!
 
 ## SSH into your pi...
 ### ... on Windows
