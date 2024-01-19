@@ -1,6 +1,6 @@
 +++
 archetype = "default"
-title = "pwnagotchi.org"
+title = "pwnagotchi org"
 weight = 1
 +++
 
