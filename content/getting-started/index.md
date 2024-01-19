@@ -217,7 +217,7 @@ If your bluetooth is not working, you can try these steps:
 2) run `sudo bluetoothctl`
 3) run `scan on`. Find your phone either by it's name, or MAC address. You will need only MAC address, so the best you can do is to find it in your phone. 
 4) run `pair <mac>`, where `<mac>` is your phone's BT MAC address.
-5) run `trust <mac>`, where again, <mac> is your phone's BT MAC address.
+5) run `trust <mac>`, where again, `<mac>` is your phone's BT MAC address.
 6) In a few moments, you should be prompted (on your phone) to allow communication with pwnagotchi.
 7) If the problem still persists, try untrusting and unpairing pwnagotchi from your phone, rebooting both devices and repeating process. Sometimes, you need to repeat this process multiple times for it to work (I need 3 attempts before it started working). If you still have problem, head to ⁠supwnport channel on our Discord.
 
