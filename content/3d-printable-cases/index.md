@@ -53,7 +53,7 @@ color: #fff !important;
           <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://cults3d.com/en/3d-model/gadget/coque-pwnagotchi-waveshare3-pisugar3-et-protection-d-ecran-plexiglass" target="_blank"> </span>
   <td><p style="text-align: center;">- Raspberry pi zero or zero2 <br></br>
             - Normal GPIO header<br></br>
-            - Waveshare v3 <br></br>
+            - Waveshare v3 or v4 <br></br>
             - Pisugar3</p></td>
   <td style="text-align: center;"><a href="https://cults3d.com/en/users/maxdarkdog/3d-models" target="_blank">MAXDARKDOG</a></td>
   </tr>
@@ -86,7 +86,7 @@ color: #fff !important;
 <td><p style="text-align: center;">
 - Raspberry pi zero or zero2<br></br>
 - Normal GPIO header<br></br>
-- Waveshare v2 or v3 <br></br>
+- Waveshare v2, v3 or v4 <br></br>
 - Waveshare UPC hat<br></br>
 </p></td>
 <td style="text-align: center;"><a id="centered" href="https://github.com/aluminum-ice/" target="_blank">Aluminum-Ice</a></td>  
@@ -111,7 +111,7 @@ color: #fff !important;
 <td><p style="text-align: center;">
   - Raspberry pi zero or zero2<br></br>
   - Slimagotchi mod<br></br>
-  - Waveshare v2 or v3<br></br>
+  - Waveshare v2, v3 or v4<br></br>
   - Pisugar3</p></td>
 <td style="text-align: center;"><a id="centered" href="https://github.com/V0r-T3x/" target="_blank">V0r-T3x</a></td>  
 </tr>
@@ -120,7 +120,7 @@ color: #fff !important;
 <td><p style="text-align: center;">
   - Raspberry pi zero or zero2<br></br>
   - Slimagotchi mod<br></br>
-  - Waveshare v3 <br></br>
+  - Waveshare v3 or v4 <br></br>
   - Pisugar 1200mah</p></td>
 <td style="text-align: center;"><a id="centered" href="https://www.printables.com/de/@mikeymakesit" target="_blank">MikeyMakesIt</a></td>  
 </tr>
@@ -140,7 +140,7 @@ color: #fff !important;
 <td><p style="text-align: center;">
   - Raspberry pi zero or zero2<br></br>
   - Normal GPIO header<br></br>
-  - Waveshare v2 or v3<br></br>
+  - Waveshare v2, v3 or v4<br></br>
   - Pisugar3 1200mah</p></td>
 <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/nokati/designs" target="_blank">Nokati</a></td>  
 </tr>
