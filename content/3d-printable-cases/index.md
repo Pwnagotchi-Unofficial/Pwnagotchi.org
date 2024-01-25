@@ -144,6 +144,15 @@ color: #fff !important;
   - Pisugar3 1200mah</p></td>
 <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/nokati/designs" target="_blank">Nokati</a></td>  
 </tr>
+<tr>
+<td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:5450141"><img src="https://cdn.thingiverse.com/assets/44/b0/63/76/9d/large_display_f150a2fc-e52c-4d80-95fe-973d7dd1eb2b.jpeg" height="300" style="max-width: 100%;"></a></p></td>
+<td><p style="text-align: center;">
+  - Raspberry pi zero2 (NO SLIM MOD) <br></br>
+  - Normal GPIO header<br></br>
+  - Waveshare v4<br></br>
+  - Pisugar3 1200mah</p></td>
+<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/rmrfus/designs" target="_blank">rmrfus</a></td>  
+</tr>
 <!--
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="project-link"><img src="img-link" height="300" style="max-width: 100%;"></a></p></td>
