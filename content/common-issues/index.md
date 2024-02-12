@@ -29,7 +29,7 @@ Sometimes, you need to repeat this process multiple times for it to work (I need
 
 These are known working settings to edit on your config file. 
 
-``
+```
 main.plugins.bt-tether.enabled = true
 main.plugins.bt-tether.devices.android-phone.enabled = true
 main.plugins.bt-tether.devices.android-phone.search_order = 1
@@ -53,7 +53,7 @@ main.plugins.bt-tether.devices.ios-phone.max_tries = 0
 main.plugins.bt-tether.devices.ios-phone.share_internet = false
 main.plugins.bt-tether.devices.ios-phone.priority = 999
 
-``
+```
 
 
 ## Cannot SSH into the Pwnagotchi
