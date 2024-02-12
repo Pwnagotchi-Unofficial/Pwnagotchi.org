@@ -12,7 +12,10 @@ If your bluetooth isnt working (or your Pwnagotchi wont connect to your hotspot)
 
 ### Instructions:
 
+
 If your bluetooth is not working, you can try these steps:
+
+Before you start this is very important for Android make sure bluetooth tethering is activated and for apple you need iPhone's personal hotspot ON
 
 1. SSH into your pwnagotchi
 2. run `sudo bluetoothctl`
@@ -24,6 +27,33 @@ If your bluetooth is not working, you can try these steps:
 
 Sometimes, you need to repeat this process multiple times for it to work (I needed 3 attempts before it started working).
 
+These are known working settings to edit on your config file. 
+
+``
+main.plugins.bt-tether.enabled = true
+main.plugins.bt-tether.devices.android-phone.enabled = true
+main.plugins.bt-tether.devices.android-phone.search_order = 1
+main.plugins.bt-tether.devices.android-phone.mac = "YOUR MAC"
+main.plugins.bt-tether.devices.android-phone.ip = "192.168.44.44"
+main.plugins.bt-tether.devices.android-phone.netmask = 24
+main.plugins.bt-tether.devices.android-phone.interval = 1
+main.plugins.bt-tether.devices.android-phone.scantime = 10
+main.plugins.bt-tether.devices.android-phone.max_tries = 10
+main.plugins.bt-tether.devices.android-phone.share_internet = true
+main.plugins.bt-tether.devices.android-phone.priority = 1
+
+main.plugins.bt-tether.devices.ios-phone.enabled = false
+main.plugins.bt-tether.devices.ios-phone.search_order = 2
+main.plugins.bt-tether.devices.ios-phone.mac = "YOUR MAC"
+main.plugins.bt-tether.devices.ios-phone.ip = "172.20.10.6"
+main.plugins.bt-tether.devices.ios-phone.netmask = 24
+main.plugins.bt-tether.devices.ios-phone.interval = 5
+main.plugins.bt-tether.devices.ios-phone.scantime = 20
+main.plugins.bt-tether.devices.ios-phone.max_tries = 0
+main.plugins.bt-tether.devices.ios-phone.share_internet = false
+main.plugins.bt-tether.devices.ios-phone.priority = 999
+
+``
 
 
 ## Cannot SSH into the Pwnagotchi
