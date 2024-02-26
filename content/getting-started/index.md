@@ -164,7 +164,7 @@ Steps in MacOS Are similar to Linux, and this example is based on Intel MacOS So
 
 ![MacOS Network Manager Settings](../../static/images/macosnetwork.png)
 
-After plugging it in we should automatically see our ethernet connection:
+After plugging the Raspberry Pi in we should automatically see our ethernet connection:
 
 ![Updated Network Settings](<../../static/images/updatednetwork.png>)
 
@@ -172,12 +172,13 @@ Now click on the new network(RNDIS/Ethernet Gadget for me) and click on Details.
 
 ![Config IPV4](<../../static/images/ipv4config.png>)
 
-And go to DNS Section now and enter your desired DNS Server(i.e 1.1.1.1 or 8.8.8.8) by clicking + sign like below:
+And go to DNS Section now and enter your desired DNS Server(i.e 9.9.9.9 or 8.8.8.8) by clicking + sign like below:
 
 ![Config DNS](<../../static/images/dnsconfig.png>)
 
 Note: If you cannot connect to the internet from your MacOS After this click on (**...** > Set Service Order...) drag the interface you use for internet to the top. 
-After all of these click OK it might ask for your password and then the status should change from 'Self Assigned' IP to 'Connected' you are all done! Open your favorite terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is whatever username you have specified in the Imager. If you haven't, the default is `pi`. Enter the password you have specified in the Imager, if you haven't, then the default is `raspberry`.
+
+After all of these click OK it might ask for your password and then the status should change from 'Self Assigned' IP to 'Connected' you are all done! Open your favorite terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is `pi` by default. Enter the password the default is `raspberry`.
 
 
 ## Checking Bluetooth
