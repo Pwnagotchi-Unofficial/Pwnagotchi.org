@@ -162,21 +162,17 @@ After that, you can save and your connection should work. Open the terminal, and
 ### ... on MacOS
 Steps in MacOS Are similar to Linux, and this example is based on Intel MacOS Sonoma, however it shouldn't be too much different for any other mac versions. First of all connect your Raspberry Pi to your Mac, I used an usb to type-c adapter, but if you own a microusb-typec cable you can use that! After you plug it in open your system settings ( >System Settings) and go to the "Network" section. You should see a window like this:
 
-![MacOS Network Manager Settings](../../static/images/networksetting.png)
+![MacOS Network Manager Settings](../../static/images/macosnetwork.png)
 
 After plugging it in we should automatically see our ethernet connection:
 
 ![Updated Network Settings](<../../static/images/updatednetwork.png>)
 
-Now click on the new network(RNDIS/Ethernet Gadget for me) and click on Details. You should see a screen like this:
-
-![Adding Config](<../../static/images/networksetting.png>)
-
-Click on TCP/IP and set Configure IPv4 from DHCP to Manual configure the else like below.
+Now click on the new network(RNDIS/Ethernet Gadget for me) and click on Details. You should see a screen popping up and click TCP/IP and set Configure IPv4 from(DHCP to Manually) configure the else like below.
 
 ![Config IPV4](<../../static/images/ipv4config.png>)
 
-And go to DNS Section now and enter your desired DNS Server by clicking + sign like below:
+And go to DNS Section now and enter your desired DNS Server(i.e 1.1.1.1 or 8.8.8.8) by clicking + sign like below:
 
 ![Config DNS](<../../static/images/dnsconfig.png>)
 
