@@ -158,28 +158,10 @@ After that, head over to "IPv4 Settings", change method to "Manual" and enter de
 
 After that, you can save and your connection should work. Open the terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is whatever username you have specified in the Imager. If you haven't, the default is `pi`. Enter the password you have specified in the Imager, if you haven't, then the default is `raspberry`.
 
-
 ### ... on MacOS
-Steps in MacOS Are similar to Linux, and this example is based on Intel MacOS Sonoma, however it shouldn't be too much different for any other mac versions. First of all connect your Raspberry Pi to your Mac, I used an usb to type-c adapter, but if you own a microusb-typec cable you can use that! After you plug it in open your system settings ( >System Settings) and go to the "Network" section. You should see a window like this:
+Steps should be similar to Linux, so you can try bouncing off of that. I have never used Mac, so I have no idea how to do this. 
 
-![MacOS Network Manager Settings](../../static/images/macosnetwork.png)
-
-After plugging the Raspberry Pi in we should automatically see our ethernet connection:
-
-![Updated Network Settings](<../../static/images/updatednetwork.png>)
-
-Now click on the new network(RNDIS/Ethernet Gadget for me) and click on Details. You should see a screen popping up and click TCP/IP and set Configure IPv4 from(DHCP to Manually) configure the else like below.
-
-![Config IPV4](<../../static/images/ipv4config.png>)
-
-And go to DNS Section now and enter your desired DNS Server(i.e 9.9.9.9 or 8.8.8.8) by clicking + sign like below:
-
-![Config DNS](<../../static/images/dnsconfig.png>)
-
-Note: If you cannot connect to the internet from your MacOS After this click on (**...** > Set Service Order...) drag the interface you use for internet to the top. 
-
-After all of these click OK it might ask for your password and then the status should change from 'Self Assigned' IP to 'Connected' you are all done! Open your favorite terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is `pi` by default. Enter the password the default is `raspberry`.
-
+_Community notice: If you happen to own Mac and do this, you can write this portion of the guide and provide screenshots :)_
 
 ## Checking Bluetooth
 If you have connected to your pwny via SSH, you can use the shell to debug stuff. Because we have set everything necessary in advance, there is not really a need to have the shell, but it is helpful to have it in case something is not working.
