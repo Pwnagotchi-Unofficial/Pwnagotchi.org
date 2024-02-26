@@ -7,7 +7,7 @@ weight = 2
 
 This section is focused on newcomers. Here you can look through guides that will help you with getting your first device up and running (most of them are in the [community wiki](https://github.com/Pwnagotchi-Unofficial/community-wiki)). 
 
-This is a guide for beginners by [N3ttX](https://github.com/ApplePie420) - How to get up and running quickly (headless/without screen)
+This is a guide for beginners - How to get up and running quickly (headless/without screen)
 
 ## Hardware
 
@@ -26,13 +26,21 @@ Total cost amounts to around 40$ for decent quality accessories. You can go lowe
 ## Software
 You will need a computer with basically any OS. I run Linux (Manjaro Xfce), but this should also apply for Windows and Mac aswell. We will be using [Raspberry Imager](https://www.raspberrypi.com/software/) to flash our system. Head to the webpage, you will find installation instructions for every OS imaginable there. 
 
-Next, we will need an image. The official one is no longer maintained, is outdated and contains a bug that prevents the AI mode from starting. Instead, we will be using a community built image from [wpa-2](https://github.com/wpa-2), that contains various fixes for AI mode and screens. You can download this image from [here](https://github.com/wpa-2/pwnagotchi/releases/tag/Fix), under Assets. Use software like 7-Zip, WinRAR or gunzip to extract the `.img` file from the archive.
+Next, we will need an image. The official one is no longer maintained, it's outdated and contains a bug that prevents the AI mode from starting. Instead, we will be using a community built image from [jayofelony
+](https://github.com/jayofelony), Images are hosted here [https://github.com/jayofelony/pwnagotchi ](https://github.com/jayofelony/pwnagotchi/releases)
+
+Look under assets
+- RPiZeroW (32bit) (armhf)
+- RPiZero2W, RPi3, RPi4, RPi5 (arm64)
+
+Use software like 7-Zip, WinRAR or gunzip to extract the `.img` file from the archive.
 
 # Flashing the OS
 ## Selecting OS image and media
 There isn't much to this, once you have extracted your `.img` file from the archive, plug in your SD card reader with microSD card in it, and run [Raspberry] Imager. You will see windows similar to this:
 
-![Raspberry Imager](https://github.com/pwndevelopers/community-wiki/assets/21370314/0a27501d-9bd5-464f-903b-811d8f15ba4a)
+![2024-02-26 07_16_20-Raspberry Pi Imager v1 8 4](https://github.com/Pwnagotchi-Unofficial/Pwnagotchi.org/assets/9049886/10cc3481-8f1d-4ef1-adf5-d50f41bc5a06)
+
 
 In there, choose the OS by clicking the button, scrolling to bottom and selecting "Use custom". Use the popup navigator to locate your `.img` file on your computer. After that, select your storage. If you have only one USB flash drive plugged in, it should be the only option, like this (the text might say something different but you get the gist):
 
@@ -41,18 +49,10 @@ In there, choose the OS by clicking the button, scrolling to bottom and selectin
 Select that media, but don't hit write yet. In the bottom right corner, there is a cogwheel button for settings. Click on that, we will set some parameters right away, this will make the process much easier.
 
 ## OS options
-You can set hostname to whatever you like, for example, my pwny is called `pwn3ttx` so I also set hostname of my device to it. This is so you can easily recognize it on your network, and you can use it as URL to view your pwny via Bluetooth.
+Dont change anything. 
 
-Check "Enable SSH" with "Use password authentication", so you can remote into the pi. If you want to use your SSH keys, check the other option, and upload the public keys.
-
-Set username and password, you can leave those to default (username: `pi`, password: `raspberry`), but from security standpoint, **it is highly discouraged to do so**. Change them to something you like, that is secure and you can remember.
-
-Configure Wireless LAN, you'd want to leave that empty, since your device won't be connecting to the internet by itself.
-
-Set Locale Settings, enter the timezone you are in, and the keyboard layout you'd wish to use when you remote in.
-
-![Example of the settings](https://github.com/pwndevelopers/community-wiki/assets/21370314/04d52ceb-ea89-444e-8eff-76cb6e359762)
-
+Also choose no at this point
+![Screenshot 2024-02-17 113241](https://github.com/Pwnagotchi-Unofficial/Pwnagotchi.org/assets/9049886/869c4381-aa1f-4926-956d-c63bc965a4e8)
 
 ## Flashing
 That is everything, you can hit "Save" on the bottom, and hit "Write" on the main screen. This process can take up to few minutes, depending on your SD card, reader and drive from which you are reading the image from. Be patient. When the flashing is done, you will get a message that it is done.
@@ -62,16 +62,17 @@ If you have followed the guide, your SD card should still be mounted (or connect
 
 ![Two different partitions in Thunar file manager](https://github.com/pwndevelopers/community-wiki/assets/21370314/cfa1dcba-45ed-4a87-8a02-50fda15a0e9e)
 
+## At this point you have 2 options.
+Insert the SD card and boot up the pwnagotchi and edit your config.toml later or add one to the boot partition
+
+
 Mount the boot partition, and open it. In there, you will create a file named `config.toml`. Open this file in your favourite text editor, and pay close attention to next steps.
 
-### Changing the default config.toml
-You can use the [default configuration](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml) as a guide to help you understand different settings. It doesn't have to contain everything, what you see in the blob in the link are default settings. We will go over stuff you need to change in order to get your pwny working.
+
 
 ```toml
-main.name = ""
+main.name = "pwnagotchi"
 main.lang = "en"
-main.confd = "/etc/pwnagotchi/conf.d/"
-
 main.whitelist = [
   "EXAMPLE_NETWORK",
   "ANOTHER_EXAMPLE_NETWORK",
@@ -79,54 +80,10 @@ main.whitelist = [
   "fo:od:ba"
 ]
 
-main.plugins.grid.enabled = true
-main.plugins.grid.report = false
-main.plugins.grid.exclude = [
-  "YourHomeNetworkHere"
-]
-
-main.plugins.bt-tether.enabled = true
-
-# remove this section if you have iPhone
-main.plugins.bt-tether.devices.android-phone.enabled = false
-main.plugins.bt-tether.devices.android-phone.search_order = 1
-main.plugins.bt-tether.devices.android-phone.mac = ""
-main.plugins.bt-tether.devices.android-phone.ip = "192.168.44.44"
-main.plugins.bt-tether.devices.android-phone.netmask = 24
-main.plugins.bt-tether.devices.android-phone.interval = 1
-main.plugins.bt-tether.devices.android-phone.scantime = 10
-main.plugins.bt-tether.devices.android-phone.max_tries = 10
-main.plugins.bt-tether.devices.android-phone.share_internet = false
-main.plugins.bt-tether.devices.android-phone.priority = 1
-
-# remove this section if you have Android phone
-main.plugins.bt-tether.devices.ios-phone.enabled = false
-main.plugins.bt-tether.devices.ios-phone.search_order = 2
-main.plugins.bt-tether.devices.ios-phone.mac = ""
-main.plugins.bt-tether.devices.ios-phone.ip = "172.20.10.6"
-main.plugins.bt-tether.devices.ios-phone.netmask = 24
-main.plugins.bt-tether.devices.ios-phone.interval = 5
-main.plugins.bt-tether.devices.ios-phone.scantime = 20
-main.plugins.bt-tether.devices.ios-phone.max_tries = 0
-main.plugins.bt-tether.devices.ios-phone.share_internet = false
-main.plugins.bt-tether.devices.ios-phone.priority = 999
-
-main.plugins.memtemp.enabled = true
-main.plugins.memtemp.scale = "celsius"
-main.plugins.memtemp.orientation = "horizontal"
-
-main.plugins.logtail.enabled = true
-main.plugins.logtail.max-lines = 10000
-
-ui.web.enabled = true
-ui.web.address = "0.0.0.0"
-ui.web.username = "changeme"
-ui.web.password = "changeme"
-ui.web.origin = ""
-ui.web.port = 8080
-ui.web.on_frame = ""
-
-ui.display.enabled = false
+ui.display.enabled = true
+ui.display.type = "waveshare_3" #Change this to match your screen/ 
+ui.display.color = "black"
+ui.fps = 1
 ```
 #### Explanation of stuff you probably want to change
 
