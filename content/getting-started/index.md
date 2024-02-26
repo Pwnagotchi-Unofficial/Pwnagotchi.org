@@ -162,7 +162,7 @@ After that, you can save and your connection should work. Open the terminal, and
 ### ... on MacOS
 Steps in MacOS Are similar to Linux, and this example is based on Intel MacOS Sonoma, however it shouldn't be too much different for any other mac versions. First of all connect your Raspberry Pi to your Mac, I used an usb to type-c adapter, but if you own a microusb-typec cable you can use that! After you plug it in open your system settings ( >System Settings) and go to the "Network" section. You should see a window like this:
 
-![MacOS Network Manager Settings](../../static/images/dnsconfig.png)
+![MacOS Network Manager Settings](../../static/images/networksetting.png)
 
 After plugging it in we should automatically see our ethernet connection:
 
