@@ -42,7 +42,7 @@ main.plugins.bt-tether.devices.android-phone.max_tries = 10
 main.plugins.bt-tether.devices.android-phone.share_internet = true
 main.plugins.bt-tether.devices.android-phone.priority = 1
 
-main.plugins.bt-tether.devices.ios-phone.enabled = false
+main.plugins.bt-tether.devices.ios-phone.enabled = true
 main.plugins.bt-tether.devices.ios-phone.search_order = 2
 main.plugins.bt-tether.devices.ios-phone.mac = "YOUR MAC"
 main.plugins.bt-tether.devices.ios-phone.ip = "172.20.10.6"
@@ -50,7 +50,7 @@ main.plugins.bt-tether.devices.ios-phone.netmask = 24
 main.plugins.bt-tether.devices.ios-phone.interval = 5
 main.plugins.bt-tether.devices.ios-phone.scantime = 20
 main.plugins.bt-tether.devices.ios-phone.max_tries = 0
-main.plugins.bt-tether.devices.ios-phone.share_internet = false
+main.plugins.bt-tether.devices.ios-phone.share_internet = true
 main.plugins.bt-tether.devices.ios-phone.priority = 999
 
 ```
