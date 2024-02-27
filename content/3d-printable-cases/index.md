@@ -20,7 +20,6 @@ color: #fff !important;
 img {
   max-width: 100% !important; /* Ensure images don't exceed the width of their container */
   height: auto !important;    /* Maintain the aspect ratio of the image */
-  display: block !important;   /* Remove extra space below images */
   margin: 0 auto !important;   /* Center images within their container */
 }
 
@@ -79,7 +78,7 @@ color: #fff !important;
               - Raspberry pi zero or zero2<br></br>
               - Normal GPIO header<br></br>
               - Waveshare OLED hat</p></td>
-  <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/facevalue83/designs" target="_blank">FaceValue83</a></td>  
+  <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/facevalue83/designs" target="_blank">FaceValue83</a></td>
   </tr>
   <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/aluminum-ice/pwnagotchi_rpiz2w_case"><img src="https://user-images.githubusercontent.com/12374267/265144566-e2619066-1524-45c5-ba61-141decb1ceec.jpeg" height="300" style="max-width: 100%;"></a></p></td>
@@ -89,7 +88,7 @@ color: #fff !important;
 - Waveshare v2, v3 or v4 <br></br>
 - Waveshare UPC hat<br></br>
 </p></td>
-<td style="text-align: center;"><a id="centered" href="https://github.com/aluminum-ice/" target="_blank">Aluminum-Ice</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://github.com/aluminum-ice/" target="_blank">Aluminum-Ice</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.printables.com/de/model/524034-pwnagotchi-case-for-pimoroni-display-hat-mini-and-"><img src="https://media.printables.com/media/prints/524034/images/4238249_9915179b-23d7-46ae-84a3-9c6055dd6778/thumbs/inside/1280x960/jpg/img_20230621_060108.webp" height="300" style="max-width: 100%;"></a></p></td>
@@ -97,14 +96,14 @@ color: #fff !important;
   - Normal GPIO header<br></br>
   - Pimoroni Display Hat Mini<br></br>
   - Pisugar2</p></td>
-<td style="text-align: center;"><a id="centered" href="https://github.com/V0r-T3x/" target="_blank">V0r-T3x</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://github.com/V0r-T3x/" target="_blank">V0r-T3x</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.printables.com/de/model/618355-pwnagotchi-display-hat-mini-w-molle-clip"><img src="https://media.printables.com/media/prints/618355/stls/4905622_2f0cde70-f54c-4ef0-8b84-2af65c6bfc9e_19e8d12e-29b8-4afc-aaca-2632ed00bda4/thumbs/cover/320x240/png/pwnagotchi-dhm-molle_preview.webp" height="300" style="max-width: 100%;"></a></p></td>
 <td><p style="text-align: center;">
   - with molle clip<br></br>
   - display-hat-mini</p></td>
-<td style="text-align: center;"><a id="centered" href="https://github.com/Sniffleupagus/" target="_blank">NurseJackass</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://github.com/Sniffleupagus/" target="_blank">NurseJackass</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://cults3d.com/en/3d-model/gadget/slimagotchi-waveshare3-pisugar3-shell-and-screen-protector-plexiglass"><img src="https://files.cults3d.com/uploaders/29237791/illustration-file/acf63228-18e2-42ab-8567-89b23c8b7541/IMG_20230912_194744__01.jpg" height="300" style="max-width: 100%;"></a></p></td>
@@ -113,7 +112,7 @@ color: #fff !important;
   - Slimagotchi mod<br></br>
   - Waveshare v2, v3 or v4<br></br>
   - Pisugar3</p></td>
-<td style="text-align: center;"><a id="centered" href="https://github.com/V0r-T3x/" target="_blank">V0r-T3x</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://github.com/V0r-T3x/" target="_blank">V0r-T3x</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.printables.com/de/model/168536-pwnagotchi-case-wavesharev2-low-profile-pisugar-12"><img src="https://media.printables.com/media/prints/168536/images/1576992_b0cb29c7-8f4d-4c77-8f57-2fc55b4ee4ad/thumbs/inside/1280x960/jpeg/img_1057_168536.webp" height="300" style="max-width: 100%;"></a></p></td>
@@ -122,7 +121,7 @@ color: #fff !important;
   - Slimagotchi mod<br></br>
   - Waveshare v3 or v4 <br></br>
   - Pisugar 1200mah</p></td>
-<td style="text-align: center;"><a id="centered" href="https://www.printables.com/de/@mikeymakesit" target="_blank">MikeyMakesIt</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://www.printables.com/de/@mikeymakesit" target="_blank">MikeyMakesIt</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:3920904"><img src="https://img.thingiverse.com/cdn-cgi/image/fit=contain,quality=95/https://cdn.thingiverse.com/assets/c6/72/b3/2a/60/large_display_IMG_5243.JPG" height="300" style="max-width: 100%;"></a></p></td>
@@ -133,7 +132,7 @@ color: #fff !important;
   - Waveshare v1 or v2 <br></br>
   - Pisugar 1200mah<br></br>
   </p></td>
-<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/ohaithear/designs" target="_blank">Ohaithear</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/ohaithear/designs" target="_blank">Ohaithear</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:5450141"><img src="https://img.thingiverse.com/cdn-cgi/image/fit=contain,quality=95/https://cdn.thingiverse.com/assets/8f/72/0e/0b/0b/large_display_68105262175__E5001BDA-82E5-4F40-BB45-84BB6F713BB7.jpeg" height="300" style="max-width: 100%;"></a></p></td>
@@ -142,7 +141,7 @@ color: #fff !important;
   - Normal GPIO header<br></br>
   - Waveshare v2, v3 or v4<br></br>
   - Pisugar3 1200mah</p></td>
-<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/nokati/designs" target="_blank">Nokati</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/nokati/designs" target="_blank">Nokati</a></td>
 </tr>
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:5450141"><img src="https://cdn.thingiverse.com/assets/44/b0/63/76/9d/large_display_f150a2fc-e52c-4d80-95fe-973d7dd1eb2b.jpeg" height="300" style="max-width: 100%;"></a></p></td>
@@ -151,7 +150,7 @@ color: #fff !important;
   - Normal GPIO header<br></br>
   - Waveshare v4<br></br>
   - Pisugar3 1200mah</p></td>
-<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/rmrfus/designs" target="_blank">rmrfus</a></td>  
+<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/rmrfus/designs" target="_blank">rmrfus</a></td>
 </tr>
 <!--
 <tr>
@@ -161,7 +160,7 @@ color: #fff !important;
   - Normal GPIO header<br></br>
   - Waveshare v2 or v3<br></br>
   - Pisugar3 1200mah</p></td>
-<td style="text-align: center;"><a id="centered" href="-link" target="_blank">Author</a></td>  
+<td style="text-align: center;"><a id="centered" href="-link" target="_blank">Author</a></td>
 </tr>
 -->
   </tbody>
@@ -175,8 +174,15 @@ color: #fff !important;
 <br></br>
 
 
+
+
+  <div id="navigation">
+      
+
+  </div>
+
   </section>
-  
+
   <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
     <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
   </div>
