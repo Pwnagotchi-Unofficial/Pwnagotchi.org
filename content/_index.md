@@ -4,6 +4,7 @@ title = "pwnagotchi org"
 weight = 1
 +++
 
+<meta name="description" content="Pwnagotchi is a device that uses optional artificial intelligence to improve its ability to crack Wi-Fi passwords. The device is extensible and runs on a low power raspberry pi by default.">
 
 <style>
 main{
