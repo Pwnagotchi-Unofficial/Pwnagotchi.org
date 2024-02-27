@@ -39,7 +39,7 @@ body {
     --MENU-SEARCH-BORDER-color: #550202; /* border color of search box */
 
     --MENU-SECTIONS-BG-color: #300000; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
-    --MENU-SECTIONS-ACTIVE-BG-color: rgba(0, 0, 0, 0.795); /* background color of the active menu section */
+    --MENU-SECTIONS-ACTIVE-BG-color: #1c0000; /* background color of the active menu section */
     --MENU-SECTIONS-LINK-color: #FFDFDF; /* link color of menu topics */
     --MENU-SECTIONS-LINK-HOVER-color: rgb(255, 255, 255); /* hovered link color of menu topics */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #ffffff; /* text color of the displayed menu topic */

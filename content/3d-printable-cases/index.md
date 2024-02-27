@@ -175,13 +175,6 @@ color: #fff !important;
 <br></br>
 
 
-
-
-  <div id="navigation">
-      
-
-  </div>
-
   </section>
   
   <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
