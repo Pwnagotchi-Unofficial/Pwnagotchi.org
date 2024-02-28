@@ -43,7 +43,9 @@ main.plugins.bt-tether.devices.android-phone.scantime = 10  # Duration of each s
 main.plugins.bt-tether.devices.android-phone.max_tries = 10  # Maximum attempts to find the phone
 main.plugins.bt-tether.devices.android-phone.share_internet = false  # Enable internet sharing via Bluetooth
 main.plugins.bt-tether.devices.android-phone.priority = 1  # Priority level for tethering
+```
 
+```
 # Configuration for iOS Phone
 main.plugins.bt-tether.devices.ios-phone.enabled = false
 main.plugins.bt-tether.devices.ios-phone.search_order = 2
@@ -55,7 +57,6 @@ main.plugins.bt-tether.devices.ios-phone.scantime = 10  # Duration of each searc
 main.plugins.bt-tether.devices.ios-phone.max_tries = 10  # Maximum attempts to find the phone
 main.plugins.bt-tether.devices.ios-phone.share_internet = false  # Enable internet sharing via Bluetooth
 main.plugins.bt-tether.devices.ios-phone.priority = 2  # Priority level for tethering
-
 ```
 
 
