@@ -14,9 +14,9 @@ In there, choose the OS by clicking the button, scrolling to bottom and selectin
 
 ![Device selection menu in Imager](https://github.com/pwndevelopers/community-wiki/assets/21370314/55c25357-be3a-4f10-8fe6-d583e52c052e)
 
-Select that media!
+Select that option!
 
-Also choose no at this point:
+And also choose no at this point:
 ![Screenshot 2024-02-17 113241](https://github.com/Pwnagotchi-Unofficial/Pwnagotchi.org/assets/9049886/869c4381-aa1f-4926-956d-c63bc965a4e8)
 
 ## Flashing
