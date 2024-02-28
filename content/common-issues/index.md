@@ -48,7 +48,7 @@ main.plugins.bt-tether.devices.android-phone.priority = 1  # Priority level for 
 ```
 # Configuration for iOS Phone
 main.plugins.bt-tether.devices.ios-phone.enabled = false
-main.plugins.bt-tether.devices.ios-phone.search_order = 2
+main.plugins.bt-tether.devices.ios-phone.search_order = 1
 main.plugins.bt-tether.devices.ios-phone.mac = ""  # Bluetooth MAC address of the iOS phone
 main.plugins.bt-tether.devices.ios-phone.ip = ""  # Static IP of the Pwnagotchi when tethered to iOS
 main.plugins.bt-tether.devices.ios-phone.netmask = 24  # Netmask of the PAN
@@ -56,7 +56,7 @@ main.plugins.bt-tether.devices.ios-phone.interval = 1  # Search interval in minu
 main.plugins.bt-tether.devices.ios-phone.scantime = 10  # Duration of each search in seconds
 main.plugins.bt-tether.devices.ios-phone.max_tries = 10  # Maximum attempts to find the phone
 main.plugins.bt-tether.devices.ios-phone.share_internet = false  # Enable internet sharing via Bluetooth
-main.plugins.bt-tether.devices.ios-phone.priority = 2  # Priority level for tethering
+main.plugins.bt-tether.devices.ios-phone.priority = 1  # Priority level for tethering
 ```
 
 
