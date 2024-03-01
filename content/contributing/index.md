@@ -59,7 +59,7 @@ callend when the agent is tuning on a specific channel.
 
 `on_config_changed`
 
-This will be triggered if the config has changed (also right after **on\_loaded**).
+This will be triggered if the config has changed (also right after **on_loaded**).
 
 `on_deauthentication`
 
@@ -83,7 +83,7 @@ Called when a non overlapping wifi channel is found to be free.
 
 `on_handshake`
 
-Called when a new handshake is captured, access\_point and client\_station are json objects if the agent could match the BSSIDs to the current list, otherwise they are just the strings of the BSSIDs.
+Called when a new handshake is captured, access_point and client_station are json objects if the agent could match the BSSIDs to the current list, otherwise they are just the strings of the BSSIDs.
 
 `on_internet_available`
 
@@ -153,24 +153,25 @@ Called when the agent refreshed its access points list.
 
 To illustrate how easy it is to add additional functionality via the plugin system, here is the code for the GPS plugin (`gps.py`):
 
+```python
     import logging
     import json
     import os
     import pwnagotchi.plugins as plugins
-    
-    
+
+
     class GPS(plugins.Plugin):
         __author__ = 'evilsocket@gmail.com'
         __version__ = '1.0.0'
         __license__ = 'GPL3'
         __description__ = 'Save GPS coordinates whenever an handshake is captured.'
-    
+
         def __init__(self):
             self.running = False
-    
+
         def on_loaded(self):
             logging.info("gps plugin loaded for %s" % self.options['device'])
-    
+
         def on_ready(self, agent):
             if os.path.exists(self.options['device']):
                 logging.info("enabling gps bettercap's module for %s" % self.options['device'])
@@ -178,24 +179,25 @@ To illustrate how easy it is to add additional functionality via the plugin syst
                     agent.run('gps off')
                 except:
                     pass
-    
+
                 agent.run('set gps.device %s' % self.options['device'])
                 agent.run('set gps.speed %d' % self.options['speed'])
                 agent.run('gps on')
                 self.running = True
             else:
                 logging.warning("no GPS detected")
-    
+
         def on_handshake(self, agent, filename, access_point, client_station):
             if self.running:
                 info = agent.session()
                 gps = info['gps']
                 gps_filename = filename.replace('.pcap', '.gps.json')
-    
+
                 logging.info("saving GPS to %s (%s)" % (gps_filename, gps))
                 with open(gps_filename, 'w+t') as fp:
                     json.dump(gps, fp)
-    
+```
+
 Pwnagotchi’s developement environment is [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) + [nexmon patches](https://re4son-kernel.com/re4son-pi-kernel/) for monitor mode, or any Linux with a monitor mode enabled interface (if you tune `config.toml`).
 
 **Do not try with Kali on the Raspberry Pi 0 W**, it is compiled without hardware floating point support and TensorFlow is simply not available for it, use Raspbian.
@@ -204,6 +206,7 @@ Pwnagotchi’s developement environment is [Raspbian](https://www.raspberrypi.or
 
 Currently Pwnagotchi supports several displays and adding support for new ones is very easy! All you have to do is copying the specific Python libraries of the hardware [into this folder](https://github.com/evilsocket/pwnagotchi/tree/master/pwnagotchi/ui/hw/libs) and then create a new class in its parent folder that implements the methods of the following abstract class:
 
+```python
     class DisplayImpl(object):
     def __init__(self, config, name):
     self.name = name
@@ -229,32 +232,34 @@ Currently Pwnagotchi supports several displays and adding support for new ones i
         'max': 20
     }
     }
-    
+
     def layout(self):
     raise NotImplementedError
-    
+
     def initialize(self):
     raise NotImplementedError
-    
+
     def render(self, canvas):
     raise NotImplementedError
-    
+
     def clear(self):
     raise NotImplementedError
-    
+```
+
 For instance, the [pwnagotchi/ui/hw/oledhat.py](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/ui/hw/oledhat.py) file which supports [this hat](https://www.waveshare.com/wiki/1.3inch_OLED_HAT) looks like this:
 
+```python
     import logging
-    
+
     import pwnagotchi.ui.fonts as fonts
     from pwnagotchi.ui.hw.base import DisplayImpl
-    
-    
+
+
     class OledHat(DisplayImpl):
     def __init__(self, config):
     super(OledHat, self).__init__(config, 'oledhat')
     self._display = None
-    
+
     def layout(self):
     fonts.setup(8, 8, 8, 8)
     self._layout['width'] = 128
@@ -276,37 +281,43 @@ For instance, the [pwnagotchi/ui/hw/oledhat.py](https://github.com/evilsocket/pw
     'max': 18
     }
     return self._layout
-    
+
     def initialize(self):
     logging.info("initializing oledhat display")
     from pwnagotchi.ui.hw.libs.waveshare.oledhat.epd import EPD
     self._display = EPD()
     self._display.init()
     self._display.Clear()
-    
+
     def render(self, canvas):
     self._display.display(canvas)
-    
+
     def clear(self):
     self._display.clear()
-    
+```
+
 ## Creating an Image
 
 ### Linux
+
 If you want to create a custom image for testing, developing or just hacking, you will need a GNU/Linux computer and the binaries for `curl`, `git`, `make`, `unzip`, `go`, `qemu-user-static` and `kpartx`. The Makefile will also temporarily install [packer](https://www.packer.io/) and use `sudo` as needed.
 
 To create a zip file with the image and one with its sha256 checksum, just run:
 
+```bash
     make image
+```
 
 To remove the generated files:
 
+```bash
     sudo make clean
+```
 
 ### Windows
 
 Download [Win32Diskimager](https://win32diskimager.org/)
- 
+
 Launch the program and select an .img file which you dont need anymore (or download one from Github). The select the BOOT drive of your sd-card and hit read. Once that is done the image you chose prior is now an exact copy of your current setup. Flash it on another sd-card or share it!
 Adding a Language
 
@@ -314,34 +325,40 @@ Adding a Language
 
 If you want to contribute a new translation of Pwnagotchi’s status messages for the UI, do the following:
 
-*   Copy the language template (`voice.pot`); the template should NOT be changed manually.
-    
-        ./scripts/language.sh add <lang> (e.g. "de")
-        
-    
-*   Now the user changes the file `pwnagotchi/locale/<lang>/LC_MESSAGES/voice.po`
-    
-    *   The important part: be sure to change the `msgstr` part, NOT the `msgid` part!
-*   Now you’ll need to compile it; this will create the `.mo` files:
-    
+- Copy the language template (`voice.pot`); the template should NOT be changed manually.
 
-        ./scripts/language.sh compile <lang>
-    
+```bash
+      ./scripts/language.sh add <lang> (e.g. "de")
+```
+
+- Now the user changes the file `pwnagotchi/locale/<lang>/LC_MESSAGES/voice.po`
+
+  - The important part: be sure to change the `msgstr` part, NOT the `msgid` part!
+
+- Now you’ll need to compile it; this will create the `.mo` files:
+
+```bash
+      ./scripts/language.sh compile <lang>
+```
+
 ### Updating an existing translation
 
 Sometimes we change old or add new status messages in Pwnagotchi’s UI. If that’s happened and something in the `voice.py` the code has changed, users can submit updated translations using the following procedure:
 
 1.  Update the template and merges it with the already translated po-file:
 
+```bash
         ./scripts/language.sh update <lang>
-    
+```
 
 1.  Now you need to
-    *   Look for `fuzzy` marked strings in the file pwnagotchi/locale//LC\_MESSAGES/voice.po
-    *   Add your new/changed translation
-    *   Remove the `fuzzy` string afterwards
-2.  Recompile the `.mo` file
+    - Look for `fuzzy` marked strings in the file pwnagotchi/locale//LC_MESSAGES/voice.po
+    - Add your new/changed translation
+    - Remove the `fuzzy` string afterwards
+1.  Recompile the `.mo` file
 
+```bash
         ./scripts/language.sh compile <lang>
-    
+```
+
 Afterwards you can either compile it to a custom image, or submit it, in a pull request, to one ot multiple github image repos of your choice. After some time the developer/developers responsible for the repo should see your commit and hopefully add your translation.

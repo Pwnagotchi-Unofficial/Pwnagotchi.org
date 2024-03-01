@@ -5,13 +5,11 @@ title = "Common Issues"
 weight = 6
 +++
 
-
 ## Bluetooth tethering not working
 
 If your bluetooth isnt working (or your Pwnagotchi wont connect to your hotspot), here is a quick guide which will hopefully help you out by N3tt.
 
 ### Instructions:
-
 
 If your bluetooth is not working, you can try these steps:
 
@@ -23,13 +21,13 @@ Before you start this is very important for Android make sure bluetooth tetherin
 4. run `pair <mac>`, where `<mac>` is your phone's BT MAC address.
 5. run `trust <mac>`, where again, `<mac>` is your phone's BT MAC address.
 6. In a few moments, you should be prompted (on your phone) to allow communication with pwnagotchi.
-7. If the problem still persists, try untrusting and unpairing pwnagotchi from your phone, rebooting both devices and repeating process. 
+7. If the problem still persists, try untrusting and unpairing pwnagotchi from your phone, rebooting both devices and repeating process.
 
 Sometimes, you need to repeat this process multiple times for it to work (I needed 3 attempts before it started working).
 
-These are known working settings to edit on your config file. 
+These are known working settings to edit on your config file.
 
-```
+```toml
 main.plugins.bt-tether.enabled = false
 
 # Configuration for Android Phone
@@ -45,7 +43,7 @@ main.plugins.bt-tether.devices.android-phone.share_internet = false  # Enable in
 main.plugins.bt-tether.devices.android-phone.priority = 1  # Priority level for tethering
 ```
 
-```
+```toml
 # Configuration for iOS Phone
 main.plugins.bt-tether.devices.ios-phone.enabled = false
 main.plugins.bt-tether.devices.ios-phone.search_order = 1
@@ -58,7 +56,6 @@ main.plugins.bt-tether.devices.ios-phone.max_tries = 10  # Maximum attempts to f
 main.plugins.bt-tether.devices.ios-phone.share_internet = false  # Enable internet sharing via Bluetooth
 main.plugins.bt-tether.devices.ios-phone.priority = 1  # Priority level for tethering
 ```
-
 
 ## Cannot SSH into the Pwnagotchi
 
@@ -81,10 +78,8 @@ If you noticed that your Pwnagotchi isnt beeing recognized by Windows follow the
 
 ### Instructions for Windows 10:
 
-
 1. Check if you connected your RPi to correct USB port. RPi0(W) have 2 USB ports - one for power only (labelled PWR) and one for data (labelled USB). You want to be plugged in USB marked one (closer to HDMI)
 2. Try different cable. Some cheap cables are power only.
 3. Try different USB port on your PC/Laptop
 4. If your RPi is shown on some COM port (COM5 for example), you need to install RNDIS drivers (because Windows doesn't install those automatically for some reason). Follow this [guide](https://www.factoryforward.com/pi-zero-w-headless-setup-windows10-rndis-driver-issue-resolved/).
 5. [RNDIS windows 10 driver download link](https://modclouddownloadprod.blob.core.windows.net/shared/mod-rndis-driver-windows.zip)
-
