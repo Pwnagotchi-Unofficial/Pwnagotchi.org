@@ -143,7 +143,7 @@ Mount the filesystem by running:
 mount /dev/mapper/cryptoconfig /mnt
 ```
 
-#### 5. Copy files inside the container
+#### 6. Copy files inside the container
 
 Now we can copy the files that we want to encrypt inside the container:
 
@@ -151,7 +151,7 @@ Now we can copy the files that we want to encrypt inside the container:
 cp /etc/pwnagotchi/* /mnt
 ```
 
-#### 6. Remove old files
+#### 7. Remove old files
 
 Remove the existing unencrypted files from the original location by running:
 
@@ -159,7 +159,7 @@ Remove the existing unencrypted files from the original location by running:
 rm /etc/pwnagotchi/*
 ```
 
-#### 7. Unmount the container
+#### 8. Unmount the container
 
 Unmount the container running:
 
@@ -167,7 +167,7 @@ Unmount the container running:
 umount /mnt
 ```
 
-#### 7. Configure pwnagotchi to decrypt the new container
+#### 9. Configure pwnagotchi to decrypt the new container
 
 Last step is to tell pwnagotchi about the newly created container. To do this, run:
 
@@ -175,7 +175,7 @@ Last step is to tell pwnagotchi about the newly created container. To do this, r
 echo "cryptoconfig /cryptoconfig /etc/pwnagotchi" >> /root/.pwnagotchi-crypted
 ```
 
-#### 8. Reboot
+#### 10. Reboot
 
 Done! You have succesfully setup encryption on your pwnagotchi. If you want to create other containers repeat the same process and change the directory path and container name.
 
