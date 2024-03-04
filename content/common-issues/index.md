@@ -66,7 +66,7 @@ main.plugins.bt-tether.devices.ios-phone.priority = 1  # Priority level for teth
 1. Check if you connected your RPi to correct USB port. RPi0(W) have 2 USB ports - one for power only (labelled PWR) and one for data (labelled USB). You want to be plugged in USB marked one (closer to HDMI)
 2. Try different cable. Some cheap cables are power only.
 3. Try different USB port on your PC/Laptop
-4. Is your Pwnagotchi detected as RNDIS gadget? If not, download the RNDIS driver [here](https://discord.com/channels/717817147853766687/717818155061346427/1196805896290971658).
+4. Is your Pwnagotchi detected as RNDIS gadget? If not, download the RNDIS driver [here](https://modclouddownloadprod.blob.core.windows.net/shared/mod-rndis-driver-windows.zip).
 5. Have you assigned static IP to your RPi? You can do that in your Network Manager by right clicking your RPi (detected as RNDIS gadget) -> Properties -> Internet Protocol Version 4 (TCP/IPv4) -> Properties -> Use the following IP address. You can choose whatever IP you want (preferably `10.0.0.1`, but that depends on your LAN),subnet mask should be `255.255.255.0`, gateway `10.0.0.1` and if you need to specify DNS, go with `8.8.8.8`, `8.8.4.4` (both Google) or `1.1.1.1` (Cloudflare). By now, you should be able to ping `10.0.0.2` (yes, .2, not .1) and if you have response, you are able to ssh.
 
 NOTE:
