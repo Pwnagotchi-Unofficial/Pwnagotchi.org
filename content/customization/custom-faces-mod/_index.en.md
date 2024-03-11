@@ -1,10 +1,8 @@
 +++
 tags = ["customization"]
-title = "basic configuration"
+title = "custom faces mod"
 weight = 1
 +++
-
-## Custom Faces Mod
 
 This is a nice way to start modifying your pwnagotchi. This modification **allows you to use images** instead of the standard text faces. The [mod](https://github.com/roodriiigooo/PWNAGOTCHI-CUSTOM-FACES-MOD) has been made by [Rodrigo](https://github.com/roodriiigooo). **Make sure to check out his amazing work.**  
     
@@ -162,7 +160,7 @@ Stop the pwnagotchi service, if it's not:
     
 ### 🎴 Upload Images
 
-Use FileZilla or any other method you know to upload your images to the /custom-faces/ folder that was created earlier. If you don't have it, use one of my packages from here.
+Use FileZilla or any other method you know to upload your images to the /custom-faces/ folder that was created earlier. If you don't have it, use one of my packages from [here](https://github.com/roodriiigooo/PWNAGOTCHI-CUSTOM-FACES-MOD/tree/main/custom-themes).
 
 Open the pwnagotchi's configuration file:
 
