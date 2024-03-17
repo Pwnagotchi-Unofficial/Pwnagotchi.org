@@ -83,3 +83,21 @@ If you noticed that your Pwnagotchi isnt beeing recognized by Windows follow the
 3. Try different USB port on your PC/Laptop
 4. If your RPi is shown on some COM port (COM5 for example), you need to install RNDIS drivers (because Windows doesn't install those automatically for some reason). Follow this [guide](https://www.factoryforward.com/pi-zero-w-headless-setup-windows10-rndis-driver-issue-resolved/).
 5. [RNDIS windows 10 driver download link](https://modclouddownloadprod.blob.core.windows.net/shared/mod-rndis-driver-windows.zip)
+
+## Pwnagotchi's subnet clash with computer's subnet
+
+If your network is using `10.0.0.0/24` as the network address and this is clashing with Pwnagotchi's network address, you can change the IP address and network address of Pwnagotchi USB interface by using a different subnet. In order to do this, login to your pi via SSH and edit the file `/etc/network/interfaces.d/usb0-cfg` with your preferred editor and use the following config:
+
+```
+allow-hotplug usb0
+iface usb0 inet static
+  address 192.168.0.2
+  netmask 255.255.255.0
+  network 192.168.0.0
+  broadcast 192.168.0.255
+  gateway 192.168.0.1
+  dns-nameservers 1.1.1.1
+  metric 20
+```
+
+Save the file and reboot your pwnagotchi. After it boots up, you should be able to access it by using the ip address `192.168.0.2` instead of `10.0.0.2`. **Remember to change also the configuration of your computer's interface by using the IP address `192.168.0.1`.**
