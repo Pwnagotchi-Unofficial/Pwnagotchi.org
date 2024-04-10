@@ -47,6 +47,7 @@ color: #fff !important;
   </thead>
   <tbody>
   <tr>
+  
   <td><p align="center" dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="https://cults3d.com/en/3d-model/gadget/coque-pwnagotchi-waveshare3-pisugar3-et-protection-d-ecran-plexiglass" data-target="animated-image.originalLink"><img src="https://files.cults3d.com/uploaders/24091331/illustration-file/75bcd664-bda6-4743-8067-54f6f527a808/20230508_111605.jpg" height="300" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
         <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
           <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://cults3d.com/en/3d-model/gadget/coque-pwnagotchi-waveshare3-pisugar3-et-protection-d-ecran-plexiglass" target="_blank"> </span>
@@ -63,6 +64,15 @@ color: #fff !important;
             - Normal GPIO header<br></br>
             - Waveshare v2</p></td>
   <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/picoproject/designs" target="_blank">PicoProject</a></td>
+  </tr>
+  <tr>
+  <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.printables.com/model/837123-pwn-in-place-pwnagotchi-case"><img src="https://media.printables.com/media/prints/837123/images/6449841_48f358ea-38c7-454b-b84c-07bff4ef33df_c95e18e8-2dad-43ae-931d-60a24e1326af/thumbs/inside/1280x960/jpg/p4080365.webp" height="300" style="max-width: 100%;"></a></p></td>
+  <td><p style="text-align: center;">
+    - Raspberry pi zero or zero2<br></br>
+    - Normal GPIO header<br></br>
+    - Waveshare v2 or v3<br></br>
+    - Pisugar3 1200mah</p></td>
+  <td style="text-align: center;"><a id="centered" href="https://www.printables.com/@yaikou" target="_blank">Ya Ikou!</a></td>
   </tr>
   <tr>
   <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:4297526"><img src="https://img.thingiverse.com/cdn-cgi/image/fit=contain,quality=95/https://cdn.thingiverse.com/assets/b9/fa/a1/1f/fb/large_display_pico_case_seriesA_photo5_20200419.png" height="300" style="max-width: 100%;"></a></td>
