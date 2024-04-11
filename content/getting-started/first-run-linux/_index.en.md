@@ -48,4 +48,15 @@ After that, your pwnagotchi should be able to connect to internet via USB connec
 
 ### Common issues
 
-**> After computer reboot, my Pwnagotchi doesn't connect to internet anymore:** the solution to this problem is running the same process above again using the new interface name because Pwnagotchi has rebooted and the interface name has changed or the iptables rules have been cleared.
+
+**> New Network Interface after every boot (MAC-Adress)**
+
+This happens, because the pwnagotchi generates a new MAC-address after every reboot. To set a static MAC-address see [Common Issues](/common-issues/)
+
+**> After computer reboot, my Pwnagotchi doesn't connect to internet anymore**
+
+This also happens because the pwnagotchi generates a new MAC-address after every boot. Fix: [Common issues](/common-issues/)
+
+
+
+
