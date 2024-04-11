@@ -37,3 +37,14 @@ And go to DNS Section now and enter your desired DNS Server(i.e 9.9.9.9 or 8.8.8
 Note: If you cannot connect to the internet from your MacOS After this click on (**...** > Set Service Order...) drag the interface you use for internet to the top.
 
 After all of these click OK it might ask for your password and then the status should change from 'Self Assigned' IP to 'Connected' you are all done! Open your favorite terminal, and type in `ssh <username>@10.0.0.2`, where `<username>` is `pi` by default. Enter the password the default is `raspberry`.
+
+### Common issues
+
+
+**> New Network Interface after every boot (MAC-Adress)**
+
+This happens, because the pwnagotchi generates a new MAC-address after every reboot. To set a static MAC-address see [Common Issues](/common-issues/)
+
+**> After computer reboot, my Pwnagotchi doesn't connect to internet anymore**
+
+This also happens because the pwnagotchi generates a new MAC-address after every boot. Fix: [Common issues](/common-issues/)
