@@ -101,3 +101,24 @@ iface usb0 inet static
 ```
 
 Save the file and reboot your pwnagotchi. After it boots up, you should be able to access it by using the ip address `192.168.0.2` instead of `10.0.0.2`. **Remember to change also the configuration of your computer's interface by using the IP address `192.168.0.1`.**
+
+## Pwnagotchi changes MAC address with every Boot (New network device)
+
+To use the pwnagotchi as a rndis-device, you need to setup a manual network configuration.
+
+Depending on your OS, this configuration is bound to the MAC address of the device (in my example Ubuntu) or the network device which name includes the MAC.
+The problem is, that the pwnagotchi, generates a new MAC address with every boot, so with linux and mac, you get the issue, that after every boot, the pwnagotchi will show up as a new network device and you need to reconfigure it everytime.
+
+To mitigate this issue, you need to eject your Micro SD, and edit the file `cmdline.txt` on the boot partition by appending the following line to it to set a _static MAC_ with a texteditor:
+
+```
+g_ether.host_addr=f8:e0:79:af:57:eb g_ether.dev_addr=f8:e0:79:af:57:eb 
+```
+*Make sure, that you don't paste a newline/Enter! The config file needs to be one line*
+
+Found this solution [here](https://betweenmistakes.com/2019/11/09/rndis-ethernet-gadget-rpi0w/) and [here](https://forums.raspberrypi.com/viewtopic.php?p=1555672#p1556036)
+
+Bonus:
+
+You are free to change the MAC `f8:e0:79:af:57:eb` to a custom hexadecimal one as long as it is valid and [not reserved](https://www.iana.org/assignments/ethernet-numbers/ethernet-numbers.xml)
+Some fun ones could be: `b1:gb:00:bd:ba:be, 1e:at:de:ad:be:ef` or the good old classic `ca:fe:c0:ff:ee:00` 
