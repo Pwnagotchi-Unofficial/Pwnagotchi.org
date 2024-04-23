@@ -82,6 +82,7 @@ color: #fff !important;
             - Waveshare OLED hat</p></td>
   <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/picoproject/designs" target="_blank">PicoProject</a></td>
   </tr>
+<!--
   <tr>
   <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:6046594"><img src="https://img.thingiverse.com/cdn-cgi/image/fit=contain,quality=95/https://cdn.thingiverse.com/assets/33/48/59/16/f4/large_display_3ce863d8-8e96-4158-9f67-1ab39a8ae89b.png" height="300" style="max-width: 100%;"></a></p></td>
   <td><p style="text-align: center;">
@@ -90,6 +91,7 @@ color: #fff !important;
               - Waveshare OLED hat</p></td>
   <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/facevalue83/designs" target="_blank">FaceValue83</a></td>
   </tr>
+-->
   <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/aluminum-ice/pwnagotchi_rpiz2w_case"><img src="https://user-images.githubusercontent.com/12374267/265144566-e2619066-1524-45c5-ba61-141decb1ceec.jpeg" height="300" style="max-width: 100%;"></a></p></td>
 <td><p style="text-align: center;">
@@ -170,6 +172,15 @@ color: #fff !important;
   - Waveshare v4<br></br>
   - Pisugar2 1200mah</p></td>
 <td style="text-align: center;"><a id="centered" href="https://makerworld.com/en/u/3913879736" target="_blank">White Hat Hacker</a></td>
+</tr>
+<tr>
+<td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:6590004"><img src="https://cdn.thingiverse.com/assets/fa/f0/f8/84/a3/large_display_4ff14d5e-eb5b-4c1a-be97-727053b6b2eb.jpeg" height="300" style="max-width: 100%;"></a></p></td>
+<td><p style="text-align: center;">
+  - Raspberry pi zero or zero2<br></br>
+  - Banana pi m4 zero</br>
+  - Normal GPIO header<br></br>
+  - Waveshare v2 or v3<br></br>
+<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/nikcreations/designs" target="_blank">NikCreations</a></td>
 </tr>
 <!--
 <tr>
