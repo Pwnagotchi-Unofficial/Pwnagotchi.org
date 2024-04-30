@@ -1,81 +1,382 @@
-+++
-pre = "<i class='fas fa-puzzle-piece'></i> "
-archetype = "default"
-title = "3rd Party Plugins"
-weight = 4
-+++
+<!DOCTYPE html><html lang="en-us">
 
-<div style="position: relative; padding-bottom: 75%; height: 2000px; max-width: 100%; overflow: hidden;">
-    <object type="text/html" data="plugins.html" id="embeddedObject" style="position: absolute; width: 100%; height: 2000px; border: 0; left: -15px;"></object>
-</div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="English"><meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rpBgfgPPKd5nS1r1iHR4/cCA8ssHbN1IzP7rTfFpsxOxT38WOp5M6AZgPLfmPUGsq" crossorigin="anonymous">
+  <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+</head>
 
+<style>
+
+.download-card.recommended a h4{font-weight:700;background-image:linear-gradient(20deg,var(--color-kali-blue),var(--color-kali-purple));color:transparent;background-clip:text;-webkit-background-clip:text}body,html{min-width:1000px;overflow:auto}#kali-platforms{padding-top:var(--nav-height);margin-top:calc(var(--nav-height) * -1)}#kali-platforms h1{margin:30px 0;margin-top:50px;font-weight:100;width:500px;margin-left:50%;transform:translateX(-220px)}#kali-platforms h1 strong{font-weight:700}#kali-platforms h1 .caret{animation:blink-caret 1s step-end infinite}@keyframes blink-caret{from,to{color:transparent}50%{color:inherit}}#kali-platforms .darkmode-switch{padding:0;margin-bottom:30px}#kali-platforms__cards{display:flex;flex-wrap:wrap;justify-content:center;margin:auto;width:95%;max-width:1260px;border-bottom:1px solid rgba(127,127,127,.2);padding-bottom:30px}#kali-platforms .card{display:block;width:400px;margin:20px 10px;position:relative;transform-origin:bottom;transition-property:transform,box-shadow;border:1px solid rgba(127,127,127,.2);box-shadow:none!important}#kali-platforms>.card{margin:auto}#kali-platforms>.card img{height:2em}#kali-platforms .card.recommended{box-shadow:0 5px 15px rgba(0,0,0,7%),0 4px 4px -2px rgba(0,0,0,.1)!important;border:1px solid rgba(127,127,127,.4);border-bottom-width:2px;margin:30px 30px 50px}.card.recommended::after,[class^=download-card].recommended::after{display:inline-block;background:var(--primary-color);box-shadow:0 1px 5px var(--primary-color),inset 0 1px rgba(255,255,255,.2);border-radius:999px;padding:5px 20px;font-size:14px;color:#fff!important;font-family:themify,var(--font-family),sans-serif;border:1px solid rgba(0,0,0,.2);transition:transform .2s;white-space:nowrap}.card.recommended::after,[class^=download-card].recommended::after{position:absolute;bottom:-20px;left:50%;content:'Recommended';transform:translateX(-50%)}#kali-platforms .card:hover,#kali-platforms .card.recommended:hover{transform:translateY(-5px);box-shadow:0 5px 20px rgba(0,0,0,.15),0 4px 4px -2px rgba(0,0,0,.1)!important}#kali-platforms .card>div{display:flex;background-image:linear-gradient(120deg,var(--card-bg) -10%,white 110%);color:#000;height:210px;border-radius:var(--border-radius)var(--border-radius)0 0}#kali-platforms .card figure{overflow:hidden;width:50%;position:relative;margin:0;border-radius:var(--border-radius)0 0 0;display:flex}#kali-platforms .card figure::after{content:'';z-index:10;width:200%;height:100%;top:-90%;left:-20px;opacity:.1;transform:rotate(45deg);background:linear-gradient(to top,rgba(255,255,255,0),#fff 15%,rgba(255,255,255,.5));transition-property:transform,top,opacity;transition-duration:.3s;position:absolute}#kali-platforms .card:hover figure::after{transform:rotate(25deg);top:-40%;opacity:.15}#kali-platforms .card figure img{margin:0;transition:transform .3s;width:100%}#kali-platforms .card:hover figure img{transform:translateY(-3px)scale(1.05)rotateX(15deg)}#kali-platforms .card figure+div{padding-left:20px}#kali-platforms .card h3{color:#000;left:calc(50% - 20px);top:1em;position:absolute;transform:translateY(-50%);font-size:22px}#kali-platforms .card h3~div{padding-top:80px}#kali-platforms .card ul{margin-bottom:6px;opacity:.6}#kali-platforms .card ul li{font-size:12px;padding:0 20px;width:220px}#kali-platforms .card ul li::before{top:1px;background:0 0;font-weight:700;filter:none;color:inherit;font-family:themify}#kali-platforms .card ul.positives li::before{content:'\e64c'}#kali-platforms .card ul.negatives li::before{content:'\e646'}#kali-platforms .card p{margin:20px;font-size:14px}:root{--downloads-nav-height:60px}#downloads-nav{display:flex;justify-content:center;box-shadow:0 6px 8px rgba(0,0,0,.1);background-image:linear-gradient(to bottom,var(--body-color),var(--white-color));background-size:cover;position:sticky;height:var(--downloads-nav-height);top:0;right:0;left:0;z-index:99;opacity:.95}#downloads-nav>div{position:relative;display:flex;flex-direction:row;justify-content:center;align-items:center;font-size:1.2em}#downloads-nav .marker{position:absolute;height:4px;width:0;background:var(--text-color-dark);left:50%;bottom:0;border-radius:4px 4px 0 0;box-shadow:0 3px 8px #7f7f7f;transition-property:left,width;transition-duration:.6s}#downloads-nav a{margin:0 24px;cursor:pointer}#back-to-top{display:block;width:60px;height:60px;line-height:60px;position:sticky;top:calc(100vh - 100px);left:calc(100vw - 100px);border-radius:100%;background:var(--text-color-dark);box-shadow:0 0 10px var(--text-color-dark);font-size:20px;text-align:center;z-index:99;cursor:pointer;color:var(--white-color);transition:transform ease-in .2s}#back-to-top:hover{transform:translateY(-10px);opacity:1!important}#downloads .centered-content{width:90%;max-width:800px;margin:auto}#downloads section{box-sizing:content-box;padding-top:calc(var(--downloads-nav-height) + 40px);opacity:0;transition:opacity 1s;will-change:opacity}#kali-platforms,#downloads section:not(:last-child){padding-bottom:calc(max(50vh,200px));}#downloads section:last-child{padding-bottom:200px}section h2,section h3,section h4,section h5,section h6,section p{margin:1.3em 0}#kali-platforms h2,#downloads h2{text-shadow:0 2px 6px rgba(127,127,127,.5);text-align:center;font-weight:400}.header-link{margin-right:-1em}.header-link i{text-shadow:.5px .5px .25px,-.5px -.5px .25px,.5px -.5px .25px,-.5px .5px .25px;color:var(--primary-color);margin-left:.4em;font-size:.5em;vertical-align:top}section img{max-width:100%}.btn svg{height:15px;width:15px;margin-right:.25em;margin-top:-4px;vertical-align:middle}.chevron-link{font-size:26px}#downloads h1{text-shadow:0 -1px 1px #7f7f7f,0 2px 10px rgba(127,127,127,.7)}#downloads h1 img{margin-left:-.4em;height:2em;display:inline;vertical-align:middle}.buttons-paragraph{margin:2em 0;text-align:center}.downloads-tabs{background:var(--text-color-dark);box-shadow:0 0 5px var(--text-color-dark);padding:8px;max-width:600px;margin:auto;border-radius:99px;display:flex;flex-direction:row;height:40px;font-size:18px;align-items:center}.downloads-tabs a{flex:1;text-align:center;color:var(--white-color)}.downloads-tabs a:not(:first-child){border-left:1px solid rgba(127,127,127,.8)}.downloads-tabs a.selected{border-color:transparent;box-shadow:0 0 10px black;background:var(--white-color);color:var(--text-color-dark);text-shadow:0 0 2px;border-radius:99px}.downloads-tabs a.selected+a{border-color:transparent}.downloads-tabs+div{transition:opacity .2s}.download-cards{display:flex;flex-wrap:wrap;justify-content:center;margin:40px 0}.download-cards .separator{width:100%}.download-cards--wide>:first-child{border-top-left-radius:var(--border-radius);border-top-right-radius:var(--border-radius)}.download-cards--wide>:last-child{border-bottom-left-radius:var(--border-radius);border-bottom-right-radius:var(--border-radius)}.download-card{--border-radius:20px}.download-card,.download-card--wide{--base-height:50px;display:flex;flex-direction:column;width:300px;background-color:#6e0000;border-radius:var(--border-radius);box-shadow:0 5px 15px rgba(0,0,0,7%);transition-duration:.2s;margin:10px;text-align:center;position:relative}.download-card--wide{flex-direction:row;width:100%;margin:0;border-radius:0}.download-card:hover{transform:translateY(-5px);box-shadow:0 14px 25px rgba(0,0,0,.1)}.download-card__sum{display:none;position:absolute;top:0;right:0;left:0;border-radius:var(--border-radius);bottom:var(--base-height);font-size:21px;background:var(--white-color);padding:45px;padding-bottom:0;word-wrap:break-word;text-align:justify;font-family:monospace;z-index:2;font-variant-ligatures:no-common-ligatures}.download-card.show-sum .download-card__sum,.download-card--wide.show-sum .download-card__sum{display:block}.download-card>a::after,.download-card--wide>a::after{display:block;content:'';position:absolute;top:0;right:0;bottom:0;left:0;z-index:1}.download-card--wide>a{flex:1;padding:0 20px}.download-card img{height:140px;margin:20px}.download-card p,.download-card h4{margin:0;margin-bottom:10px}.download-card p,.download-card h4{padding:0 40px}.download-card p:empty{height:5px}.download-card--wide h4{margin:0;font-weight:400;text-align:left;line-height:var(--base-height);font-size:18px}.download-card--wide .download-card__sum{padding:0;bottom:0;font-size:18px;line-height:20px;padding:5px 0 5px 20px}.download-card--wide .download-card__sum h4{font-size:12px;font-weight:700;line-height:inherit}.download-card__downloads{display:flex;height:var(--base-height);line-height:var(--base-height);margin-top:auto}.download-card__downloads a{flex:1;position:relative;z-index:2;border:solid rgba(127,127,127,.2);border-width:1px 1px 0 0}.download-card__downloads a:last-child{border-right:0}.download-card__downloads a::after{display:block;position:absolute;content:attr(version-number);writing-mode:vertical-lr;top:0;bottom:0;right:0;text-align:center;color:#ffffff;font-size:12px;line-height:30px}.download-card--wide .download-card__downloads{margin-top:0;margin-left:auto}.download-card--wide .download-card__downloads a{border-top:0;width:80px}.download-card__downloads .download-card__download-button{z-index:0}.download-card.show-sum .download-card__sum-button,.download-card--wide.show-sum .download-card__sum-button{color:var(--text-color-dark)}.download-card--wide.show-sum .download-card__downloads a:not(:last-child){z-index:0}.download-card.recommended{border:2px solid #fff;box-shadow:0 7px 25px -5px var(--primary-color);background:linear-gradient(to top,white 30%,var(--primary-color) 600%)}body.dark-theme [class^=download-card].recommended{background:linear-gradient(to top,rgba(255,255,255,.1),rgba(0,0,0,3%) 15%,rgba(255,255,255,.15))}.download-card.recommended img{filter:drop-shadow(0 5px 10px rgba(127,127,127,.6))}.download-card.recommended a h4{font-size:1.5em}.download-card.recommended p{color:var(--text-color-dark)}.download-card.recommended::after{top:-15px;bottom:unset}.download-card--wide.recommended{box-shadow:inset 0 0 1px var(--primary-color),0 3px 30px -15px var(--primary-color)}.download-card--wide.recommended{margin-bottom:50px;border-radius:var(--border-radius)}.download-card--wide.recommended+.download-card--wide{border-top-left-radius:var(--border-radius);border-top-right-radius:var(--border-radius)}#kali-installer-images .download-card{margin:0}#kali-installer-images .download-card:not(.recommended){transform:scale(.9);transform-origin:bottom}#kali-installer-images .download-card:not(.recommended):hover{transform:scale(.91)translateY(-5px)}#kali-live .download-card{margin:0}#kali-live .download-card:not(.recommended){transform:scale(.9);transform-origin:bottom}#kali-live .download-card:not(.recommended):hover{transform:scale(.91)translateY(-5px)}#kali-virtual-machines__64bit .download-card:not(.recommended){transform:scale(.9);transform-origin:bottom;opacity:.85}#kali-virtual-machines__64bit .download-card:not(.recommended):hover{transform:scale(.91)translateY(-5px)}#nethunter-demo{height:500px;width:240px;flex-shrink:0}#nethunter-demo~div{width:520px;margin:auto}#winkex-demo{width:500px;height:300px;margin:auto}
+
+
+"UTF-8";:root{--border-radius:6px;--nav-height:70px}[class^=ti-]::before,box-sizing:border-box;outline:none;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;text-size-adjust:none}::-moz-selection{background:var(--primary-color);color:var(--white-color)}::selection{background:var(--primary-color);color:#fff}html,body{line-height:1.5;font-family:var(--font-family),Cantarell,sans-serif;color:var(--text-color);overflow-x:hidden;margin:0;padding:0;font-size:16px;height:100%;min-width:320px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body.dark-theme{--body-color:var(--dark-body-color);--text-color:var(--dark-text-color);--text-color-dark:var(--dark-text-color-dark);--white-color:var(--dark-white-color);--light-color:var(--dark-light-color)}input,select,textarea,button{font-family:inherit}p{color:var(--text-color);font-size:15px}h1,h2,h3,h4,h5,h6{color:var(--text-color-dark);font-weight:700;line-height:1.2;margin-top:0}h1{font-size:45px}h2{font-size:32px}h3{font-size:26px}h4{font-size:20px}h5{font-size:18px}h6{font-size:14px}ul{margin:0;padding-left:0;font-size:15px}ul{list-style-type:none;padding-left:0;margin:0}ul li{padding-left:20px;position:relative}ul li::before{position:absolute;content:'';height:8px;width:8px;border-radius:50%;background:var(--primary-color);filter:contrast(.2)brightness(1.7);left:0;top:.8em;transform:translateY(-50%)}ol{padding-left:20px;font-size:15px}details{position:relative;padding:1.2em;margin:40px 0;cursor:pointer;font-size:.9em}details.card{border:1px solid rgba(127,127,127,.15)}.card details.card{background:rgba(127,127,127,5%)}details summary{display:block;font-size:1.2em;text-shadow:0 0 1px}details summary::after{display:block;content:'\e64b';font-family:themify;position:absolute;top:.7em;right:1em;font-size:1.2em;text-shadow:0 0 1px}details[open] summary::after{content:'\e648'}details summary~div{padding-top:.16em}blockquote{color:var(--text-color-dark);padding:5px 40px;border-left:2px solid var(--primary-color);margin:40px 0;background:rgba(127,127,127,5%)}blockquote p{font-size:18px}img{vertical-align:middle;border:0}a,a:hover,a:focus{text-decoration:none;color:var(--primary-color)}a:hover,a:focus{color:var(--primary-color)}a,button,select{cursor:pointer}a:focus,button:focus,select:focus{outline:0}hr{margin-top:16px;margin-bottom:16px;border:0;border-top:1px solid rgba(127,127,127,.2)}pre{display:block;margin:10px 0;text-shadow:0 0 .1px rgba(255,255,255,.5);background:0 0!important}code{margin-bottom:0!important;font-size:100%;background:rgba(127,127,127,.15);padding:1px 3px;border-radius:5px;color:#cd5c81;font-family:monospace;vertical-align:middle}pre>code{display:block;overflow-x:auto;padding:1em;color:#fff;line-height:1.2;background:#000;border:1px solid rgba(127,127,127,.4);box-shadow:inset 0 -1px 15px rgba(255,255,255,.15)}pre code::selection,pre code span::selection,pre code::-moz-selection,pre code span::-moz-selection{background:#4c4f5c}pre code::-webkit-scrollbar{height:5px}pre code::-webkit-scrollbar-track{background:#000}pre code::-webkit-scrollbar-thumb{background:#888}table{text-align:left;width:100%;max-width:100%;border:1px solid rgba(127,127,127,.2);border-collapse:collapse;table-layout:fixed;font-size:14px}thead{color:#000;background:rgba(127,127,127,.075);font-weight:700}.dark-theme thead{color:#fff}tbody{background:0 0}table td,table th{padding:10px 6px;vertical-align:middle;border:1px solid rgba(127,127,127,.2)}.shadow,.card{box-shadow:0 5px 15px rgba(0,0,0,7%)!important;transition-duration:.3s;transition-property:box-shadow,transform}.shadow:hover,.shadow:focus,.card:hover,.card:focus{box-shadow:0 14px 25px rgba(0,0,0,.1)!important}.card{background-color:var(--white-color);border-radius:var(--border-radius);display:flex;flex-direction:column}a.card:hover{transform:translateY(-5px)}.container{max-width:1600px;width:90%;margin-left:auto;margin-right:auto}@media(max-width:600px){.container{width:calc(100% - 30px)}}.chevron-link::after{content:'›';display:inline-block;margin-left:.2em;transition:transform .15s linear;will-change:transform}.chevron-link:hover::after{transform:translateX(.1em)}.btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:16px 44px;border-radius:var(--border-radius);font-weight:700;border:0;background:var(--primary-color);color:#fff!important;box-shadow:inset 0 -6px rgba(0,0,0,.2);text-align:center;transition:box-shadow .1s ease}.btn:hover{box-shadow:inset 0 2px 10px rgba(0,0,0,.3)}.switch{height:2.5em;width:5em;padding:0;position:relative;display:inline-block;cursor:pointer;font-size:10px}.switch input{display:none}.switch input+div{height:100%;width:100%;border-radius:999px;background:var(--primary-color);padding:.3em}.switch input+div::before{content:'';display:block;height:1.9em;width:1.9em;border-radius:100%;background:#fff;transform:translateX(0);transition:transform .2s}.switch input:checked+div::before{transform:translateX(2.5em)}.darkmode-switch{font-size:10px;letter-spacing:.2em;text-align:center;padding-top:20px;padding-bottom:4px}.darkmode-switch .switch{vertical-align:bottom;margin:-4px 10px}.notices{margin:32px 0;position:relative}.notices p{padding:10px;border-radius:var(--border-radius)}.notices p::before,.notices p::after{position:absolute;top:5px;height:20px;line-height:18px;box-sizing:border-box;font-weight:700;color:var(--text-color-dark)}.notices p::before{font-family:themify;content:"\e697";left:10px;width:20px;text-align:center;border-radius:6px;border:1px solid;font-size:12px}.notices p::after{left:36px}.notices.info p{border-top:30px solid rgba(255,210,89,.15);background:rgba(255,210,89,.15)}.notices.info p::after{content:attr(data-header)}nav{height:var(--nav-height);position:relative;display:flex;justify-content:space-between;z-index:1000}#logo{width:100px;height:100%;display:block;background-size:100%;background-position:50%;background-repeat:no-repeat;position:relative;z-index:2;transition:none}#logo:not(:empty){background-image:none!important}#logo img{height:100%}header nav.show-menu #logo:empty{transition:0s .17s filter,.2s .17s opacity;filter:none;opacity:1}#navigation{display:flex;align-items:center}#navigation li{padding:0;transition:transform .1s linear}#navigation li::before{display:none}#navigation a,#navigation li span{padding:10px 13px;display:inline-block;height:43px;border:1px solid transparent;color:var(--text-color-dark);text-transform:uppercase;cursor:pointer}#navigation a:hover,#navigation a:focus{color:var(--primary-color)}#navigation i{display:inline-block;font-size:.8em;margin-left:.2em}@media(min-width:1100px){#navigation .dropdown-menu:hover{transform:translateY(-2px)}#navigation .dropdown-menu>span{border-radius:var(--border-radius)var(--border-radius)0 0;position:relative;z-index:2;border-bottom:0;transition-property:box-shadow,border,background-color;transition-timing-function:ease;transition-duration:0s}#navigation .dropdown-menu:hover>span{transition-duration:.3s;box-shadow:-4px -4px 15px -4px rgba(127,127,127,.2);border-color:rgba(0,0,0,.1);background:var(--white-color);color:var(--primary-color);text-shadow:none}body.dark-theme #navigation .dropdown-menu:hover>span{background:var(--body-color)}#navigation .dropdown-menu div{display:flex;visibility:hidden;opacity:0;padding:10px 0;position:absolute;top:43px;flex-direction:column;white-space:pre;border-radius:0 var(--border-radius)var(--border-radius);border:1px solid rgba(0,0,0,.1);border-top:0;box-shadow:0 3px 15px rgba(127,127,127,.3);z-index:1;transition:visibility 0s,opacity .3s ease;background:var(--white-color);min-width:170%}body.dark-theme #navigation .dropdown-menu div{background:var(--body-color)}#navigation .dropdown-menu:last-child div{right:0;border-radius:var(--border-radius)0 var(--border-radius)var(--border-radius);text-align:right}#navigation .dropdown-menu:hover>span+div{visibility:visible;opacity:1}}nav button{align-self:center;height:27px;width:27px;border:none;background:0 0;color:inherit;padding:0;margin-right:20px;display:none;position:relative;z-index:2;flex-direction:column;justify-content:space-around;align-items:stretch;filter:drop-shadow(var(--nav-text-shadow))}nav button div{height:2px;background:currentColor;border-radius:999px;transition:transform .6s}nav button div:first-child{transform-origin:top left}nav.show-menu button div:first-child{transform:rotate(45deg)}nav.show-menu button div:nth-child(2){transform:translateX(-200%)scaleX(0)}nav button div:last-child{transform-origin:bottom left}nav.show-menu button div:last-child{transform:rotate(-45deg)}@media(max-width:1100px){nav button{display:flex}#navigation{position:fixed;top:0;bottom:0;width:100vw;left:100%;background:var(--white-color);flex-direction:column;line-height:3em;transition:left .2s ease;overflow:auto}#navigation::before,#navigation::after{content:'';display:block;margin:auto}nav.show-menu #navigation{left:0}#navigation li{text-align:center;width:100%}#navigation .dropdown-menu div{display:flex;flex-direction:column;overflow:hidden;background:var(--body-color);max-height:0;transition:max-height .6s;box-shadow:inset 0 12px 5px -10px rgba(0,0,0,.075),inset 0 -12px 5px -10px rgba(0,0,0,5%)}#navigation .dropdown-menu:hover div{max-height:300px}#navigation .dropdown-menu div a{padding:0}}header{display:flex;flex-direction:column;box-shadow:0 0 15px rgba(0,0,0,.1);background-color:#300000;background-size:cover;background-position:50%;background-repeat:no-repeat;position:relative}header::before{position:absolute;content:'';height:100%;width:100%;top:0;left:0;opacity:.8}header.bg-cover{--nav-text-shadow:0 0 20px rgba(0, 0, 0, .5)}header.bg-cover::before{background:var(--primary-color)}@media(min-width:1100px){header.bg-cover #navigation li>a,header.bg-cover #navigation li>span{color:#fff;text-shadow:0 0 1px #fff,var(--nav-text-shadow)}}header.bg-cover #logo:empty{filter:brightness(0)invert(1)drop-shadow(var(--nav-text-shadow))}header.bg-cover nav:not(.show-menu) button{color:#fff}main{--margins:30px;--sidebar-width:250px;display:flex;align-items:start;min-height:calc(100vh - 674px)}main>*{margin-top:var(--margins)}aside.card,article.card{display:block}aside{position:sticky;top:var(--margins);width:var(--sidebar-width);padding:20px 10px}aside>a{position:absolute}aside>a::before{position:absolute;font-family:themify;content:"\e64a";font-size:25px;color:inherit;z-index:1;left:-3px;top:-3px;width:35px;height:35px;line-height:35px;border-radius:100%;background:var(--light-color);text-align:center}aside>ul>li::before{display:none}aside>ul>li>a{font-size:20px;margin-left:20px}aside li ul:not(:empty){max-height:calc(100vh - 240px);overflow:auto;scrollbar-width:thin;scrollbar-color:#CCC transparent}aside li ul::-webkit-scrollbar{width:3px}aside li ul::-webkit-scrollbar-track{background:0 0}aside li ul::-webkit-scrollbar-thumb{background:#ccc}aside li li{margin:1em 0;font-size:13px}aside li li a{color:var(--text-color-dark);display:block;margin:0}aside li li.active a{color:var(--primary-color)}aside li li.active::before{opacity:1}main>section{width:calc(100% - var(--sidebar-width) - var(--margins));margin-left:var(--margins)}main>section:only-child{margin-left:auto;margin-right:auto}main>section>h1 i{margin-right:8px}article{padding:3em}@media(max-width:1000px){main{flex-wrap:wrap}aside,main>section{width:100%;margin-left:0}aside{position:relative;top:0;order:2}article{padding:1.5em}}article>h2{padding-bottom:12px;border-bottom:1px solid rgba(127,127,127,.2)}#page-list{background:var(--light-color);padding:1.5em;border-radius:var(--border-radius)}#page-list>li>a{display:none}#page-list li li{font-size:16px;margin:1.5em 0}#page-list li li a{color:var(--text-color-dark)}#page-list>li::before{display:none}#page-list>li li::before{content:'\e628';font-family:themify;left:-10px;background:0 0;height:auto;width:auto;color:var(--primary-color);filter:none}#content{word-wrap:break-word}#content>*{margin-bottom:1.3em}#content h1,#content h2,#content h3,#content h4,#content h5,#content h6{margin-top:1.3em}#content img,#content video{max-width:100%;height:auto;margin:0 auto 15px;display:block;text-align:center;max-height:700px}#content table img{margin:0}#post-meta{color:var(--text-color);font-style:italic;font-size:14px}#pagination>div{display:flex;flex-wrap:wrap;justify-content:space-between}#pagination *{line-height:40px}#pagination a{display:flex}#pagination>div{flex-basis:100%}#pagination i{font-size:15px;margin-right:8px}#pagination a:last-child:not(:only-child) i{margin-right:0;margin-left:8px}#pagination span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:250px;display:block}@media(max-width:680px){#pagination span{display:none}}#posts article,section#content{width:90%;max-width:800px;margin:auto}article p:empty,section#content p:empty,article p a:empty,section#content p a:empty{display:none!important}section#content{margin-top:60px}section#content table,section#content table td,section#content table th{border:0}section#content table thead{background:0 0}section#content table thead{color:var(--text-color-dark)}.page-button{background:0 0;border:2px solid rgba(127,127,127,.15);box-shadow:inset 0 0 rgba(127,127,127,.15);color:var(--text-color);margin-top:20px;font-weight:700;transition-property:box-shadow;transition-duration:.4s;display:inline-block;line-height:2.5;text-align:center;font-size:.9em}.page-button:hover{box-shadow:inset 0 60px rgba(127,127,127,.15);color:var(--text-color)}#posts .darkmode-switch{padding:30px 0}#posts>h1{text-align:center;margin:auto;margin-top:60px;width:90%}#posts main{max-width:1800px;flex-wrap:wrap;justify-content:center;margin:auto}#posts article{line-height:2;background:0 0!important;padding:0}#posts main article{margin:40px}#posts main article:only-of-type,#posts main article:only-of-type~details{margin:0}#posts main article:only-of-type~details{width:300px;margin-left:var(--margins);position:sticky;top:var(--margins)}#posts main article:only-of-type>details{display:none}@media(max-width:1280px){#posts main article:only-of-type~details{display:none}#posts main article:only-of-type>details{display:revert}}#posts article h1{font-weight:400;line-height:1.7;margin-bottom:10px;font-size:32px}@media(max-width:500px){#posts article h1{font-size:26px}}#posts article>img,#posts article>a>img{width:100%;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.2);margin-bottom:var(--margins);min-height:280px}@media(max-width:900px){#posts article>img,#posts article>a>img{min-height:100px}}#posts article time{color:var(--primary-color)}#posts article time i{margin-right:.4em}#posts article li::before{top:1.05em}#posts article a.page-button{padding:0 30px}#paginator{margin:auto;font-size:1.2em;text-align:center;display:flex;max-width:90%;justify-content:center;flex-wrap:wrap}#paginator li{padding:0;margin:2px}#paginator li::before{display:none}#paginator li a{width:2.5em;box-sizing:content-box}#paginator li.current-page a{border-color:var(--primary-color);background:var(--primary-color);color:#fff}@media(max-width:900px){#paginator li a{width:2em;line-height:2em}}footer{background:#000;margin-top:160px;font-size:14px;padding:20px 0}body.dark-theme footer{box-shadow:0 30px 80px var(--primary-color)}footer,footer a,footer h4{color:#fff}footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;line-height:2.2em;padding:20px 0}footer .container div{flex:1;max-width:400px;margin-left:10px}#footer-logo{max-width:80%;display:block}footer h4{margin:1.2em 0}footer a{display:block}footer a svg{height:20px;margin-right:10px;vertical-align:sub}@media(max-width:1400px){footer .container{max-width:900px}footer .container div{flex:unset;width:200px;margin:0 auto;padding-left:50px;box-sizing:content-box}footer .container div:last-child{width:100%;margin:60px auto}}.hljs-title,.hljs-name{color:#ffc730}.hljs-comment,.hljs-meta,.hljs-meta .hljs-keyword{color:#49aee6}.hljs-number,.hljs-symbol,.hljs-literal,.hljs-deletion,.hljs-link{color:#bf2e5d}.hljs-string,.hljs-doctag,.hljs-addition,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo{color:#5ebdab}.hljs-attribute,.hljs-code,.hljs-selector-id{color:#d41919}.hljs-keyword,.hljs-selector-tag,.hljs-bullet,.hljs-tag{color:#367bf0}.hljs-subst,.hljs-variable,.hljs-template-tag,.hljs-template-variable{color:#8c42ab}.hljs-type,.hljs-built_in,.hljs-builtin-name,.hljs-quote,.hljs-section,.hljs-selector-class{color:#fea44c}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-prompt{color:#47d4b9}.language-console{color:#ddd}.language-console .language-bash{color:#fff}
+
+body,html {
+    overflow: auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+text-align:center;
+color: white;
+}
+
+p {
+text-align:center;
+color: white;
+}
+
+.download-card--wide h4  {
+  color: white;
+}
+
+.download-card--wide [version-number="example"] {
+  color: white;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 999;
+}
+
+.download-card--wide:hover + .popup {
+  display: block;
+}
+
+.container {
+            overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+</style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var embeddedObject = document.getElementById('embeddedObject');
 
-    embeddedObject.addEventListener('load', function() {
-      var contentBody = embeddedObject.contentDocument.body;
-      if (contentBody) {
-        contentBody.style.overflow = 'hidden';
-      }
+function showPopup(popupId) {
+  document.getElementById(popupId).style.display = "block";
+}
 
-      setTimeout(function() {
-        embeddedObject.remove();
-      }, 100000000000);
-    });
-  });
-
-
-  // Get the object element by ID
-  const embeddedObject = document.getElementById('embeddedObject');
-  const alternativeMessage = document.createElement('p');
-  alternativeMessage.textContent = "This page is only supported on larger screens. Sorry :-)";
-  alternativeMessage.style.display = 'none'; // Initially hide the alternative message
-
- 
-  // Function to check screen width and toggle between object and alternative message
-  function checkScreenWidth() {
-      const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-      if (screenWidth < 520) {
-          embeddedObject.style.display = 'none'; // Hide the object on small screens
-          alternativeMessage.style.display = 'block'; // Show the alternative message
-      } else {
-          embeddedObject.style.display = 'block'; // Show the object on larger screens
-          alternativeMessage.style.display = 'none'; // Hide the alternative message
-      }
-  }
-
-  // Insert the alternative message after the embedded object
-  embeddedObject.parentNode.insertBefore(alternativeMessage, embeddedObject.nextSibling);
-
-  // Initial check on page load
-  checkScreenWidth();
-
-  // Listen for window resize events and update accordingly
- window.addEventListener('resize', checkScreenWidth);
+function hidePopup(popupId) {
+  document.getElementById(popupId).style.display = "none";
+}
 
 </script>
 
 
 <style>
+  /* Add custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  /* Include other scrollbar styles for different browsers as needed */
 
-  p {
-   text-align: center !important;
+  /* Add a custom scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
   }
 
+  body {
+    overflow: hidden !important;
+  }
 
-  @media screen and (max-width: 560px) {
-    * {
-      padding: 0 !important;
-      margin: 0 !important;
+  /* Style for collapsible sections */
+  .collapsible {
+    background-color: #1c0000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Style for the content inside the collapsible section */
+  .content {
+    display: none;
+    padding: 0px;
+    overflow: hidden;
+  }
+
+  /* Style for the custom SVG image */
+  .collapsible .icon {
+    transform: rotate(270deg);
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Style for the custom SVG image when the plugins are shown */
+  .collapsible.active .icon {
+    transform: rotate(180deg);
+    width: 20px;
+    height: 20px;
+  }    
+
+    /* Initially set the icon color to white */
+  .ti-download {
+    color: white;
+    font-size: 22px;
+  }
+
+  /* Define a class to change the color to blue */
+  .ti-download.blue {
+    color: blue;
+  }
+
+  body,html {
+    overflow: auto;
+    overflow: hidden;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  p {text-align: center;}
+  
+  
+  
+    body {
+        max-width: 100% !important;
+        margin: 0 !important;
+        font-size: 10px !important; /* Adjust the base font size as needed */
+  }
+  
+  
+  header {
+    background-color: #300000;
+    /* Add other styles as needed */
+  }
+  
+  .card li {
+    font-size: 16px; /* Adjust the font size for the <li> elements */
+    /* Add other styles for the <li> elements if needed */
+  }
+  
+  @media (max-width: 450px) {
+    .card li {
+      font-size: 14px; /* Adjust the font size for smaller screens */
+      /* Add other styles for smaller screens if needed */
     }
   }
+  
+  p {
+    font-size: 20px !important; /* Adjust the font size for the <li> elements */
+    /* Add other styles for the <li> elements if needed */
+  }
+  
+  @media (max-width: 560px) {
+  p {
+      font-size: 13px !important; /* Adjust the font size for smaller screens */
+      /* Add other styles for smaller screens if needed */
+    }
+  }
+  
+  @media (max-width: 555px) {
+    p {
+        font-size: 10px !important; /* Adjust the font size for smaller screens */
+        /* Add other styles for smaller screens if needed */
+      }
+    }
 
+  .content {
+      overflow: auto; /* or overflow-x: auto; */
+  }
+      
+  .popup {
+      font-size: 18px;
+  }
+  
 
+  
 </style>
 
+<style>:root{--primary-color:#367BF0;--body-color:#ffffff;--text-color:#636363;--text-color-dark:#242738;--white-color:#ffffff;
+--light-color:;--font-family:Noto Sans;--dark-body-color:#010409;--dark-text-color:#eeeeec;--dark-text-color-dark:white;
+--dark-white-color:#16171d;--dark-light-color:;--color-kali-blue:#2777ff;--color-kali-purple:#a400a4}</style>
+<script>const $=document.querySelector.bind(document),$$=document.querySelectorAll.bind(document)</script></head><header><nav class="container">
 
 
 
+      <section id="kali-platforms"><h1>download <strong>plugins</strong> <span>easily</span><span class="caret">|</span></h1>
+
+      <p>Are you looking for <strong>community made</strong> Pwnagotchi plugins? We got a long list of the most used <strong>plugins</strong>. Just place the plugins you want to use into your</a><strong> custom plugin directory</strong>. Do not forget to <strong>enable </strong>your custom plugins in your <strong>config.toml</strong>!</p>
+
+
+      <br><hr>
+      <button class="download-card--wide collapsible">
+        GPS-plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/gps_more.py" target="_blank"><h4>GPS_more</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.1"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">Modified version of stock gps.py. After loading, it will update the GPS on set epochs until it gets a fix, then it just updates for handshakes. That way you can confirm it´s working before you get a handshake. Optionally saves all gps locations to a file (epochs and handshakes), like a breadcrumb trail.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/crahan/pwnagotchi-plugins/blob/main/gps-plus.py" target="_blank"><h4>GPS-plus</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.1"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">Displays gps coordinates, like the original plugin, but with added options. Made to go with memtemp-plus.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/evilsocket/pwnagotchi/blob/2122af4e264495d32ee415c074da8efd905901f0/pwnagotchi/plugins/default/net-pos.py" target="_blank"><h4>Net-Pos</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 2.0.3"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Saves a json file with the access points nearby whenever a handshake is captured. When internet is available the files are converted in geo locations using the Mozilla LocationService API. Useful if you havnt got a GPS-module.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/sixt0o/f0xtr0t/blob/main/f0xtr0t.py" target="_blank"><h4>f0xtr0t</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.4.2"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin that shows a openstreetmap with positions of ap-handshakes in your webbrowser. Based on the original webgpsmap plugin.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/cyberartemio/wardriver-pwnagotchi-plugin" target="_blank"><h4>Wardriver</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">Wardriving plugin for wigle!</div>
+      </div>
+      <button class="download-card--wide collapsible">
+        UI-plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/crahan/pwnagotchi-plugins/blob/main/memtemp-plus.py" target="_blank"><h4>memtemp-plus</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.2"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">A plugin that will display memory/cpu usage and temperature. Based on original memtemp plugin with added features.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/itsdarklikehell/pwnagotchi-plugins/blob/ab088a12f25ca3acca33d68d5d5d2625172a4787/dashboard2.py" target="_blank"><h4>Dashboard2</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Dashboard2 plugin is a consolidation of the clock, deauth counter, memtemp, pivoyager and added few features such as cracked handshake counter and internet status.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://gitlab.com/sn0wflake/pwnagotchi-pwnmenu-plugin/-/blob/main/pwnmenu.py" target="_blank"><h4>Pwnmenu</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">This plugin is a simple popup menu to run scripts from.</div>
+            
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/Teraskull/pwnagotchi-community-plugins/blob/1ee41500935c2bf11d9f506b294d9ebdf4034437/display_version.py" target="_blank"><h4>Display Version</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin that will display the Pwnagotchi version left of the current mode.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/jayofelony/pwnagotchi-torch-plugins/blob/main/internet-connection.py" target="_blank"><h4>Internet Connection</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.2"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin that displays the Internet connection status on the pwnagotchi display.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/NeonLightning/pwny/blob/main/internet-conection.py" target="_blank"><h4>Internet Connection v2</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Indicates internet connection status.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/GaelicThunder/Experience-Plugin-Pwnagotchi/blob/master/exp.py" target="_blank"><h4>Experience Plugin</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.5"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Get exp every time a handshake gets captured, displays exp and lvl on ui.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/Kaska89/pwnagotchi-EXPv2-plugin/blob/main/expv2.py" target="_blank"><h4>Experience Plugin v2</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 2.0.1"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Get exp every time a handshake gets captured, displays exp and lvl on ui. (v2 added strength)</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/hannadiamond/pwnagotchi-plugins/blob/main/plugins/age.py" target="_blank"><h4>Age Plugin</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.1"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Adds age and strength to your UI.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/Kaska89/pwnagotchi-EXPv2-plugin/blob/main/agev2.py" target="_blank"><h4>Age Plugin v2</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Displays age and strength stats based on trained epochs.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/NeonLightning/pwny/blob/main/IPDisplay.py" target="_blank"><h4>IP-display</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Displays the IP-adress of your Pwnagotchi in the UI.</div>
+      </div>
+      <button class="download-card--wide collapsible">
+        Quality of Life-plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/evilsocket/pwnagotchi-plugins-contrib/blob/master/aircrackonly.py" target="_blank"><h4>AircrackOnly</h4></a><div class="download-card__downloads"><a class="download-card__download-button" 
+            version-number="v 1.0.1"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">confirms pcap contains handshake/PMKID or deletes it</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/PwnPeter/pwnagotchi-plugins" target="_blank"><h4>handshakes-dl-hashie</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i 
+            class="ti-download"></i></i></a></div></div><div id="popup" class="popup">Download captured handshakes from the web-ui, but the handshakes automatically get converted to hashcat format with hashie-hcxpcapngtool.py. <br></br> Note: you need hashie-hcxpcapngtool.py & handshakes-dl-hashie.py in your plugin folder for it to work.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/flamebarke/DiscoHash/blob/main/discohash.py" target="_blank"><h4>DiscoHash</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">DiscoHash extracts hashes from pcaps (hashcat mode 22000) using hcxpcapngtool, analyses the hash using hcxhashtool and posts the output to Discord along with any obtained GPS coordinates.</div>
+      </div>
+      <button class="download-card--wide collapsible">
+        Educational-plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/SilenTree12th/pwnagotchi_plugins/blob/main/better_quickdic.py" target="_blank"><h4>better_quickdic</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.2.0"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">Runs a quick dictionary scan against captured handshakes, unlike the original you can upload wordlist files. Cracked handshakes will be stored as [essid].pcap.cracked.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/V0r-T3x/pwnagotchi_LCD_colorized_darkmode/blob/b5792224f1c17b6f14e2acac1e28470cdd424983/files/crack_house.py" target="_blank"><h4>Crackhouse</h4></a><div class="download-card__downloads"><a 
+            class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></i></a></div></div><div id="popup" class="popup">A plugin to display closest cracked network & its password.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/c-nagy/pwnagotchi-display-password-plugin/blob/master/display-password.py" target="_blank"><h4>Display Password</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 2.1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin to display recently cracked passwords from the upload plugins.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/SilenTree12th/pwnagotchi_plugins/blob/main/mycracked_pw.py" target="_blank"><h4>My Cracked PW</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 5.1.1"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin to grab all cracked passwords and creates wifi qrcodes and a wordlist which can be used for the quickdic plugin. It stores them in the home directory.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/c-nagy/pwnagotchi-educational-purposes-only-plugin/blob/main/educational-purposes-only.py" target="_blank"><h4>Educational</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin to automatically authenticate to known networks and perform internal network recon.</div>
+      </div>
+      <button class="download-card--wide collapsible">
+        Uploader-Plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/adi170-alt/pwnagotchi-banthex-upload/blob/main/banthex.py" target="_blank"><h4>Banthex</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.5.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">This plugin automatically uploads handshakes to https://banthex.de/wpa/.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/evilsocket/pwnagotchi/blob/2122af4e264495d32ee415c074da8efd905901f0/pwnagotchi/plugins/default/onlinehashcrack.py" target="_blank"><h4>OnlineHashCrack</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 2.1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">This plugin automatically uploads handshakes to https://onlinehashcrack.com.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/evilsocket/pwnagotchi/blob/2122af4e264495d32ee415c074da8efd905901f0/pwnagotchi/plugins/default/wpa-sec.py" target="_blank"><h4>WpaSec</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 2.1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">This plugin automatically uploads handshakes to https://wpa-sec.stanev.org.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/jjensn/hashespwnagotchi/blob/master/hashespwnagotchi.py" target="_blank"><h4>HashesPwnagotchi</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 0.0.1"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">This plugin uploads handshakes to https://hashes.pw.</div>
+      </div>
+      <button class="download-card--wide collapsible">
+        UPS/PiSugar-plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/NeonLightning/pwny/blob/main/pisugar3.py" target="_blank"><h4>Pisugar 3 Improved</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">The PiSugar 3 Plugin displays the battery percentage as well as the charging status on your Pwnagotchi's UI.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/tisboyo/pwnagotchi-pisugar2-plugin/blob/master/pisugar2.py" target="_blank"><h4>Pisugar2</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 0.0.1"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin that will add a voltage indicator for the PiSugar 2.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/pokermaster1/waveshareupsbattery/blob/main/wavesharebattery.py" target="_blank"><h4>Wavesharebattery</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin for your Waveshare UPS!</div>
+
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="hhttps://github.com/marbasec/UPSLite_Plugin_1_3/blob/main/upslite_plugin_1_3.py" target="_blank"><h4>UPSlite</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">A plugin that will add a voltage indicator for the UPS Lite v1.3!</div>
+
+      </div>
+      <button class="download-card--wide collapsible">
+        Miscellaneous-plugins
+        <img src="./images/chevron-up-solid.svg" class="icon" />
+      </button>
+      <div class="content">
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/V0r-T3x/pwnagotchi_plugins/blob/main/plugins/fix_region.py" target="_blank"><h4>Fix Region</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Lets you change the iw region to unlock channels.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/dadav/pwnagotchi-custom-plugins/blob/867eb90b816c04e41d07be52cd3cf92268cc5a00/hulk.py#" target="_blank"><h4>Hulk</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">This plugin activates Hulk mode and Hulk is always angry.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/instattack.py" target="_blank"><h4>instattack</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Improves your Pwnagotchi efficiency significantly by attacking as soon as a new client/AP is in range!</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/NeonLightning/pwny/blob/main/terminal2.py" target="_blank"><h4>WebUI terminal</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.0.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Allows you to use the ssh terminal from the WebUI.</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/cyberartemio/wof-pwnagotchi-plugin" target="_blank"><h4>Wall of Flippers</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="v 1.2.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Simple plugin to show data from Wall Of Flippers on Pwnagotchi's screen!</div>
+
+            <div class="download-card--wide" onmouseover="showPopup()" onmouseout="hidePopup()"><div class="download-card__sum"></div><a href="https://github.com/jakami99/pwnamap" target="_blank"><h4>Pwnamap</h4></a><div class="download-card__downloads"><a class="download-card__download-button" version-number="vv 0.9.0"><i class="ti-download"></i></a></div></div><div id="popup" class="popup">Tool to geolocate and visualize your cracks on a map (and more)</div>
+
+      </div>
+      <br></br>
+
+
+
+</header>
+
+<body></body>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
