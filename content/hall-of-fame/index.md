@@ -9,31 +9,31 @@ People who helped, developed or contributed in other ways get honored here. I wa
 Some people made software, which you can use right now. To see their work check out the 3rd-party Images/Plugins pages!
 <br></br>
 
-NeonLightning
+[NeonLightning](https://github.com/NeonLightning)
 
-V0rT3x
+[V0rT3x](https://github.com/V0r-T3x)
 
-Jayofellony
+[Jayofelony](https://github.com/jayofelony)
 
-Alumium-Ice
+[Aluminum-Ice](https://github.com/aluminum-ice)
 
-Talking Sasquach
+[Talking Sasquach](https://github.com/skizzophrenic)
 
-NurseJackass
+[NurseJackass](https://github.com/Sniffleupagus)
 
-WPA2
+[WPA2](https://github.com/wpa-2)
 
-S4ntr3ri4
+[S4ntr3ri4](https://www.reddit.com/u/S4nt3ri4)
 
-DylanJava
+[DylanJava](https://github.com/DylanJava)
 
-Aleda 
+[Aleda](https://github.com/renewedbullet)
 
-Dal 
+[Dal](https://github.com/Fikolmij/)
 
-Rai
+[Rai](https://github.com/rai68)
 
-Dj1ch
+[dj1ch](https://github.com/dj1ch)
 
 _and many others..._
 
