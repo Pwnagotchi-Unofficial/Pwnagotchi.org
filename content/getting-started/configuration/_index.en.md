@@ -32,7 +32,7 @@ ui.display.type = "waveshare_3" #Change this to match your screen
 ui.display.color = "black"
 ui.fps = 1
 ```
-### Explanation of stuff you probably want to change in `config.toml`:
+#### Explanation of stuff you probably want to change in `config.toml`:
 
 `main.name` → Specifies the name of your Pwny. You can choose whatever name you desire here.
 
