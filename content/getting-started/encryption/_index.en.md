@@ -6,7 +6,7 @@ weight = 60
 
 **TL;DR:** Click [here](#a-step-by-step-guide) to jump directly to the step-by-step encryption guide.
 
-What if you loose your Pwnagotchi? All your data (API keys, handshakes, etc) will be lost. Also, the person who finds your little friend will be able to read your data.
+What if you lose your Pwnagotchi? All your data (API keys, handshakes, etc) will be lost. Also, the person who finds your little friend will be able to read your data.
 
 Although we cannot help you in not losing your device, we can help you prevent the leak of your data by using encryption. We will use [dm-crypt](https://en.wikipedia.org/wiki/Dm-crypt) subsystem of Linux.
 
@@ -22,8 +22,8 @@ $container_name $container_path $mountpoint
 
 Where:
 
-- `$container_name` is the name of the container, tipically `crypto<directory_name>
-- `$container_path` is the path to the container file, tipically placed in the root (e.g. `/cryptoconfig`)
+- `$container_name` is the name of the container, typically `crypto<directory_name>`
+- `$container_path` is the path to the container file, typically placed in the root (e.g. `/cryptoconfig`)
 - `$mountpoint` is the path where the container will be mounted once it is decrypted (e.g. `/etc/pwnagotchi`)
 
 **Cool, but how is the decryption password provided?**
@@ -49,7 +49,7 @@ The files to be encrypted depend solely on you and your level of paranoia. Gener
 
 What we suggest you do is to think about which files/folders you wouldn't want a stranger to see in the unfortunate event that you lose your Pwnagotchi. At the same time, though, don't encrypt the entire contents of the disk, otherwise your Pwnagotchi will no longer boot up.
 
-A list of common directories that contains sensitive data and should be encrypted are:
+A list of common directories that contain sensitive data and should be encrypted are:
 
 - Config directory: `/etc/pwnagotchi`
 - Handshakes directory: `/root/handshakes`
@@ -57,7 +57,7 @@ A list of common directories that contains sensitive data and should be encrypte
 
 ### Fix decryption server bug in evilsocket image
 
-In the evilsocket original image there is a bug with the decryption service (see this [issue](https://github.com/evilsocket/pwnagotchi/issues/879)). To fix it run the following command:
+In evilsocket's original image there is a bug with the decryption service (see this [issue](https://github.com/evilsocket/pwnagotchi/issues/879)). To fix it run the following command:
 
 ```sh
 sudo chmod u+x /usr/bin/decryption-webserver
@@ -69,7 +69,7 @@ So you have read all the docs above, now it's time to encrypt some bits. Isn't i
 
 The following steps will guide you through the encryption of the **Pwnagotchi's config directory** (i.e. `/etc/pwnagotchi`).
 
-You can apply the same steps to basically every directory you want to encrypt and keep secure. Just replace `/etc/pwnagotchi` with the path to your directory (**always use absolute path**) and `cryptoconfig` with the name that you want to use for your container (tip: use `crypto<directory_name>` as the naming scheme).
+You can apply the same steps to basically every directory you want to encrypt and keep secure. Just replace `/etc/pwnagotchi` with the path to your directory (**always use absolute path**) and `cryptoconfig` with the name that you want to use for your container (TIP: use `crypto<directory_name>` as the naming scheme).
 
 **IMPORTANT: Most of the operations requires root privileges. So run the commands either with `sudo` or use `sudo su` to become `root`.**
 
@@ -177,7 +177,7 @@ echo "cryptoconfig /cryptoconfig /etc/pwnagotchi" >> /root/.pwnagotchi-crypted
 
 #### 10. Reboot
 
-Done! You have succesfully setup encryption on your Pwnagotchi. If you want to create other containers repeat the same process and change the directory path and container name.
+Done! You have successfully set up encryption on your Pwnagotchi. If you want to create other containers repeat the same process and change the directory path and container name.
 
 All you have to do now is reboot your Pwnagotchi and connect to the hotspot to provide the decryption password.
 
