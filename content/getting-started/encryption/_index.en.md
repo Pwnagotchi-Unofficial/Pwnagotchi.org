@@ -6,13 +6,13 @@ weight = 60
 
 **TL;DR:** Click [here](#a-step-by-step-guide) to jump directly to the step-by-step encryption guide.
 
-What if you loose your pwnagotchi? All your data (api keys, handshakes, etc) will be lost. Also, the person who finds your little friend will be able to read your data.
+What if you loose your Pwnagotchi? All your data (API keys, handshakes, etc) will be lost. Also, the person who finds your little friend will be able to read your data.
 
-Although we cannot help you in not losing your device, we can help you prevent the leak of your data by using encryption. We will use [dm-crypt](https://en.wikipedia.org/wiki/Dm-crypt) subsystem of linux.
+Although we cannot help you in not losing your device, we can help you prevent the leak of your data by using encryption. We will use [dm-crypt](https://en.wikipedia.org/wiki/Dm-crypt) subsystem of Linux.
 
 ### How it works
 
-When pwnagotchi boots up, it will look for the file `/root/.pwnagotchi-crypted`. Every line in this file represents a luks-container that will be decrypted and mounted before pwnagotchi starts.
+When Pwnagotchi boots up, it will look for the file `/root/.pwnagotchi-crypted`. Every line in this file represents a LUKS container that will be decrypted and mounted before Pwnagotchi starts.
 
 Each line follows this format:
 
@@ -28,26 +28,26 @@ Where:
 
 **Cool, but how is the decryption password provided?**
 
-Once booted up, pwnagotchi will start a new hotspot with the following SSID/password:
+Once booted up, Pwnagotchi will start a new hotspot with the following SSID/password:
 
 - **SSID:** `DECRYPT-ME`
 - **Password:** `pwnagotchi`
 
 After connected to this hotspot, you'll be redirected to a web page on your browser.
 
-If you aren't redirected, configure the ip address of your device manually (ip: `192.168.0.3` - subnet mask: `255.255.255.0`) and open [http://192.168.0.10/](http://192.168.0.10/) in your browser. The web page will look like this:
+If you aren't redirected, configure the IP address of your device manually (IP: `192.168.0.3` - subnet mask: `255.255.255.0`) and open [http://192.168.0.10/](http://192.168.0.10/) in your browser. The web page will look like this:
 
 ![Decryption web page](https://i.imgur.com/BRGATme.png)
 
-Inside the webpage, you'll find as many input textbox as many luks container you have added inside the `/root/.pwnagotchi-crypted` file. For every container, provide the correct password. Once you have typed all the passwords, click `Submit`.
+Inside the webpage, you'll find as many input textbox as many LUKS container you have added inside the `/root/.pwnagotchi-crypted` file. For every container, provide the correct password. Once you have typed all the passwords, click `Submit`.
 
-Your pwnagotchi will decrypt every container with the provided password and complete the boot process starting the service.
+Your Pwnagotchi will decrypt every container with the provided password and complete the boot process starting the service.
 
 ### What files should you encrypt?
 
 The files to be encrypted depend solely on you and your level of paranoia. Generally, you should encrypt all files that may contain sensitive information.
 
-What we suggest you do is to think about which files/folders you wouldn't want a stranger to see in the unfortunate event that you lose your pwnagotchi. At the same time, though, don't encrypt the entire contents of the disk, otherwise your pwnagotchi will no longer boot up.
+What we suggest you do is to think about which files/folders you wouldn't want a stranger to see in the unfortunate event that you lose your Pwnagotchi. At the same time, though, don't encrypt the entire contents of the disk, otherwise your Pwnagotchi will no longer boot up.
 
 A list of common directories that contains sensitive data and should be encrypted are:
 
@@ -67,11 +67,11 @@ sudo chmod u+x /usr/bin/decryption-webserver
 
 So you have read all the docs above, now it's time to encrypt some bits. Isn't it?
 
-The following steps will guide you through the encryption of the **pwnagotchi's config directory** (i.e. `/etc/pwnagotchi`).
+The following steps will guide you through the encryption of the **Pwnagotchi's config directory** (i.e. `/etc/pwnagotchi`).
 
 You can apply the same steps to basically every directory you want to encrypt and keep secure. Just replace `/etc/pwnagotchi` with the path to your directory (**always use absolute path**) and `cryptoconfig` with the name that you want to use for your container (tip: use `crypto<directory_name>` as the naming scheme).
 
-**IMPORTANT: most of the operations requires root privileges. So run the commands either with `sudo` or use `sudo su` to become `root`.**
+**IMPORTANT: Most of the operations requires root privileges. So run the commands either with `sudo` or use `sudo su` to become `root`.**
 
 #### 0. Backup your data
 
@@ -105,9 +105,9 @@ dd if=/dev/zero of=/cryptoconfig bs=1M count=100
 
 This will create a new file `/cryptoconfig` where all encrypted files will be stored. The size of the file will be of 100MB. Increase `count=100` in case you want to encrypt directories that are bigger.
 
-#### 2. Make the container luks-ready
+#### 2. Make the container LUKS-ready
 
-Run the following command to setup luks inside the container:
+Run the following command to setup LUKS inside the container:
 
 ```sh
 cryptsetup luksFormat /cryptoconfig
@@ -167,9 +167,9 @@ Unmount the container running:
 umount /mnt
 ```
 
-#### 9. Configure pwnagotchi to decrypt the new container
+#### 9. Configure Pwnagotchi to decrypt the new container
 
-Last step is to tell pwnagotchi about the newly created container. To do this, run:
+Last step is to tell Pwnagotchi about the newly created container. To do this, run:
 
 ```sh
 echo "cryptoconfig /cryptoconfig /etc/pwnagotchi" >> /root/.pwnagotchi-crypted
@@ -177,15 +177,15 @@ echo "cryptoconfig /cryptoconfig /etc/pwnagotchi" >> /root/.pwnagotchi-crypted
 
 #### 10. Reboot
 
-Done! You have succesfully setup encryption on your pwnagotchi. If you want to create other containers repeat the same process and change the directory path and container name.
+Done! You have succesfully setup encryption on your Pwnagotchi. If you want to create other containers repeat the same process and change the directory path and container name.
 
-All you have to do now is reboot your pwnagotchi and connect to the hotspot to provide the decryption password.
+All you have to do now is reboot your Pwnagotchi and connect to the hotspot to provide the decryption password.
 
 ```sh
 reboot now
 ```
 
-**Note: remember to delete the original compressed backup archive once you are sure that everything is working fine.**
+**Note: Remember to delete the original compressed backup archive once you are sure that everything is working fine.**
 
-**Note 2: if the decryption web server is not working, run [this](#fix-decryption-server-bug-in-evilsocket-image) command.**
+**Note 2: If the decryption web server is not working, run [this](#fix-decryption-server-bug-in-evilsocket-image) command.**
 
