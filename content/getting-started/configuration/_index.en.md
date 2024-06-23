@@ -36,7 +36,7 @@ ui.fps = 1
 
 `main.name` → Specifies the name of your Pwny. You can choose whatever name you desire here.
 
-`main.lang` → Specifies the language of your Pwny. A list of which languages are available is [here](https://pwnagotchi.ai/configuration/#choose-your-unit-s-language).
+`main.lang` → Specifies the language of your Pwny's UI. A list of available languages is [here](https://pwnagotchi.ai/configuration/#choose-your-unit-s-language).
 
 `main.whitelist` → A list of access points that **WON'T** be pwned. You can enter either an SSID (= the name of the Wi-Fi router) or a MAC address here. (It is a good idea to add your home Wi-Fi network here.)
 
