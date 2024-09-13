@@ -13,7 +13,10 @@ Another great way to customize your Pwnagotchi quickly is TweakView by NurseJack
 
 \- Set up your pi and Pwnagotchi with webUI. The Tweak View interface is accessed through webUI, so make sure that works first.
 
-\- [Download the file](https://github.com/Sniffleupagus/pwnagotchi_plugins/blob/main/tweak_view.py) into the custom plugins folder on Pwnagotchi. Enable the plugin through the webUI, then reload the plugins page. "Tweak View" is now a link to the editor interface. The interface is not pretty, but it works. It was a development tool to learn Python and how to integrate with Pwnagotchi. Mostly it provides a quicker and easier update cycle for fine-tuning UI layout (as opposed to editing all of the plugin and view files and restarting Pwnagotchi).
+\- [Download the file](https://raw.githubusercontent.com/Sniffleupagus/pwnagotchi_plugins/main/tweak_view.py) 
+```wget -P /usr/local/share/pwnagotchi/custom-plugins/ https://raw.githubusercontent.com/Sniffleupagus/pwnagotchi_plugins/main/tweak_view.py```
+
+into the custom plugins folder on Pwnagotchi. Enable the plugin through the webUI, then reload the plugins page. "Tweak View" is now a link to the editor interface. The interface is not pretty, but it works. It was a development tool to learn Python and how to integrate with Pwnagotchi. Mostly it provides a quicker and easier update cycle for fine-tuning UI layout (as opposed to editing all of the plugin and view files and restarting Pwnagotchi).
 
 \- The editor interface presents a list of all of the UI elements on the screen, with all of the editable parameters for each. To change an element, type something into the settings boxes or change the dropdowns. There is very little error checking, and some wrong changes can make the display stop updating. Be cautious when editing. UI Elements have the following editable parameters:
     
