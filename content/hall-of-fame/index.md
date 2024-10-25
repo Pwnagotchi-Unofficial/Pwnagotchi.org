@@ -25,7 +25,7 @@ Some people made software, which you can use right now. To see their work check 
 
 [S4ntr3ri4](https://www.reddit.com/u/S4nt3ri4)
 
-[DylanJava](https://github.com/DylanJava)
+[dylan.at](https://dylan.at)
 
 [Aleda](https://github.com/renewedbullet)
 
