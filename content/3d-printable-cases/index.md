@@ -182,6 +182,15 @@ color: #fff !important;
   - Waveshare v2 or v3<br></br>
 <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/nikcreations/designs" target="_blank">NikCreations</a></td>
 </tr>
+<tr>
+<td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:6721135"><img src="https://cdn.thingiverse.com/assets/a5/c6/42/58/36/large_display_ae862a52-7c8c-4740-b23a-f9af46576010.jpg" height="300" style="max-width: 100%;"></a></p></td>
+<td><p style="text-align: center;">
+  - Raspberry pi zero or zero2<br></br>
+  - Slimagotchi<br></br>
+  - Waveshare v2 or v3<br></br>
+  - 18650 Battery Holder and TC4056 Charging board</p></td>
+<td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/vmalakaiv" target="_blank">VmalakaiV</a></td>
+</tr>
 <!--
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="project-link"><img src="img-link" height="300" style="max-width: 100%;"></a></p></td>
