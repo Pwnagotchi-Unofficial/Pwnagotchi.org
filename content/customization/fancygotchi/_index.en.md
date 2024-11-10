@@ -1,9 +1,14 @@
 +++
 tags = ["customization"]
-title = "fancygotchi"
+title = "Fancygotchi"
 weight = 3
 +++
 
+## Fancygotchi
+
+### For further information, go check the [Fancygotchi wiki](https://github.com/V0r-T3x/Fancygotchi/wiki)
+
+<!--
 ## Fancygotchi
 
 [Fancygotchi](https://github.com/V0r-T3x/pwnagotchi-fancygotchi) is a theme manager developed by [V0rt3x](https://github.com/V0r-T3x). He setup a [Patreon](https://www.patreon.com/V0rt3x_workshop) for his Project and I hope you check it out.
@@ -204,3 +209,5 @@ If something in the configuration changed, there is no need to restart the pwnag
 ### Sharing Custom Theme:
 
 If you want to share a custom theme, just share the theme folder with another device, which has Fancygotchi installed already.
+
+-->
