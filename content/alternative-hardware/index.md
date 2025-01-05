@@ -32,7 +32,6 @@ background-color: #300000 !important;
 |----------------------------------------------|
 |  adafruit2in13                                |
 |  argonpod                                     |
-|  base                                         |
 |  dfrobot                                      |
 |  dfrobot1                                     |
 |  dfrobot2                                     |
