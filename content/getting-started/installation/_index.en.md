@@ -5,7 +5,7 @@ weight = 15
 +++
 
 
-There isn't much to this, once you have extracted your `.img` file from the archive, plug in your SD card reader with microSD card in it, and run [Raspberry] Imager. You will see windows similar to this:
+There isn't much to this, once you have downloaded your `.img` file from Github, plug in your SD card reader with microSD card in it, and run [Raspberry] Imager. You will see windows similar to this:
 
 ![2024-02-26 07_16_20-Raspberry Pi Imager v1 8 4](https://github.com/Pwnagotchi-Unofficial/Pwnagotchi.org/assets/9049886/10cc3481-8f1d-4ef1-adf5-d50f41bc5a06)
 

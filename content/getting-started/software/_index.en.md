@@ -10,6 +10,4 @@ Next, we will need an image. The official one is no longer maintained, it's outd
 
 Look under assets if your device is a Raspberry Pi Zero W (or if you know it has a armhf processor) you would want to select the file with `32-bit` in the name as it is using a 32-bit processor. If your device is a Raspberry Pi Zero 2 W or a Raspberry Pi 3 to 5 (or if you know it has a arm64 processor) you would want to use the image with `64-bit` in the name as it is using a 64-bit processor.
 
-Use software like 7-Zip, WinRAR or gunzip to extract the `.img` file from the archive.
-
 You are able to download the RNDIS driver [here](https://modclouddownloadprod.blob.core.windows.net/shared/mod-rndis-driver-windows.zip).
