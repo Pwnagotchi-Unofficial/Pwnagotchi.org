@@ -4,7 +4,7 @@ title = "pwnagotchi org"
 weight = 1
 +++
 
-<meta name="description" content="Pwnagotchi is a device that uses optional artificial intelligence to improve its ability to crack Wi-Fi passwords. The device is extensible and runs on a low power raspberry pi by default.">
+<meta name="description" content="Pwnagotchi is a tool that utilizes bettercap and operates on a Raspberry Pi to monitor its surrounding Wi-Fi environment, aiming to capture crackable WPA key material. It collects this data by passively sniffing or performing deauthentication and association attacks. The captured material is stored on disk as PCAP files, which include various handshakes supported by hashcat, such as full and half WPA handshakes and PMKIDs.">
 
 <style>
 main{
