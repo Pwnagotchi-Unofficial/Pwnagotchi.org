@@ -5,8 +5,10 @@ title = "Getting Started"
 weight = 2
 +++
 
-This section is focused on newcomers. Here you can look through guides that will help you with getting your first device up and running (most of them are in the [community wiki](https://github.com/Pwnagotchi-Unofficial/community-wiki) too). 
+This section is focused on newcomers. Here you can look through guide that will help you get your first device up and running.
 
-This is a guide for beginners - How to get up and running quickly (headless/without screen)
+Most current guide is [Jayofelony's wiki](https://github.com/jayofelony/pwnagotchi/wiki).
+
+The rest of this guide is for beginners - How to get up and running quickly (headless/without screen)
 
 <p style="text-align: center;"><strong>Happy pwning!</strong></p>
