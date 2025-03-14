@@ -17,6 +17,10 @@ Callback
 
 Description
 
+`on_angry`
+
+Called when the status is set to angry.
+
 `on_association`
 
 Called when the agent is sending an association frame.
@@ -52,6 +56,10 @@ Called when the status is set to excited.
 `on_free_channel`
 
 Called when a non overlapping wifi channel is found to be free.
+
+`on_grateful`
+
+Called when the status is set to grateful.
 
 `on_handshake`
 
@@ -105,9 +113,17 @@ Called when the ui is updated.
 
 Called when the agent refreshed an unfiltered access point list this list contains all access points that were detected BEFORE filtering.
 
+`on_updating`
+
+Called when updating.
+
 `on_unload`
 
 This will be triggered if the plugin gets unloaded (e.g. the user toggled the enable/disable switch). You should remove unneeded **ui-elements** here.
+
+`on_unread_inbox`
+
+Called when there are unread messages.
 
 `on_wait`
 
