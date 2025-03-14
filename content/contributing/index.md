@@ -11,39 +11,15 @@ This contributing page is **not** for this wiki, its for the Pwnagotchi framewor
 
 ## Developing your own plugin
 
-If you want to develop your own plugin, you have the following callbacks availaible:
+If you want to develop your own plugin, you have the following callbacks available:
 
 Callback
 
 Description
 
-`on_ai_best_reward`
+`on_angry`
 
-Called when the AI got the best reward so far.
-
-`on_ai_policy`
-
-Called when the AI finds a new set of parameters.
-
-`on_ai_ready`
-
-Called when the AI finished loading.
-
-`on_ai_training_end`
-
-Called when the AI has done training.
-
-`on_ai_training_start`
-
-Called when the AI starts training for a given number of epochs.
-
-`on_ai_training_step`
-
-Called after the AI completed a training epoch.
-
-`on_ai_worst_reward`
-
-Called when the AI got the worst reward so far.
+Called when the status is set to angry.
 
 `on_association`
 
@@ -55,7 +31,7 @@ Called when the status is set to bored.
 
 `on_channel_hop`
 
-callend when the agent is tuning on a specific channel.
+called when the agent is tuning on a specific channel.
 
 `on_config_changed`
 
@@ -80,6 +56,10 @@ Called when the status is set to excited.
 `on_free_channel`
 
 Called when a non overlapping wifi channel is found to be free.
+
+`on_grateful`
+
+Called when the status is set to grateful.
 
 `on_handshake`
 
@@ -133,9 +113,17 @@ Called when the ui is updated.
 
 Called when the agent refreshed an unfiltered access point list this list contains all access points that were detected BEFORE filtering.
 
+`on_updating`
+
+Called when updating.
+
 `on_unload`
 
 This will be triggered if the plugin gets unloaded (e.g. the user toggled the enable/disable switch). You should remove unneeded **ui-elements** here.
+
+`on_unread_inbox`
+
+Called when there are unread messages.
 
 `on_wait`
 
@@ -148,6 +136,14 @@ You can provide some web-functionality here. Will be triggered if the user opens
 `on_wifi_update`
 
 Called when the agent refreshed its access points list.
+
+
+### AI deprecated
+AI was deprecated in [v2.9.2](https://github.com/jayofelony/pwnagotchi/releases/tag/v2.9.2). These callbacks have been deprecated as well.
+
+`on_ai_best_reward` `on_ai_policy` `on_ai_ready` `on_ai_training_end` `on_ai_training_start` `on_ai_training_step` `on_ai_worst_reward`
+
+
 
 ### Exampleplugin
 
@@ -198,7 +194,7 @@ To illustrate how easy it is to add additional functionality via the plugin syst
                     json.dump(gps, fp)
 ```
 
-Pwnagotchi’s developement environment is [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) + [nexmon patches](https://re4son-kernel.com/re4son-pi-kernel/) for monitor mode, or any Linux with a monitor mode enabled interface (if you tune `config.toml`).
+Pwnagotchi’s development environment is [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) + [nexmon patches](https://re4son-kernel.com/re4son-pi-kernel/) for monitor mode, or any Linux with a monitor mode enabled interface (if you tune `config.toml`).
 
 **Do not try with Kali on the Raspberry Pi 0 W**, it is compiled without hardware floating point support and TensorFlow is simply not available for it, use Raspbian.
 
@@ -318,7 +314,7 @@ To remove the generated files:
 
 Download [Win32Diskimager](https://win32diskimager.org/)
 
-Launch the program and select an .img file which you dont need anymore (or download one from Github). The select the BOOT drive of your sd-card and hit read. Once that is done the image you chose prior is now an exact copy of your current setup. Flash it on another sd-card or share it!
+Launch the program and select an .img file which you don't need anymore (or download one from GitHub). The select the BOOT drive of your sd-card and hit read. Once that is done the image you chose prior is now an exact copy of your current setup. Flash it on another sd-card or share it!
 Adding a Language
 
 ## Contributing a new translation
@@ -361,4 +357,4 @@ Sometimes we change old or add new status messages in Pwnagotchi’s UI. If that
         ./scripts/language.sh compile <lang>
 ```
 
-Afterwards you can either compile it to a custom image, or submit it, in a pull request, to one ot multiple github image repos of your choice. After some time the developer/developers responsible for the repo should see your commit and hopefully add your translation.
+Afterwards you can either compile it to a custom image, or submit it, in a pull request, to one of multiple GitHub image repos of your choice. After some time the developer/developers responsible for the repo should see your commit and hopefully add your translation.
