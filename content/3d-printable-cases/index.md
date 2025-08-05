@@ -46,6 +46,15 @@ color: #fff !important;
     </tr>
   </thead>
   <tbody>
+    <tr>
+  <td><p align="center" dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="https://www.printables.com/model/1375098-epic-pwnagotchi-case-for-pizero-waveshare-v4-eink" data-target="animated-image.originalLink"><img src="https://media.printables.com/media/prints/23981c1f-a64b-48bb-954a-b3d9336efeb2/images/10386004_846c4783-5e70-4ba3-9cf8-29332d4ad3c6_e3f40616-3ba8-40c4-b058-09a35fd4e56e/thumbs/inside/1600x1200/jpeg/converted_20250805_131046.webp" height="300" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+        <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+          <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://www.printables.com/model/1375098-epic-pwnagotchi-case-for-pizero-waveshare-v4-eink" target="_blank"> </span>
+  <td><p style="text-align: center;">- Raspberry pi zero or zero2 <br></br>
+            - Normal GPIO header<br></br>
+            - Waveshare v3 or v4 <br></br></p></td>
+  <td style="text-align: center;"><a href="https://www.printables.com/@unitMeasure" target="_blank">AVIPARS</a></td>
+  </tr>
   <tr>
   
   <td><p align="center" dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="https://cults3d.com/en/3d-model/gadget/coque-pwnagotchi-waveshare3-pisugar3-et-protection-d-ecran-plexiglass" data-target="animated-image.originalLink"><img src="https://files.cults3d.com/uploaders/24091331/illustration-file/75bcd664-bda6-4743-8067-54f6f527a808/20230508_111605.jpg" height="300" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
