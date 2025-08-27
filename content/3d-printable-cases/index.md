@@ -191,6 +191,15 @@ color: #fff !important;
   - 18650 Battery Holder and TC4056 Charging board</p></td>
 <td style="text-align: center;"><a id="centered" href="https://www.thingiverse.com/vmalakaiv" target="_blank">VmalakaiV</a></td>
 </tr>
+<tr>
+<td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://makerworld.com/de/models/1728032-pwnagotchi-waveshare-ups-hat-c-2-13-v4"><img src="https://makerworld.bblmw.com/makerworld/model/USdb53ef1a110e3f/design/2025-08-24_542248ee0f1e88.png" height="300" style="max-width: 100%;"></a></p></td>
+<td><p style="text-align: center;">
+  - Raspberry pi zero or zero2 WH<br></br>
+  - Normal GPIO header<br></br>
+  - Waveshare v4<br></br>
+  - Waveshare UPS HAT C</p></td>
+<td style="text-align: center;"><a id="centered" href="https://makerworld.com/de/@gicko" target="_blank">gicko</a></td>
+</tr>
 <!--
 <tr>
 <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="project-link"><img src="img-link" height="300" style="max-width: 100%;"></a></p></td>
