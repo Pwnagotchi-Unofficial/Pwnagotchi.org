@@ -69,6 +69,11 @@ main.plugins.bt-tether.devices.ios-phone.priority = 1  # Priority level for teth
 4. Is your Pwnagotchi detected as RNDIS gadget? If not, download the RNDIS driver [here](https://modclouddownloadprod.blob.core.windows.net/shared/mod-rndis-driver-windows.zip).
 5. Have you assigned static IP to your RPi? You can do that in your Network Manager by right clicking your RPi (detected as RNDIS gadget) -> Properties -> Internet Protocol Version 4 (TCP/IPv4) -> Properties -> Use the following IP address. You can choose whatever IP you want (preferably `10.0.0.1`, but that depends on your LAN),subnet mask should be `255.255.255.0`, gateway `10.0.0.1` and if you need to specify DNS, go with `8.8.8.8`, `8.8.4.4` (both Google) or `1.1.1.1` (Cloudflare). By now, you should be able to ping `10.0.0.2` (yes, .2, not .1) and if you have response, you are able to ssh.
 
+On some images, SSH will refuse connection (connection refused) even if the RPi is reachable via 10.0.0.2.
+
+In that case, plug the Pi into HDMI + keyboard and check if a default pi user exists.
+We had to create a pi user manually and assign a password before SSH was possible.
+
 NOTE:
 If you want to SSH using pwnagotchi.local instead of IP address, you need to have Bonjour Print Services installed. You can download installed from [here](https://support.apple.com/kb/DL999?viewlocale=en_US&locale=en_US).
 
