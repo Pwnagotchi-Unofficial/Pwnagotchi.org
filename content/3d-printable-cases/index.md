@@ -75,6 +75,15 @@ color: #fff !important;
   <td style="text-align: center;"><a id="centered" href="https://www.printables.com/@yaikou" target="_blank">Ya Ikou!</a></td>
   </tr>
   <tr>
+  <tr>
+    <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://makerworld.com/en/models/1829815-pwnagotchi-digimon-vpet-case#profileId-1953806"><img src="https://makerworld.bblmw.com/makerworld/model/US841bf68931e9a2/design/2025-09-26_40c39808be2f5.jpg?x-oss-process=image/resize,w_1000/format,webp" height="300" style="max-width: 100%;"></a></p></td>
+    <td><p style="text-align: center;">
+      - Raspberry pi zero or zero2<br></br>
+      - Normal GPIO header<br></br>
+      - Waveshare 2.13inch e-Paper Hat V4<br></br>
+      - UPS-Lite V1.2</p></td>
+    <td style="text-align: center;"><a id="centered" href="https://makerworld.com/en/@chikit" target="_blank">cracra</a></td>
+  </tr>
   <td><p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://www.thingiverse.com/thing:4297526"><img src="https://img.thingiverse.com/cdn-cgi/image/fit=contain,quality=95/https://cdn.thingiverse.com/assets/b9/fa/a1/1f/fb/large_display_pico_case_seriesA_photo5_20200419.png" height="300" style="max-width: 100%;"></a></td>
   <td><p style="text-align: center;">
             - Raspberry pi zero or zero2<br></br>
