@@ -86,7 +86,7 @@ If you noticed that your Pwnagotchi isnt beeing recognized by Windows follow the
 
 ## Pwnagotchi's subnet clash with computer's subnet
 
-If your network is using `10.0.0.0/24` as the network address and this is clashing with Pwnagotchi's network address, you can change the IP address and network address of Pwnagotchi USB interface by using a different subnet. In order to do this, login to your pi via SSH and edit the file `/etc/network/interfaces.d/usb0-cfg` with your preferred editor and use the following config:
+If your network is using `10.0.0.0/24` as the network address and this is clashing with Pwnagotchi's network address, you can change the IP address and network address of Pwnagotchi USB interface by using a different subnet. In order to do this, login to your pi via SSH and edit the file `/etc/NetworkManager/system-connections/usb0.nmconnection` with your preferred editor and use the following config:
 
 ```
 allow-hotplug usb0
