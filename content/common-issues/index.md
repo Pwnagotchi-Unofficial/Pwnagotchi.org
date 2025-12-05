@@ -88,6 +88,7 @@ If you noticed that your Pwnagotchi isnt beeing recognized by Windows follow the
 
 If your network is using `10.0.0.0/24` as the network address and this is clashing with Pwnagotchi's network address, you can change the IP address and network address of Pwnagotchi USB interface by using a different subnet. In order to do this, login to your pi via SSH and edit the file `/etc/NetworkManager/system-connections/usb0.nmconnection` with your preferred editor and use the following config:
 
+Windows settings 
 ```
 allow-hotplug usb0
 iface usb0 inet static
@@ -99,6 +100,19 @@ iface usb0 inet static
   dns-nameservers 1.1.1.1
   metric 20
 ```
+
+MAC settings 
+`sudo nano /etc/systemd/network/73-usb-net-by-mac.network`
+```
+[Match]
+Name=usb0
+[Network]
+Address=192.168.0.2/24
+Gateway=192.168.0.1
+DHCP=no
+KeepConfiguration=no
+```
+`sudo systemctl enable systemd-networkd`
 
 Save the file and reboot your pwnagotchi. After it boots up, you should be able to access it by using the ip address `192.168.0.2` instead of `10.0.0.2`. **Remember to change also the configuration of your computer's interface by using the IP address `192.168.0.1`.**
 
